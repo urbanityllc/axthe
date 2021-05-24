@@ -1,0 +1,11 @@
+{
+  "name": "ex-a",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx nodemon"
+  },
+  "dependencies": {
+    "axthe": "file:../axthe"
+  }
+}

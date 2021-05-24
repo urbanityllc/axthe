@@ -1,0 +1,64 @@
+
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    * {
+    	margin: 0;
+    	padding: 0;
+    	box-sizing: border-box;
+    	font-family: sans-serif;
+    }
+    
+    body {
+    	overflow-y: scroll; /* fix */
+    	overflow-x: hidden; /* fix */
+    }
+    
+    
+    :root {
+    	--menu-height: 35px;
+    
+    	--menu-backcolor: black;
+    	--menu-color: #ccc;
+    
+    	--menu-backcolor_hover: black;
+    	--menu-color_hover: white;
+    
+    	--menu-drop-backcolor: red;
+    	--menu-drop-color: blue;
+    
+    	--menu-drop-backcolor_hover: blue;
+    	--menu-drop-color_hover: red;
+    }
+    
+    
+  </style>
+  <link rel="stylesheet" href="nav.css"/>
+</head>
+<body>
+  <header>
+    <div class="main-menu-wrap">
+      <div class="logo"> <span>My Site</span></div>
+      <input id="checkboxT" type="checkbox"/>
+      <label for="checkboxT">
+        <svg class="burger-icon" viewBox="0 0 1024 1024">
+          <path d="M128 277.333h768v86h-768v-86z m0 298v-84h768v84h-768z m0 214v-86h768v86h-768z"></path>
+        </svg>
+      </label>
+      <div class="main-menu"><a href="#">HomeX</a>
+        <div class="sub-menu-wrap">
+          <input id="checkboxS" type="checkbox"/>
+          <label class="sub-check" for="checkboxS">About</label>
+          <!-- optional sub-menu, can be disabled-->
+          <div class="sub-menu"><a href="#">Home1</a><a href="#">Home2</a><a href="#">Home3</a></div>
+        </div><a href="#">Services</a><a href="#">Product</a><a href="#">Contact</a>
+      </div>
+      <div class="menu-space"></div>
+    </div>
+  </header>
+  <section><br/>
+    <h1>An Awesome Title Here</h1>
+    <p>This tutorial will guide you through creating a responsive dr. down menu using CSS only, with the help of flexbox and the "checkbox-hack".</p>
+  </section>
+</body>

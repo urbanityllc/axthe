@@ -1,0 +1,6 @@
+clear
+caddy run --watch
+
+
+
+
