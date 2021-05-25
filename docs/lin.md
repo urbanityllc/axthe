@@ -32,3 +32,6 @@ stop caddy service
 ufw status
 
 easydns https://cp.easydns.com/manage/domains/zone/
+
+killall node
+ps aux | grep node

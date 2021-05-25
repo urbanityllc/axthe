@@ -1,5 +1,5 @@
 
-Docs are in docs folder.npmjs
 
-killall node
-ps aux | grep node
+Docs are http://axthe.github.io/axthe 
+(from docs folder)
+
