@@ -40,8 +40,9 @@ http://localhost/lading/c
 ```
 
 ## Support
-Please use this, star the project, and spread the word.
+Please use this, start the project, and spread the word.
 
 For support: 
 - https://github.com/axthe/axthe/discussions
 
+[<img src="vic.jpg" width="400"/>]
