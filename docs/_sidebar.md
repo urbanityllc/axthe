@@ -1,6 +1,5 @@
 
-* [Bio](README.md)
-* [Links and projects](links.md)
-* [LinkedIn Page](linkedin.md)
-* [History](history.md)
-* [Contact Me](contact.md)
+* [HOME](README.md)
+* [Optional setup](setup.md)
+* [Intro and Guide](guide.md)
+* [Advanced concepts](linkedin.md)
