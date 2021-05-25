@@ -1,5 +1,5 @@
  
-# An eXpress.js and Templating HElper (AXTHE)
+# <b>A</b>n e<b>X</b>press.js and <b>T</b>emplating <b>HE</b>lper (AXTHE)
 <i>AXTHE tech stack is An opinionated HElper for eXpress.js Templating.</i>
  
 ## AXTHE
