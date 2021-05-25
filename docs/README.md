@@ -12,7 +12,7 @@ AXTHE tech stack approach is to eschew client side .js, and rely hevilly on SSR.
 The aim of AXTHE is the most productive way to develop WebApps including CMS Webapps.
 
 ### Starter app:
-If you are already familiar with AXTHE, you can donwload an starter app: 
+If you are already familiar with AXTHE, you can donwload a starter app: 
 - <a href="starter.zip">starter.zip</a>
 
 ### For the impatient
@@ -24,24 +24,25 @@ It has a convention of allways(with some execetions) naming files as index.pug. 
 - /public/lading/C/index.pug
 
 Above convention create 3 landing pages alternatives (suitable for testing of marketing variations):
-http://localhost/lading/a
-http://localhost/lading/b
-http://localhost/lading/c
+- http://localhost/lading/a
+- http://localhost/lading/b
+- http://localhost/lading/c
 
 ### A few more important concepts
 
-- https in AXTHE tech stack is provided by Caddy (instead of Apache or Nginx that you would use for LAMP)
-- You can, and often do, make an call to dynamically get a list of the static files, pages or content you have in a folder! This is often used with Pug template mixins. Here is how to enable that in your package.json:
+- https (tls) in AXTHE tech stack is provided by Caddy (instead of Apache or Nginx that you would use for LAMP). You can just use your DNS to point to a subdomain and Caddy will take care of the s in https; with node.js being the app server behind the Caddy http server.
+
+- You can, and often do, make a call to dynamically get a list of the static files, pages or content you have in a folder! This is often used with Pug template mixins. Here is how to enable that:
 
 ```
-  "dependencies": {
-    "axthe": "^0.0.3"
-  }
+npm i axthe
 ```
+This is the secret of the static files approach of JamStack: that it can be dynamic, just happens to be file centric. You can and still do use a DB, but JamStack is the static file approach.
 
 ## Support
 Please use this, star the project, and spread the word.
 
-For support: 
+Support: 
 - https://github.com/axthe/axthe/discussions
 
+Paid support comming soon.
