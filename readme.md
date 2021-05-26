@@ -17,8 +17,6 @@ It is based on the most popular node.js library, express.js. Express.js generato
 Check out pug: http://html2pug.vercel.app
  
 AXthe tech stack approach is to eschew client side .js, and rely heavily on SSR. ( I really like the word eschew). The server side route in express.js intercepts the http request and passes any dynamic data to pug. That is 90% of AXthe. In addition to productivity, SSR is better at SEO and security than any client/browser side .js.
- 
-The goal of AXthe is to be the most productive way to develop WebApps, including CMS Webapps.
 
 
 ### For the impatient
@@ -34,7 +32,7 @@ Above convention create 3 landing pages alternatives (suitable for testing of ma
 - http://localhost/lading/b
 - http://localhost/lading/c
 
-### Starter app:
+### Starter app
 If you are already familiar with AXthe, you can download a starter app:
 - <a href="starter.zip">starter.zip</a>
 

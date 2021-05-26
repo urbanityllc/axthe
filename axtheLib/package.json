@@ -1,7 +1,7 @@
 {
   "name": "axthe",
-  "version": "0.0.6",
-  "description": "AXTHE tech stack is An opinionated eXpress.js and Templating HElper for high productivity webapp development",
+  "version": "0.0.7",
+  "description": "AXthe tech stack is An opinionated eXpress.js and Templating HElper for high productivity webapp development",
   "homepage": "http://docs.axthe.net",
   "repository": {
     "type": "git",
