@@ -5,6 +5,8 @@
 #### Please star our repo
 - http://github.com/axthe/axthe
 
+Docs ( github ) and the home page: http://docs.axthe.net
+
 ### Support
 - http://github.com/axthe/axthe/discussions
 
@@ -36,18 +38,3 @@ Above convention create 3 landing pages alternatives (suitable for testing of ma
 ### Starter app:
 If you are already familiar with AXTHE, you can download a starter app:
 - <a href="starter.zip">starter.zip</a>
-
-### A few more key concepts
-- https (tls) in AXTHE tech stack is provided by Caddy (instead of Apache or Nginx that you would use for LAMP). You can just use your DNS to point to Caddy, and it will take care of the s in https; with node.js being the app server behind the Caddy http server.
- 
-- You can, and often do, make a call to dynamically get a list of the static files, pages or content you have in a folder! This is often used with pug template mixins. Here is how to enable that:
-```
-npm i axthe
-```
-This is the secret of the static files approach of JamStack: that it can be/is dynamic, just happens to be file centric. You can and still and do use a DB in addition to static files, but JamStack is a static file approach, so you'll have to learn the static file approach.
-
-- For full-stack development, AXTHE leverages PostgreSQL, user auth and more via http://npmjs.com/package/@supabase/supabase-js
-
-- AXTHE is a designer firendly tech stack, so it is not just for front end and full stack developers. Even civilans, people not trained in software development can write profesional grade WebApps.
-
-- Compatible with http://prepros.io

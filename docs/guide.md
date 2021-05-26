@@ -9,4 +9,13 @@
 - http://github.com/axthe/axthe/discussions
 
 
+### Pre-reqs:
+Glance pug: http://html2pug.vercel.app
+
+Mixins: https://pugjs.org/language/mixins.html
+
+## Use the static files
+
+http://github.com/axthe/axthe
+
 [<img src="vic.jpg" width="400"/>]

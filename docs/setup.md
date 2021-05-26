@@ -8,14 +8,21 @@
 ### Support:
 - http://github.com/axthe/axthe/discussions
 
+## Setup
 
+If you already have node.js setup, greater than version 14, and have Caddy http server running in the cloud, you are good to go, you can skip to guide. But I recommend you glance it.
 
-https://codeanywhere.com/editor
+### Pre-requestites
 
+- A DNS name, I recommend http://easydns.com (and I recommend against GoDaddy)
+- A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, etc. Likely that anything in the cloud will work.
+- Sign up for an IDE/editor to edit code in the cloud (unless you are SSH and Vim expert) http://codeanywhere.com/editor
 
+## Recipe
+
+```
 apt-get update
 apt-get upgrade
-
 
 # node 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
@@ -33,14 +40,15 @@ curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo 
 
 apt update
 apt install caddy
-:9090
-reboot
 
 stop caddy service
+reboot
+
+# when you come back
 
 ufw status
 
-easydns https://cp.easydns.com/manage/domains/zone/
-
 killall node
 ps aux | grep node
+
+```

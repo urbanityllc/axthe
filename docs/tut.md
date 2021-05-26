@@ -1,4 +1,4 @@
-https://html2pug.vercel.app
+http://html2pug.vercel.app
 
 spectre and bulma
 
