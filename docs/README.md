@@ -20,7 +20,7 @@ AXTHE tech stack approach is to eschew client side .js, and rely heavily on SSR.
 The goal of AXTHE is to be the most productive way to develop WebApps, including CMS Webapps.
 
 
-## For the impatient
+### For the impatient
 It is recommended you take the guided tour of AXTHE. You'll learn that AXTHE, in addition to using express.js templating, is based on a static file approach, it is compliant with JamStack.org.
  
 It has a convention of always(with some exceptions) naming files as index.pug. That means if you have 3 pages in your webapp, you need 3 folders.
@@ -38,7 +38,7 @@ If you are already familiar with AXTHE, you can download a starter app:
 - <a href="starter.zip">starter.zip</a>
 
 ### A few more key concepts
-- https (tls) in AXTHE tech stack is provided by Caddy (instead of Apache or Nginx that you would use for LAMP). You can just use your DNS to point to Caddy, and it will take care of the s in https; with node.js being the app server behind the Caddy http server.
+- https (TLS) in AXTHE tech stack is provided by Caddy (instead of Apache or Nginx that you would use for LAMP). You can just use your DNS to point to Caddy, and it will take care of the s in https; with node.js being the app server behind the Caddy http server.
  
 - You can, and often do, make a call to dynamically get a list of the static files, pages or content you have in a folder! This is often used with pug template mixins. Here is how to enable that:
 ```

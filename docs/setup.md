@@ -9,17 +9,14 @@
 - http://github.com/axthe/axthe/discussions
 
 ## Setup
-
 If you already have node.js setup, greater than version 14, and have Caddy http server running in the cloud, you are good to go, you can skip to guide. But I recommend you glance it.
 
 ### Pre-requestites
-
 - A DNS name, I recommend http://easydns.com (and I recommend against GoDaddy)
 - A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, etc. Likely that anything in the cloud will work.
-- Sign up for an IDE/editor to edit code in the cloud (unless you are SSH and Vim expert) http://codeanywhere.com/editor
+- Sign up for an IDE/editor to edit code in the cloud (unless you are SSH and Vim expert) http://codeanywhere.com/editor . 
 
 ## Recipe
-
 ```
 apt-get update
 apt-get upgrade
@@ -33,14 +30,12 @@ npm i -g npm
 # caddy http 
 apt install cockpit
 # https://caddyserver.com/docs/install#debian-ubuntu-raspbian
-
 apt install -y debian-keyring debian-archive-keyring apt-transport-https
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo apt-key add -
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee -a /etc/apt/sources.list.d/caddy-stable.list
 
 apt update
 apt install caddy
-
 stop caddy service
 reboot
 
@@ -48,7 +43,14 @@ reboot
 
 ufw status
 
+# optional
 killall node
 ps aux | grep node
 
 ```
+
+Now you can edit the Caddyfile in the cloud, with a cloud based IDE/editor such as already mentioned http://codeanywhere.com/editor .
+
+### Github
+If you wish to use local development + Github + SFTP/SSH you should use VS Code IDE.
+

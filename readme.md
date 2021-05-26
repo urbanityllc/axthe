@@ -21,7 +21,7 @@ AXTHE tech stack approach is to eschew client side .js, and rely heavily on SSR.
 The goal of AXTHE is to be the most productive way to develop WebApps, including CMS Webapps.
 
 
-## For the impatient
+### For the impatient
 It is recommended you take the guided tour of AXTHE. You'll learn that AXTHE, in addition to using express.js templating, is based on a static file approach, it is compliant with JamStack.org.
  
 It has a convention of always(with some exceptions) naming files as index.pug. That means if you have 3 pages in your webapp, you need 3 folders.
