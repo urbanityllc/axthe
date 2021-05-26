@@ -27,6 +27,19 @@ module.exports =  class BasicMData{  // media files based DB
 
     }
 
+    /** list all pages in the sub-folder: it will give you a list of page */
+    getFolders(rfolder) {
+        let ans = this._mc.get(rfolder+FOLD)
+        if(ans != undefined) return ans
+
+        const source = './public/'+rfolder
+        ans = readdirSync(source, { withFileTypes: true })
+            .filter(dirent => dirent.isDirectory())
+            .map(dirent => dirent.name)
+        this._mc.set(rfolder+FOLD, ans)
+        return ans
+    }
+
     // get text
     getTxt(folder, selector) {
         let ans = this._mc.get(folder+TXT+selector)
@@ -60,18 +73,6 @@ module.exports =  class BasicMData{  // media files based DB
 
         ans = $(selector).attr('src')
         this._mc.set(folder+IMG+selector, ans)
-        return ans
-    }
-
-    getFolders(rfolder) {
-        let ans = this._mc.get(rfolder+FOLD)
-        if(ans != undefined) return ans
-
-        const source = './public/'+rfolder
-        ans = readdirSync(source, { withFileTypes: true })
-            .filter(dirent => dirent.isDirectory())
-            .map(dirent => dirent.name)
-        this._mc.set(rfolder+FOLD, ans)
         return ans
     }
 
