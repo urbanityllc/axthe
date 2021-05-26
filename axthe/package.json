@@ -1,7 +1,13 @@
 {
   "name": "axthe",
-  "description": "An eXpress.js Template HElper",
   "version": "0.0.5",
+  "description": "<i>AXTHE tech stack is An opinionated HElper for eXpress.js Templating</i>",
+  "homepage": "http://docs.axthe.net",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/axthe/axthe"
+  },
+  "license": "Apache",
   "dependencies": {
     "@supabase/supabase-js": "^1.11.16",
     "cheerio": "^1.0.0-rc.9",

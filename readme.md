@@ -2,9 +2,14 @@
 # An eXpress.js and Templating HElper (AXTHE)
 <i>AXTHE tech stack is An opinionated HElper for eXpress.js Templating.</i>
 
+#### Please star our repo!
+
 Docs ( github ) and the home page: http://docs.axthe.net
 
- 
+## Support:
+- http://github.com/axthe/axthe/discussions
+
+
 ### For the impatient
 It is recommended you take the guided tour of AXTHE(docs page). You'll learn that AXTHE, in addition to using express.js templating, is based on a static file approach, it is compliant with JamStack.org.
  
@@ -32,5 +37,7 @@ AXTHE tech stack approach is to eschew client side .js, and rely heavily on SSR.
  
 The goal of AXTHE is to be the most productive way to develop WebApps, including CMS Webapps.
 
+
 #### Other links:
-- https://www.npmjs.com/package/axthe
+- http://www.npmjs.com/package/axthe
+

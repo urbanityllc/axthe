@@ -1,6 +1,6 @@
 
-# An eXpress.js and Templating HElper (AXTHE)
-AXTHE tech stack is An optinonated HElper for eXpress.js Templating. 
+# AXTHE setup
+<i>AXTHE tech stack is An opinionated HElper for eXpress.js Templating</i>
 
 ## AXTHE
 AXTHE aims to be the most productive way to build Webapps, including CMS Webapps. Specifcialy it aims to be better than the old productivity leader: LAMP.

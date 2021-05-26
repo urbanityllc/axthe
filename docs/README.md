@@ -1,6 +1,14 @@
 
 # An eXpress.js and Templating HElper (AXTHE)
-<i>AXTHE tech stack is An opinionated HElper for eXpress.js Templating.</i>
+<i>AXTHE tech stack is <b>A<b>n opinionated HElper for eXpress.js Templating.</i>
+
+#### Please star our repo:
+- http://github.com/axthe/axthe
+
+Docs ( github ) and the home page: http://docs.axthe.net
+
+## Support:
+- http://github.com/axthe/axthe/discussions
 
 
 ### For the impatient
@@ -31,25 +39,16 @@ AXTHE tech stack approach is to eschew client side .js, and rely heavily on SSR.
 The goal of AXTHE is to be the most productive way to develop WebApps, including CMS Webapps.
 
 
- 
 ### A few more key concepts
- 
 - https (tls) in AXTHE tech stack is provided by Caddy (instead of Apache or Nginx that you would use for LAMP). You can just use your DNS to point to Caddy, and it will take care of the s in https; with node.js being the app server behind the Caddy http server.
  
 - You can, and often do, make a call to dynamically get a list of the static files, pages or content you have in a folder! This is often used with Pug template mixins. Here is how to enable that:
- 
 ```
 npm i axthe
 ```
 This is the secret of the static files approach of JamStack: that it can be/is dynamic, just happens to be file centric. You can and still and do use a DB in addition to static files, but JamStack is a static file approach, so you'll have to learn the static file approach.
 
-## Support
-Please use AXTHE, star the project, and spread the word.
+- For full-stack development, AXTHE leverages PostgreSQL, user auth and more via http://www.npmjs.com/package/@supabase/supabase-js
 
-I also want to say that AXTHE is a designer firendly tech stack, so it is not just for front end and full stack developers. Even civilans, people not trained in software development can write profesional grade WebApps.
+- AXTHE is a designer firendly tech stack, so it is not just for front end and full stack developers. Even civilans, people not trained in software development can write profesional grade WebApps.
 
-
-Support:
-- https://github.com/axthe/axthe/discussions
- 
-Paid support coming soon.
