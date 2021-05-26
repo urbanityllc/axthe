@@ -22,14 +22,17 @@ AXthe tech stack approach is to eschew client side .js, and rely heavily on SSR.
 It is recommended you take the guided tour of AXthe. You'll learn that AXthe, in addition to using express.js templating, is based on a static file approach, it is compliant with JamStack.org.
  
 It has a convention of always(with some exceptions) naming files as index.pug. That means if you have 3 pages in your webapp, you need 3 folders.
+```
 - /public/lading/A/index.pug
 - /public/lading/B/index.pug
 - /public/lading/C/index.pug
- 
+```
 Above convention create 3 landing pages alternatives (suitable for testing of marketing variations):
+```
 - http://localhost/lading/a
 - http://localhost/lading/b
 - http://localhost/lading/c
+```
 
 ### Starter app:
 If you are already familiar with AXthe, you can download a starter app:
