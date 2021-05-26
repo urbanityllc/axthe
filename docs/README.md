@@ -39,7 +39,7 @@ If you are already familiar with AXthe, you can download a starter app:
 - <a href="starter.zip">starter.zip</a>
 
 ### A few more key concepts
-- https (TLS) in AXthe tech stack is provided by Caddy (instead of Apache or Nginx that you would use for LAMP). You can just use your DNS to point to Caddy, and it will take care of the s in https; with node.js being the app server behind the Caddy http server.
+- https (TLS) in AXthe tech stack is provided by Caddy http server, instead of Apache or Nginx that you would use for LAMP. Caddy will proxy https traffic to node.js webapp server. You would just point your DNS subdomain to Caddy, and it will take care of the s in https; with node.js being the app server behind the Caddy http server.
  
 - You can, and often do, make a call to dynamically get a list of the static files, pages or content you have in a folder! This is often used with pug template mixins. Here is how to enable that:
 ```
