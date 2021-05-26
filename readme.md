@@ -11,7 +11,7 @@ Docs ( github ) and the home page: http://docs.axthe.net
 
 
 ## About
-AXthe aims to be the most productive way to build Webapps, including CMS Webapps. Specifically it aims to be better than the old productivity leader: LAMP.
+AXthe aims to be the most productive way to build webapps, including CMS webapps. Specifically it aims to be better than the old productivity leader: LAMP.
  
 It is based on the most popular node.js library, express.js. Express.js generator emits a starter webapp using templeting: It uses pug(formerly known as Jade). pug is templating you already know how to use, it is html markup tags that are self closing! It a fine alternative to PHP.
 Check out pug: http://html2pug.vercel.app
