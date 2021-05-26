@@ -1,6 +1,6 @@
 
-# An eXpress.js and Templating HElper (AXTHE)
-<i>AXTHE tech stack is <b>A</b>n opinionated e<b>X</b>press.js and <b>T</b>emplating <b>HE</b>lper for high productivity webapp development</i>
+# An eXpress.js and Templating HElper (AXthe)
+<i>AXthe tech stack is <b>A</b>n opinionated e<b>X</b>press.js and <b>T</b>emplating <b>HE</b>lper for high productivity webapp development</i>
 
 #### Please star our repo
 - http://github.com/axthe/axthe
@@ -17,4 +17,3 @@
 About the menu, sooner or later your are going to have to spend a day to learn it. So much of your app UX is related to Nav.
 
 
-[<img src="vic.jpg" width="400"/>]

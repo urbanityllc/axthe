@@ -1,6 +1,6 @@
 
-# An eXpress.js and Templating HElper (AXTHE)
-<i>AXTHE tech stack is <b>A</b>n opinionated e<b>X</b>press.js and <b>T</b>emplating <b>HE</b>lper for high productivity webapp development</i>
+# An eXpress.js and Templating HElper (AXthe)
+<i>AXthe tech stack is <b>A</b>n opinionated e<b>X</b>press.js and <b>T</b>emplating <b>HE</b>lper for high productivity webapp development</i>
 
 #### Please star our repo
 - http://github.com/axthe/axthe
@@ -32,7 +32,7 @@ https://github.com/axthe/axthe/tree/main/docs/starter/lib
 
 Everthing is just standard express.js, the most popular node.js module:
 - http://github.com/expressjs/express
-In fact, if you use express.js generator you'll get something similar to the starter.zip that you unziped. Just like the express.js example, AXTHE favors SSR.
+In fact, if you use express.js generator you'll get something similar to the starter.zip that you unziped. Just like the express.js example, AXthe favors SSR.
 
 Good so far?
 
