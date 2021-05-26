@@ -1,12 +1,12 @@
 
 # An eXpress.js and Templating HElper (AXTHE)
-<i>AXTHE tech stack is An opinionated HElper for eXpress.js Templating.</i>
+<i>AXTHE tech stack is <b>A</b>n opinionated e<b>X</b>press.js and <b>T</b>emplating <b>HE</b>lper for high productivity webapp development</i>
 
 #### Please star our repo!
 
 Docs ( github ) and the home page: http://docs.axthe.net
 
-## Support:
+### Support:
 - http://github.com/axthe/axthe/discussions
 
 
