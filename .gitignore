@@ -20,7 +20,7 @@ coverage/
 
 prepros.config
 
-*.html
+*.hxtml
 
 ###
 ubay
