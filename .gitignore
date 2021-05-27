@@ -1,12 +1,11 @@
 .DS_Store
 
+# VS Code 
 *.code-workspace
 .vscode
-
-# VS Code development container setup
 .devcontainer/
 
-# SonarQube ( https://www.sonarqube.org/ ) analysis report
+# SonarQube 
 .scannerwork/
 
 node_modules
@@ -20,6 +19,8 @@ yarn-error.log
 coverage/
 
 prepros.config
+
+*.html
 
 ###
 ubay

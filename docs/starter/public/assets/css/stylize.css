@@ -313,7 +313,7 @@ body {
 }
 
 html, body, p {
-    font-family: 'Open Sans', monospace; 
+    font-family: 'Open Sans', Sans-Serif; 
     text-rendering: optimizeLegibility;
     font-weight: 300;
 }

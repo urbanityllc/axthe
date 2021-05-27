@@ -5,7 +5,7 @@
     "start": "npx nodemon"
   },
   "dependencies": {
-    "axthe": "^0.0.10"
+    "axthe": "^0.0.14"
   }, 
   "devDependencies": {
     "tape": "^5.2.2"

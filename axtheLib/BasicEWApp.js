@@ -11,10 +11,10 @@ const upload = multer()
 
 module.exports =  class BasicEWApp {
 
-  eapp
+  eapp // express js app
 
   constructor() {
-    console.log(this.constructor.name,JSON.stringify(process.versions.node))
+    console.log(this.constructor.name,'node version:',JSON.stringify(process.versions.node))
     this.eapp = express();
 
     // view engine setup
@@ -54,7 +54,7 @@ module.exports =  class BasicEWApp {
 
     this.eapp.listen(port) // listen on this port
 
-    console.log(this.constructor.name, 'ready', port)
+    console.log(this.constructor.name, 'ready, you can now open browser at:', port)
   }//()
 
 }

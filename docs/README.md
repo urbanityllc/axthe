@@ -52,3 +52,5 @@ This is the secret of the static files approach of JamStack: that it can be/is d
 - AXthe is a designer firendly tech stack, so it is not just for front end and full stack developers. Even civilans, people not trained in software development can write profesional grade webapps.
 
 - Compatible with http://prepros.io
+
+- AXthe stack also has axthe npm module that has 3 main helper classes: one to setup the app, one for the routes and one for business/model layer. That last layer is the one you would create any intergrations tests.

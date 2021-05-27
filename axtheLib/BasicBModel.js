@@ -18,7 +18,7 @@ const FOLD = 'getFolders'
 /**
  * This is the testable business layer
  */
-module.exports =  class BasicMData{  // media files based DB
+module.exports =  class BasicBModel{  // media files based DB
 
     _sb // supabase instance
 

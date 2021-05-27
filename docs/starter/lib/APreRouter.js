@@ -1,29 +1,29 @@
 
-// const validate = require("validate.js")
-
 // ////////////////////////////////
 const BasicPreRouter = require('axthe/BasicPreRouter.js')
-const BasicMData     = require('axthe/BasicMData.js')
+const BasicBModel     = require('axthe/BasicBModel.js')
 
 module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Most pages don't need a pre render, but some do
 
-  constructor(eapp) {
-    super(eapp)// call base and pass app, so it knows
+	constructor(eapp) {
+		super(eapp)// call base and pass the express app, so it knows
 
-    this.fdata = new BasicMData()
+		this.bmodel = new BasicBModel() // the model is used for data, validation, business layer and such. You would of course extends BasicBModel
+	
+		// the route loads the data
+		this.eapp.get('/1', (req, res) => {
+			res.render(this.getPath(req), {title: 'My name is Vic'})
+		})
 
+		this.eapp.post('/form', (req, res) => {
+			console.log(this.constructor.name, req.body)
+			res.send("received your request!")
+		})
 
-    /* setup your routes, eg:
-    this.eapp.post('/form', function(req, res) {
-      console.log(this.constructor.name,req.body)
-      res.send("recieved your request!")
-    })
-    */
+		// to finish setup
+		this.finalPrep()
 
-
-    this.finalPrep()
-
-  }//()
+	}//()
 
 
 

@@ -2,7 +2,7 @@
 // ////////////////////////////////
 module.exports =  class BasicPreRouter {// pug
 
-    fdata
+    bmodel
 
     eapp
 

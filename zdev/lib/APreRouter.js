@@ -3,14 +3,14 @@ const validate = require("validate.js")
 
 // ////////////////////////////////
 const BasicPreRouter = require('axthe/BasicPreRouter.js')
-const BasicMData     = require('axthe/BasicMData.js')
+const BasicBModel     = require('axthe/BasicBModel.js')
 
 module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Most pages don't need a pre render, but some do
 
   constructor(eapp) {
     super(eapp)// call base and pass app, so it knows
 
-    this.fdata = new BasicMData()
+    this.bmodel = new BasicBModel()
 
     /*
     console.log(fm.getTxt('1o','.c1'))
@@ -18,7 +18,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
     console.log(fm.getFolders('team'))
     */
 
-    this.eapp.post('/form', function(req, res) {
+    this.eapp.post('/form', (req, res) => {
       console.log(this.constructor.name,req.body)
       res.send("recieved your request!")
 
