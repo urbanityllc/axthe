@@ -3,13 +3,24 @@ const cheerio = require('cheerio');
 const NodeCache = require( "node-cache" );
 const { readdirSync } = require('fs')
 
+// use for pgSQL
+const {createClient} = require('@supabase/supabase-js')
+
+// validation
+const validate = require("validate.js")
+
 // //////////////////////////////////////////////
 const IMG = 'iio'
 const TXT = 'ttt'
 const $HTM = 'htm'
 const FOLD = 'getFolders'
 
+/**
+ * This is the testable business layer
+ */
 module.exports =  class BasicMData{  // media files based DB
+
+    _sb // supabase instance
 
     _pOptions = {// pug options
     }
