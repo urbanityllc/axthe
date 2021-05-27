@@ -1,23 +1,14 @@
 
 {
 	auto_https disable_redirects
-
 	servers {
 		protocol {
 			experimental_http3
 		}
 	}
 }
-# caddy stop
-# caddy start
+# caddy reload
 ## #################################################### 
-
-
-:9090  {
-	root * ./site
-	file_server
-}
-
 
 1.axthe.net, 1.cekvenich.net, :8091  {
 	respond "hi"
