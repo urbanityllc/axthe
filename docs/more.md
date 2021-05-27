@@ -15,5 +15,4 @@
 - Recommend CSS 'framework' is classless: http://github.com/axthe/axthe/tree/main/docs/starter/public/assets/css
 - Recommended Menu, easy to customize: http://github.com/axthe/axthe/tree/main/docs/starter/public/assets/cssNav
 About the menu, sooner or later your are going to have to spend a day to learn it. So much of your app UX is related to Nav.
-
-
+- Express template AXthe is based on: https://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a

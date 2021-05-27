@@ -21,36 +21,32 @@ If you already have node.js setup, greater than version 14, and have Caddy http 
 apt-get update
 apt-get upgrade
 
-# node 
+# node via nvm 
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
 nvm install 14.16.1
 npm i -g npm
 
 # caddy http 
-apt install cockpit
 # https://caddyserver.com/docs/install#debian-ubuntu-raspbian
 apt install -y debian-keyring debian-archive-keyring apt-transport-https
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/gpg.key' | sudo apt-key add -
 curl -1sLf 'https://dl.cloudsmith.io/public/caddy/stable/debian.deb.txt' | sudo tee -a /etc/apt/sources.list.d/caddy-stable.list
-
 apt update
 apt install caddy
-stop caddy service
+caddy stop
+
 reboot
+# monitoring webapp, read their docs
+apt install cockpit
 
 # when you come back
-
 ufw status
 
 # optional
 killall node
 ps aux | grep node
-
 ```
 
-Now you can edit the Caddyfile in the cloud, with a cloud based IDE/editor such as already mentioned http://codeanywhere.com/editor .
-
-### Github
-If you wish to use local development + Github + SFTP/SSH you should use VS Code IDE.
+Now you can edit the Caddyfile in the cloud, with a cloud based IDE/editor such as already mentioned http://codeanywhere.com/editor, recommended!
 

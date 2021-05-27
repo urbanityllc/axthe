@@ -5,9 +5,6 @@
 .vscode
 .devcontainer/
 
-# SonarQube 
-.scannerwork/
-
 node_modules
 
 package-lock.json
