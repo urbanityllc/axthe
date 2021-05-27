@@ -9,15 +9,12 @@
 - http://github.com/axthe/axthe/discussions
 
 
-### Pre-reqs
-- Glance pug: http://html2pug.vercel.app
-
-- Mixins: http://pugjs.org/language/mixins.html
-
-## Getting started:
+## Guide
 
 Download a starter app:
 - <a href="starter.zip">starter.zip</a>
+Unzip. Rename the folder starter to the name of your webapp.
+
 
 You can start via x.sh in the unzip folder:
 
@@ -36,9 +33,13 @@ In fact, if you use express.js generator you'll get something similar to the sta
 
 Good so far?
 
-## More:
+## Next steps
+- Example Caddyfile: http://github.com/axthe/axthe/blob/main/Caddyfile
+- Recommend CSS 'framework' is classless: http://github.com/axthe/axthe/tree/main/docs/starter/public/assets/css
+- Recommended Menu, easy to customize: http://github.com/axthe/axthe/tree/main/docs/starter/public/assets/cssNav
+About the menu, sooner or later your are going to have to spend a day to learn it. So much of your apps UX is related to Nav.
 
-Via axthe lib you can get a list of pages in a subfolder, to use in your PreRouter!
+Via AXthe lib you can get a list of pages in a subfolder, to use in your PreRouter!
 - http://github.com/axthe/axthe/blob/main/axtheLib/BasicMData.js
 
 But mostly you'd do standard DB stuff, such as:
@@ -47,3 +48,9 @@ But mostly you'd do standard DB stuff, such as:
 Here is an example of using supabase:
 - https://github.com/axthe/axthe/blob/main/back/lib/SB.js
 Supabase has PostgreSQL, user auth and more.
+
+- Express template AXthe is based on: https://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
+
+- Likely, soon after installing supabase, you'll instal Umami.
+
+- Mixins: http://pugjs.org/language/mixins.html

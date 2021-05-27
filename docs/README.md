@@ -37,6 +37,7 @@ Above convention create 3 landing pages alternatives (suitable for testing of ma
 ### Starter app:
 If you are already familiar with AXthe, you can download a starter app:
 - <a href="starter.zip">starter.zip</a>
+Unzip. Rename the folder starter to the name of your webapp.
 
 ### A few more key concepts
 - https (TLS) in AXthe tech stack is provided by Caddy http server, instead of Apache or Nginx that you would use for LAMP. Caddy will proxy https traffic to node.js webapp server. You would just point your DNS subdomain to Caddy, and it will take care of the s in https; with node.js being the app server behind the Caddy http server.
@@ -53,4 +54,4 @@ This is the secret of the static files approach of JamStack: that it can be/is d
 
 - Compatible with http://prepros.io
 
-- AXthe stack also has axthe npm module that has 3 main helper classes: one to setup the app, one for the routes and one for business/model layer. That last layer is the one you would create any intergrations tests.
+- AXthe stack also has AXthe npm module that has 3 main helper classes: one to setup the app, one for the routes and one for business/model layer. That last layer is the one you would create any intergrations tests.

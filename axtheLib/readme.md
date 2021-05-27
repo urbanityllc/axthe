@@ -36,3 +36,4 @@ Above convention create 3 landing pages alternatives (suitable for testing of ma
 ### Starter app:
 If you are already familiar with AXthe, you can download a starter app:
 - <a href="starter.zip">starter.zip</a>
+Unzip. Rename the folder starter to the name of your webapp.
