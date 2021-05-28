@@ -1,6 +1,6 @@
 'use strict';
 // ////////////////////////////////
-module.exports =  class BasicPreRouter {// pug
+module.exports =  class BasicPreRouter {// pug templating
 
     bmodel
 

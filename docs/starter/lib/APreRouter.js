@@ -1,14 +1,14 @@
 
 // ////////////////////////////////
 const BasicPreRouter = require('axthe/BasicPreRouter.js')
-const BasicBModel     = require('axthe/BasicBModel.js')
+const AnBModel     = require('./AnBModel.js')
 
 module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Most pages don't need a pre render, but some do
 
 	constructor(eapp) {
 		super(eapp)// call base and pass the express app, so it knows
 
-		this.bmodel = new BasicBModel() // the model is used for data, validation, business layer and such. You would of course extends BasicBModel
+		this.bmodel = new AnBModel() // the model is used for data, validation, business layer and such. You would of course extends BasicBModel
 	
 		// the route loads the data
 		this.eapp.get('/1', (req, res) => {
@@ -24,9 +24,6 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 		this.finalPrep()
 
 	}//()
-
-
-
 
 }//class
 

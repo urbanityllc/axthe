@@ -9,7 +9,7 @@ const upload = multer()
 
 // /////////////////////////////////////////////
 
-module.exports =  class BasicEWApp {
+module.exports =  class BasicEWApp { // express web app
 
   eapp // express js app
 

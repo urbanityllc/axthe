@@ -3,11 +3,6 @@ const cheerio = require('cheerio');
 const NodeCache = require( "node-cache" );
 const { readdirSync } = require('fs')
 
-// use for pgSQL
-const {createClient} = require('@supabase/supabase-js')
-
-// validation
-const validate = require("validate.js")
 
 // //////////////////////////////////////////////
 const IMG = 'iio'

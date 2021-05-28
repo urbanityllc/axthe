@@ -6,6 +6,6 @@
     "start": "npx nodemon"
   },
   "dependencies": {
-    "axthe": "file:../axthe"
+    "axthe": "file:../axtheLib"
   }
 }
