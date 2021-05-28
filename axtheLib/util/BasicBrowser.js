@@ -2,7 +2,7 @@
 const puppeteer = require('puppeteer')
 
 // //////////////////
-module.exports =  class BasicBrowser  {
+module.exports =  class BasicBrowser  { // very usefull for e2e testing. and scraping
 
 	browser 
 	page

@@ -41,18 +41,20 @@ apt install cockpit
 # above is a monitoring server, read https://cockpit-project.org/documentation.html
 # for now it is ok to accept a bad cert, you can fix it w/ Caddy later via proxy to port 9090
 
+
+# get AXthe starter, and unzip
+wget https://axthe.github.io/axthe/starter.zip
+unzip starter.zip
+mv starter myApp
+
 reboot
-# when you come back
-ufw status
 ```
 
 Now you can edit, for example the Caddyfile, in the cloud, with a cloud based IDE/editor such as already mentioned http://codeanywhere.com/editor, recommended!
 
 ```
-# get AXthe starter, and unzip
-wget https://axthe.github.io/axthe/starter.zip
-unzip starter.zip
-mv starter myApp
+# when you come back
+ufw status
 cd myApp
 ./x.sh
 
@@ -60,4 +62,4 @@ cd myApp
 killall node
 ps aux | grep node
 ```
-Of course you can used a cloud IDE such CodeAnywhere to edit pug files!
+Of course you should used a cloud IDE such CodeAnywhere to edit pug files!
