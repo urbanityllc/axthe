@@ -22,7 +22,6 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
 		// to finish setup
 		this.finalPrep()
-
 	}//()
 
 }//class

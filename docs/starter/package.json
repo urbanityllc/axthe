@@ -3,7 +3,7 @@
   "private": true,
   "scripts": {
     "start": "npx nodemon",
-    "test": "tape 'tests/**/*.test.js' | faucet"
+    "test": "npx tape 'tests/**/*.test.js' | faucet"
   },
   "dependencies": {
     "axthe": "^0.0.16"
