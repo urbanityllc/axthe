@@ -9,6 +9,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
 nvm install 14.17.0
 npm i -g npm
+# install a tester for node
+npm i -g faucet
 
 # caddy http server
 # https://caddyserver.com/docs/install#debian-ubuntu-raspbian
