@@ -6,7 +6,7 @@
     "test": "tape 'tests/**/*.test.js' | faucet"
   },
   "dependencies": {
-    "axthe": "^0.0.14"
+    "axthe": "^0.0.16"
   }, 
   "devDependencies": {
     "tape": "^5.2.2",
