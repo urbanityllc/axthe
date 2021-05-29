@@ -2,14 +2,17 @@
 # An eXpress.js and Templating HElper (AXthe)
 <i>AXthe tech stack is <b>A</b>n opinionated e<b>X</b>press.js and <b>T</b>emplating <b>HE</b>lper for high productivity webapp development</i>
 
-#### Please star our repo:
+#### Please star our repo
 - http://github.com/axthe/axthe
 
-### Support:
+### Support
 - http://github.com/axthe/axthe/discussions
 
-## Setup
+## Setup (optional)
 If you already have node.js setup, greater than version 14, and have Caddy http server running in the cloud, you are good to go, you can skip to guide. But I recommend you glance it.
+
+
+You should edit in the cloud, with a cloud based IDE/editor such as http://codeanywhere.com/editor, recommended!
 
 ### Pre-requestites
 - A DNS name, I recommend http://easydns.com (and I recommend against GoDaddy)
@@ -21,7 +24,6 @@ If you already have node.js setup, greater than version 14, and have Caddy http 
 wget setup.sh
 ```
 
-Now you can edit, for example the Caddyfile, in the cloud, with a cloud based IDE/editor such as already mentioned http://codeanywhere.com/editor, recommended!
 
 ```
 # when you come back

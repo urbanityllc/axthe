@@ -3,6 +3,7 @@
 apt-get update
 apt-get upgrade
 apt install unzip
+apt get install git
 
 # node app server via nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
