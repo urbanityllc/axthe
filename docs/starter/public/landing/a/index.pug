@@ -9,8 +9,9 @@ head
 	link(rel='stylesheet' href='/assets/css/stylize.css')
 	link(rel='stylesheet' href='/assets/index.css')
 	link(rel='stylesheet' href='/assets/cssNav/nav.css')
+	script.
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
-		
 body
 	header
 		include ../../layout/nav
