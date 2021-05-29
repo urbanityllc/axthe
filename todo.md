@@ -24,3 +24,9 @@ https://desk.zoho.com/support/axthe/ShowHomePage.do#Cases
 
 
 micro fornts
+
+full stack vs fe
+
+event driven integration
+
+mobile video integration

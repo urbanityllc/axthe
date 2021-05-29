@@ -54,6 +54,7 @@ module.exports =  class BasicEWApp { // express web app
 
     this.eapp.listen(port) // listen on this port
 
+	console.log(this.constructor.name, 'Serving:', process.cwd() + '/public')
     console.log(this.constructor.name, 'ready, you can now open browser at:', port)
   }//()
 

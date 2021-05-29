@@ -16,7 +16,7 @@ You should edit in the cloud, with a cloud based IDE/editor such as http://codea
 
 ### Pre-requestites
 - A DNS name, I recommend http://easydns.com (and I recommend against GoDaddy)
-- A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, etc. Likely that anything in the cloud will work.
+- A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, Digital Ocean, Linode, etc. Likely that anything in the cloud will work
 - Sign up for an IDE/editor to edit code in the cloud (unless you are SSH and Vim expert) http://codeanywhere.com/editor . 
 
 ## Recipe

@@ -14,10 +14,10 @@
 
 }
 
-/** sticky menu **/
 body, header, main, footer {
     min-width: 100vw;
 }
+/** sticky menu **/
 header {
     position: sticky; 
     top: 0;

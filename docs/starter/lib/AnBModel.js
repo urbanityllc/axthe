@@ -2,7 +2,6 @@
 const BasicBModel     = require('axthe/BasicBModel.js')
 const yaml = require('js-yaml')
 const fs   = require('fs')
-const path = require('path')
 
 // /////////////////////////////////////////////////////////////
 // use for pgSQL
@@ -16,7 +15,7 @@ const validate = require("validate.js")
  */
 module.exports =  class AnBModel extends BasicBModel {
 
-	_config = yaml.load(fs.readFileSync(path.join(__dirname,'../config.yaml')))
+	_config = yaml.load(fs.readFileSync(process.cwd()+'/config.yaml'))
 
 	constructor() {
 		super()

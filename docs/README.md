@@ -40,6 +40,8 @@ If you are already familiar with AXthe, you can download a starter app:
 Unzip. Rename the folder starter to the name of your webapp.
 
 ### A few more key concepts
+- AXthe is based on improving https://expressjs.com/en/starter/generator.html
+
 - https (TLS) in AXthe tech stack is provided by Caddy http server, instead of Apache or Nginx that you would use for LAMP. Caddy will proxy https traffic to node.js webapp server. You would just point your DNS subdomain to Caddy, and it will take care of the s in https; with node.js being the app server behind the Caddy http server.
  
 - You can, and often do, make a call to dynamically get a list of the static files, pages or content you have in a folder! This is often used with pug template mixins. Here is how to enable that:
