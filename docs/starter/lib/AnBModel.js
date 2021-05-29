@@ -19,7 +19,7 @@ module.exports =  class AnBModel extends BasicBModel {
 
 	constructor() {
 		super()
-		console.log(__dirname, this._config)
+		console.log(process.cwd(), this._config)
 	}
 
 
