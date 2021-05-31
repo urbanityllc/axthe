@@ -7,7 +7,7 @@ const favicon = require('serve-favicon')
 const multer = require('multer');
 const upload = multer()
 
-//const livereload = require('livereload')
+const livereload = require('livereload')
 
 // /////////////////////////////////////////////
 
