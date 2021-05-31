@@ -1,0 +1,25 @@
+
+.main-menu-wrap
+	.logo
+		span An eXpress.js helper
+
+	input#checkboxT(type='checkbox')
+	label(for='checkboxT')
+		svg.burger-icon(viewBox='0 0 1024 1024')
+			path(d='M128 277.333h768v86h-768v-86z m0 298v-84h768v84h-768z m0 214v-86h768v86h-768z')
+
+	.main-menu
+		a(href='#') Home
+		.sub-menu-wrap
+			input#checkboxS(type='checkbox')
+			label(for='checkboxS') About
+			// optional sub-menu, can be disabled
+			.sub-menu
+				a(href='#') Home1
+				a(href='#') Home2
+				a(href='#') Home3
+		a(href='#') Services
+		a(href='#') Product
+		a(href='#') Contact
+
+	.menu-space
