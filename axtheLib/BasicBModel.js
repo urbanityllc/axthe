@@ -1,8 +1,8 @@
 const pug = require('pug');
 const cheerio = require('cheerio');
 const NodeCache = require( "node-cache" );
-const { readdirSync } = require('fs')
-
+const fs = require('fs-extra')
+const { v4: uuidv4 } = require('uuid')
 
 // //////////////////////////////////////////////
 const IMG = 'iio'
@@ -15,81 +15,92 @@ const FOLD = 'getFolders'
  */
 module.exports =  class BasicBModel{  // media files based DB
 
-    _sb // supabase instance
+	_sb // supabase instance
 
-    _pOptions = {// pug options
-    }
+	_pOptions = {// pug options
+	}
 
-    _mc  // memory cache
+	_mc  // memory cache
 
-    constructor(cacheTime=2){
-        this._mc = new NodeCache({
-            stdTTL:cacheTime,
-            useClones: false,
-            maxKeys: cacheTime * 300,
-            checkperiod: cacheTime*4 // to remove old from RAM
-        })
-        console.log(this.constructor.name,'ready')
+	constructor(cacheTime=2){
+		this._mc = new NodeCache({
+			stdTTL:cacheTime,
+			useClones: false,
+			maxKeys: cacheTime * 300,
+			checkperiod: cacheTime*4 // to remove old from RAM
+		})
+		console.log(this.constructor.name,'ready')
 
-    }
+	}
 
-    /** list all pages in the sub-folder: it will give you a list of page */
-    getFolders(rfolder) {
-        let ans = this._mc.get(rfolder+FOLD)
-        if(ans != undefined) return ans
+	cloneFolder(source, target) {
+		return new Promise((res,reject) => {
+		fs.copy('./public/'+source, './public/'+target, function (err) {
+			if (err) { 
+				console.error(err)
+				reject(err)
+				} else res()
+			} ) 
+		})
+	}//()
 
-        const source = './public/'+rfolder
-        ans = readdirSync(source, { withFileTypes: true })
-            .filter(dirent => dirent.isDirectory())
-            .map(dirent => dirent.name)
-        this._mc.set(rfolder+FOLD, ans)
-        return ans
-    }
+	/** list all pages in the sub-folder: it will give you a list of page */
+	getFolders(rfolder) {
+		let ans = this._mc.get(rfolder+FOLD)
+		if(ans != undefined) return ans
 
-    // get text
-    getTxt(folder, selector) {
-        let ans = this._mc.get(folder+TXT+selector)
-        if(ans != undefined) return ans
+		const source = './public/'+rfolder
+		ans = fw.readdirSync(source, { withFileTypes: true })
+			.filter(dirent => dirent.isDirectory())
+			.map(dirent => dirent.name)
+		this._mc.set(rfolder+FOLD, ans)
+		return ans
+	}
 
-        let $ = this._mc.get(folder+$HTM)
-        if($ == undefined) {
-            const file = './public/'+folder+'/index.pug'
-            const html = pug.renderFile(file, this._pOptions)
-            $ = cheerio.load(html);
-            this._mc.set(folder+$HTM, $)
-        }
+	// get text
+	getTxt(folder, selector) {
+		let ans = this._mc.get(folder+TXT+selector)
+		if(ans != undefined) return ans
 
-        ans = $(selector).text()
-        this._mc.set(folder+TXT+selector, ans)
-        return ans
-    }
+		let $ = this._mc.get(folder+$HTM)
+		if($ == undefined) {
+			const file = './public/'+folder+'/index.pug'
+			const html = pug.renderFile(file, this._pOptions)
+			$ = cheerio.load(html);
+			this._mc.set(folder+$HTM, $)
+		}
 
-    // get image src
-    getImg(folder, selector) {
-        let ans = this._mc.get(folder+IMG+selector)
-        if(ans != undefined) return ans
+		ans = $(selector).text()
+		this._mc.set(folder+TXT+selector, ans)
+		return ans
+	}
 
-        let $ = this._mc.get(folder+$HTM)
-        if($ == undefined) {
-            const file = './public/'+folder+'/index.pug'
-            const html = pug.renderFile(file, this._pOptions)
-            $ = cheerio.load(html);
-            this._mc.set(folder+$HTM, $)
-        }
+	// get image src
+	getImg(folder, selector) {
+		let ans = this._mc.get(folder+IMG+selector)
+		if(ans != undefined) return ans
 
-        ans = $(selector).attr('src')
-        this._mc.set(folder+IMG+selector, ans)
-        return ans
-    }
+		let $ = this._mc.get(folder+$HTM)
+		if($ == undefined) {
+			const file = './public/'+folder+'/index.pug'
+			const html = pug.renderFile(file, this._pOptions)
+			$ = cheerio.load(html);
+			this._mc.set(folder+$HTM, $)
+		}
 
-    // get a list, good for API
-    getFolderData(rfolder, imgSelector,  ...selectors) {
+		ans = $(selector).attr('src')
+		this._mc.set(folder+IMG+selector, ans)
+		return ans
+	}
 
-    }
+	// get a list, good for API
+	getFolderData(rfolder, imgSelector,  ...selectors) {
 
-    // sort array on prop, else in order of folder name
-    sort(arr, prop) {
+	}
 
-    }
+	// sort array on prop, else in order of folder name
+	sort(arr, prop) {
+
+	}
 
 }

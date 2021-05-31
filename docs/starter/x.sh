@@ -1,6 +1,7 @@
 
 clear
 npm i -g npm
-npx ncu
+npm i -g npm-check-updates
+ncu
 npm i
 npm start

@@ -6,7 +6,7 @@
     "test": "npx tape 'tests/**/*.test.js' | faucet"
   },
   "dependencies": {
-    "axthe": "^0.0.16"
+    "axthe": "^0.0.20"
   }, 
   "devDependencies": {
     "tape": "^5.2.2",
