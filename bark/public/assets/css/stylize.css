@@ -34,28 +34,32 @@ body { /* to show that you need the font */
 
 /* Headings */
 h1{
-    font-size: 3em; /* h1 inside section is treated different in some browsers */
+    font-size: 4em; /* h1 inside section is treated different in some browsers */
     letter-spacing: -1px;
     mxxargin: 0.67em 0;
 }
 h2{
-    font-size: 2.25em;
+    font-size: 3em;
     letter-spacing: -.5px;
     mxxargin: 0.83em 0;
 }
 h3{
-    font-size: 1.755em;
+    font-size: 2.4em;
     mxxargin: 1em 0;
 }
 h4{
-    font-size: 1.5em;
+    font-size: 2em;
     mxxargin: 1.17em 0;
 }
 h5{
-    font-size: 1em;
+    font-size: 1.4em;
     mxxargin: 1.5em 0;
 }
 h6{
+    font-size: 1.1em;
+    mxxargin: 2em 0;
+}
+h7{
     font-size: 0.83em;
     mxxargin: 2em 0;
 }
