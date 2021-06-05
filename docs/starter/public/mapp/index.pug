@@ -1,8 +1,11 @@
 
 head
+	script.
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
 body
-	p view console
+	p Oh hi
+
 	script(type='module').
 		// optionaly, you can interact w/ element
 		let c = document.getElementById('c1')
