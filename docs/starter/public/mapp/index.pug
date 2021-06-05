@@ -1,0 +1,16 @@
+
+head
+
+body
+	p view console
+	script(type='module').
+		// optionaly, you can interact w/ element
+		let c = document.getElementById('c1')
+
+
+	// here is how to use it
+	my-comp(bla=3)#c1
+		p Slot In
+
+	// and here is where you hide .js
+	script(src='my-comp.js' type='module')
