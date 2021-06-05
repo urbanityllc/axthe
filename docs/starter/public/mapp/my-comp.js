@@ -2,11 +2,11 @@
 export class MyComp extends HTMLElement {
 
 	template = `<b>I'm a Cust. El</b>
-    <slot></slot>`;
+	<slot></slot>`;
 
 	constructor() {
-        super()
-        this._setup(this.template) // just a helper function for boiler plate.
+		super()
+		this._setup(this.template) // just a helper function for boiler plate.
 	}
 
 	// bolierplate: /////////////////
@@ -17,7 +17,6 @@ export class MyComp extends HTMLElement {
 	* @param template 
 	*/
 	_setup(template) {
-		EventFlux.init()
 		const cTemp = document.createElement('template')
 		cTemp.innerHTML = template
   
