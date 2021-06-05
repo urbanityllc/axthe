@@ -1,9 +1,13 @@
 
 
-// helper for boilerplate
+// helper for boilerplate web components for full stack developers
+// this is fun, but lower level work compared to SSR front end work
+// a good time to use this is when you need a mobile app.
+// in AXthe we use ionic capacitor in the cloud to build native Anroid and iOS apps w/o a local SDK
 // based on http://developers.google.com/web/fundamentals/web-components/customelements
 // and http://docs.ficusjs.org
 export class AXhe { 
+
 
 	el // element handle
 	
