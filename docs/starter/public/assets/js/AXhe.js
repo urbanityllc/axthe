@@ -1,9 +1,8 @@
 
-// based on http://developers.google.com/web/fundamentals/web-components/customelements
-// and http://docs.ficusjs.org
 
-export class AXutil {
-	// bolierplate: /////////////////
+// helper for boilerplate
+export class AXhe { 
+
 	el // element handle
 	
 	constructor(el_) {

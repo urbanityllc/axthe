@@ -1,5 +1,8 @@
 
-import { AXutil } from '/assets/js/AXutil.js';
+
+// based on http://developers.google.com/web/fundamentals/web-components/customelements
+// and http://docs.ficusjs.org
+import { AXhe } from '/assets/js/AXhe.js' // helper for boilerplate
 
 export class MyComp extends HTMLElement {
 
@@ -14,28 +17,31 @@ export class MyComp extends HTMLElement {
 	<p id='p123'>X</p>
 	`;
 
-	sr // shadow root handle
-	// bolierplate
+	sr // shadow root handle used by the helper class
 	
-	constructor() {
+	constructor () {
 		super()
-		// compoistion helper to handle boiler plate
-		this.ax = new AXutil(this)
-		this.ax.setup(this.template) // just a helper function for boiler plate
-		this._getData()
+		// bolierplate
+		this.ax = new AXhe(this)
+		this.ax.setup(this.template) // helper for boilerplate
+		this.getData()
 	}
 
-	_getData= () => { // example of course
+	getData =()=> { // example call of course, we did not use the data to render here
 		fetch('https://jsonplaceholder.typicode.com/todos/1')
-  			.then(this.render('World'))
-	}
+  			.then( response => {
+				  console.log('got data')
+				  this.render('World')
+			  })
+	}//()
 
-	render= (arg) => {
+	render =(arg)=> {
 		let n = this.ax.query('#p123')
 		console.log(n)
 		n.innerHTML=`Hello ${arg}` // es string template
 	}
 
 }//class
+// now register the element
 customElements.define('my-comp', MyComp)
-console.log('loaded')
+console.log('registered')
