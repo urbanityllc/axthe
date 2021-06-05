@@ -1,6 +1,8 @@
 
 
 // helper for boilerplate
+// based on http://developers.google.com/web/fundamentals/web-components/customelements
+// and http://docs.ficusjs.org
 export class AXhe { 
 
 	el // element handle
@@ -9,7 +11,7 @@ export class AXhe {
 		this.el = el_
 	}
 
-	 /**
+	/**
 	* A helper method
 	* @param template 
 	*/
@@ -33,9 +35,9 @@ export class AXhe {
 		return ret
 	 }
 	 
-	 /**
-	  * Get elements in a slot
-	  */
+	/**
+	 * Get elements in a slot
+	 */
 	getSlotEls() {
 		// https://javascript.info/slots-composition
 		return this.el.sr.querySelector('slot').assignedElements()

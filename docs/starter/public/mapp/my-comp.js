@@ -1,7 +1,6 @@
 
 
 // based on http://developers.google.com/web/fundamentals/web-components/customelements
-// and http://docs.ficusjs.org
 import { AXhe } from '/assets/js/AXhe.js' // helper for boilerplate
 
 export class MyComp extends HTMLElement {
@@ -24,6 +23,11 @@ export class MyComp extends HTMLElement {
 		// bolierplate
 		this.ax = new AXhe(this)
 		this.ax.setup(this.template) // helper for boilerplate
+
+		// the rest of the example
+		this.sr.addEventListener('click', function(e) {
+			console.log(e.composedPath()[0])
+		 })//click
 		this.getData()
 	}
 
