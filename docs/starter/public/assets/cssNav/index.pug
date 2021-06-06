@@ -16,8 +16,8 @@ head
 			overflow-x: hidden; /* fix */
 		}
 
-
 		:root {
+
 			--menu-height: 35px;
 
 			--menu-backcolor: black;
@@ -33,8 +33,11 @@ head
 			--menu-drop-color_hover: red;
 		}
 
-
 	link(rel='stylesheet' href='nav.css')
+
+	script.
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+
 
 body
 	header

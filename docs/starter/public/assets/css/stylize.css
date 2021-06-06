@@ -1,19 +1,9 @@
 /*! stylize.css v1.0.0 | License MIT | https://github.com/vasanthv/stylize.css */
-:root {
-	--text: #333333;
-	--text-med: #888888;
-	--text-light: #cccccc;
-	--text-lighter: #eeeeee;
-	--blue: #3498db;
-	--dark-blue: #2980b9;
-	--yellow: #ffeaa7;
-	--red: #c0392b;
-	--border-radius: 3px;
-}
 
 /*
 	Added this:
 */
+:focus { outline: none; }
  * {
 	margin: 0;
 	padding: 0;
@@ -307,7 +297,6 @@ ol.reset, ul.reset {
 	list-style: none;
 }
 
-
 /*
 ** **********************************************************
 */
@@ -317,7 +306,17 @@ body {
 }
 
 html, body, p {
-	font-family: 'Open Sans', Sans-Serif; 
+	font-family: 'Cabin', Sans-Serif; 
 	text-rendering: optimizeLegibility;
-	font-weight: 300;
+	font-weight: 500;
+}
+
+input, button {
+	padding-left: 1rem;
+	padding-right: 1rem;
+	margin-right: 1rem;
+}
+
+h6, p {
+	letter-spacing: .5px;
 }

@@ -28,18 +28,18 @@ export class MyComp extends HTMLElement {
 		this.sr.addEventListener('click', function(e) {
 			console.log(e.composedPath()[0])
 		 })//click
-		this.getData()
+		this.getMyData()
 	}
 
-	getData =()=> { // example call of course, we did not use the data to render here
+	getMyData =()=> { // example call of course, we did not use the data to render here
 		fetch('https://jsonplaceholder.typicode.com/todos/1')
   			.then( response => {
 				  console.log('got data')
-				  this.render('World')
+				  this.myRender('World')
 			  })
 	}//()
 
-	render =(arg)=> {
+	myRender =(arg)=> {
 		let n = this.ax.query('#p123')
 		console.log(n)
 		n.innerHTML=`Hello ${arg}` // es string template

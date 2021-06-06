@@ -9,6 +9,14 @@
 - http://github.com/axthe/axthe/discussions
 
 
+### AXthe Stack:
+
+- Caddy
+- Express/Pug as file static/dynamic JAMstack
+- CodeAnywhere (or another cloud IDE)
+- Supabase for full stack
+
+
 ## Docs
 
 jsdocs coming soon.

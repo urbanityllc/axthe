@@ -11,10 +11,6 @@
 
 ## More
 
-
-### AXthe Stack:
-
-- Caddy
-- Express/Pug
-
+- Vanila.js Web Components for SPA/mobile apps
+- Ionic Capacitor in the cloud SDK compiler for Android/iOS
 

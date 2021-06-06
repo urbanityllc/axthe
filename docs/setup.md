@@ -25,6 +25,7 @@ After you create a linux in the cloud, run the setup script (from this github/do
 ```
 wget -O - https://raw.githubusercontent.com/axthe/axthe/main/docs/setup.sh | bash
 ```
+(or you can cust paste the script above: https://github.com/axthe/axthe/blob/main/docs/setup.sh )
 
 ```
 # when you come back

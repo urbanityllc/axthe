@@ -3,7 +3,8 @@ head
 	meta(http-equiv='Content-Type' content='text/html; charset=utf-8')
 	meta(name='viewport' content='width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0')
 
-	link(href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap' rel='stylesheet')
+	link(href='https://fonts.googleapis.com/css2?family=Cabin:wght@500&display=swap' rel='stylesheet')
+	
 	link(rel='stylesheet' href='/assets/css/stylize.css')
 
 	style.
@@ -11,6 +12,23 @@ head
 			background-color: var(--text-light);
 			color: var(--text);
 		}
+
+		:root {
+			--text: #333333;
+			--text-med: #888888;
+			--text-light: #cccccc;
+			--text-lighter: #eeeeee;
+			--blue: #3498db;
+			--dark-blue: #2980b9;
+			--yellow: #ffeaa7;
+			--red: #c0392b;
+			--border-radius: 20px;
+
+			--color-accent: rgb(201,84,84);
+		}
+
+	script.
+		document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 
 body
 	header
@@ -28,17 +46,6 @@ body
 	main.narrow
 		p We all know that HTML document without CSS sucks. Stylize.css adds a set of CSS to the HTML markup to make it look much better and consistent across browsers.
 		p Stylize.css adds styles to the semantic HTML markup. So use tags only and no classes, attributes, etc.
-		p
-			a(href='https://github.com/vasanthv/stylize.css') View it on Github
-			| |
-			a(href='demo.html') Demo
-			| |
-			a(href='https://raw.githubusercontent.com/vasanthv/stylize.css/master/stylize.min.css' target='_blank') Download
-		h2 Usage
-		pre &lt;link rel="stylesheet" href="stylize.min.css" /&gt;
-		p Else, you can also include the latest as shown below:
-		pre &lt;link rel="stylesheet" href="https://raw.githubusercontent.com/vasanthv/stylize.css/master/stylize.min.css" /&gt;
-
 
 		.spacer
 		h3 Links & navigation:
@@ -68,20 +75,20 @@ body
 			i This is an Emphasized / Italic text
 			.spacer
 			| This is a 
-			mark  Marked / Highlighted
+			mark  Marked / Highlighted 
 			| text
 			.spacer
 			small This is a Small text
 			.spacer
-			| This is a
-			del Deleted
+			| This is a 
+			del Deleted 
 			| text
 			.spacer
-			| This is a
-			ins Underlined / Inserted
+			| This is a 
+			ins Underlined / Inserted 
 			| text
 			.spacer
-			| This is a
+			| This is a 
 			sub Subscript
 			| text
 			.spacer
