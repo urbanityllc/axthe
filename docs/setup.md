@@ -9,20 +9,22 @@
 - http://github.com/axthe/axthe/discussions
 
 ## Setup (optional)
-If you already have node.js setup, greater than version 14, and have Caddy http server running in the cloud, you are good to go, you can skip to guide. But I recommend you glance it.
+If you already have node.js setup, greater than version 14, and have Caddy http server running in the cloud, you are good to go, you can skip to guide.
 
-
-You should edit in the cloud, sign up for a cloud based IDE/editor,  I recommend http://codeanywhere.com/editor!
 
 ### Pre-requestites
 - A DNS name, I recommend http://easydns.com (and I recommend against GoDaddy)
 - A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, Digital Ocean, Linode, etc. Likely that anything in the cloud will work
 
-## Recipe
-```
-wget setup.sh
-```
+You should edit in the cloud, sign up for a cloud based IDE/editor,  I recommend http://codeanywhere.com/editor!
 
+
+## Recipe
+After you create a linux in the cloud, run the setup script (from this github/docs) to install Caddy, node, etc.
+
+```
+wget -O - https://raw.githubusercontent.com/axthe/axthe/main/docs/setup.sh | bash
+```
 
 ```
 # when you come back
@@ -34,4 +36,3 @@ cd myApp
 killall node
 ps aux | grep node
 ```
-Of course you should used a cloud IDE such CodeAnywhere to edit pug files!

@@ -18,10 +18,7 @@ Unzip. Rename the folder starter to the name of your webapp.
 
 You can start via x.sh in the unzip folder:
 
-Notice the layout of the public folder storing pug(html):
-you can download a starter app:
-https://github.com/axthe/axthe/tree/main/docs/starter/public
-The layout has a nav.pug, where the menu is, so that you can include that in each index.pug.
+Notice the layout of the public folder storing pug(html), and that pug is almost allways called index.pug
 
 And the PreRouter: 
 https://github.com/axthe/axthe/tree/main/docs/starter/lib
@@ -46,11 +43,9 @@ But mostly you'd do standard DB stuff, such as:
 - http://npmjs.com/package/@supabase/supabase-js
 
 Here is an example of using supabase:
-- https://github.com/axthe/axthe/blob/main/back/lib/SB.js
+- https://github.com/axthe/axthe/blob/main/full/lib/SB.js
 Supabase has PostgreSQL, user auth and more.
 
 - Express template AXthe is based on: https://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
 
-- Likely, soon after installing supabase, you'll instal Umami.
-
-- Mixins: http://pugjs.org/language/mixins.html
+- Likely, soon after installing supabase, you'll instal Umami, a way to track your websites and webapps.

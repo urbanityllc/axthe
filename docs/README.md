@@ -12,7 +12,7 @@
 ## About
 AXthe aims to be the most productive way to build webapps, including CMS webapps. Specifically it aims to be better than the old productivity leader: LAMP.
  
-It is based on the most popular node.js library, express.js. Express.js generator emits a starter webapp using templeting: It uses pug(formerly known as Jade). Pug is templating you already know how to use, it is html markup tags that are self closing! It a fine alternative to PHP.
+It is based on the most popular node.js library, express.js. Express.js generator emits a starter webapp using templeting: It uses pug(formerly known as Jade). Pug is templating you already know how to use, it is html markup tags that are self closing! It a fine alternative to PHP. 
 Check out pug: http://html2pug.vercel.app
  
 AXthe tech stack approach is to eschew client side .js, and rely heavily on SSR. ( I really like the word eschew). The server side route in express.js intercepts the http request and passes any dynamic data to pug. That is 90% of AXthe. In addition to productivity, SSR is better at SEO and security than any client/browser side .js.
@@ -48,7 +48,7 @@ Unzip. Rename the folder starter to the name of your webapp.
 ```
 npm i axthe
 ```
-This is the secret of the static files approach of JamStack: that it can be/is dynamic, just happens to be file centric. You can and still and do use a DB in addition to static files, but JamStack is a static file approach, so you'll have to learn the static file approach.
+This is the specil part of the static files approach aka JamStack: that it can be/is dynamic, just happens to be file centric. You can and still and do use a DB in addition to static files, but JamStack is a static file approach, so you'll have to learn the static file approach.
 
 - For full-stack development, AXthe leverages PostgreSQL, user auth and more via http://npmjs.com/package/@supabase/supabase-js
 
