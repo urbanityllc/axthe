@@ -7,5 +7,10 @@
   },
   "dependencies": {
     "axthe": "file:../axtheLib"
+	
+  },
+  "devDependencies": {
+	"twilio": "^3.63.1"
+
   }
 }

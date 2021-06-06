@@ -8,7 +8,7 @@
 ### Support
 - http://github.com/axthe/axthe/discussions
 
-## Setup (optional)
+## Setup
 If you already have node.js setup, greater than version 14, and have Caddy http server running in the cloud, you are good to go, you can skip to guide.
 
 

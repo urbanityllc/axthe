@@ -49,4 +49,3 @@ Supabase has PostgreSQL, user auth and more.
 
 - Express template AXthe is based on: https://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
 
-- Likely, soon after installing supabase, you'll instal Umami, a way to track your websites and webapps.

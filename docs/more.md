@@ -11,6 +11,7 @@
 
 ## More: you are done when there is nothing more to remove
 
+- Likely, soon after installing supabase, you'll instal Umami, a way to track your websites and webapps.
 - Vanila.js Web Components for SPA/mobile apps
 - Ionic Capacitor in the cloud SDK compiler for Android/iOS
 - ZoHo email and back office

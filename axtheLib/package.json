@@ -4,38 +4,37 @@
   "description": "AXthe tech stack is An opinionated eXpress.js and Templating HElper for high productivity webapp development",
   "homepage": "http://docs.axthe.net",
   "repository": {
-    "type": "git",
-    "url": "http://github.com/axthe/axthe"
+	"type": "git",
+	"url": "http://github.com/axthe/axthe"
   },
   "license": "Apache",
 
   "dependencies": {
-    "@supabase/supabase-js": "^1.13.1",
-    "cheerio": "^1.0.0-rc.9",
-    "cookie-parser": "^1.4.5",
-    "express": "^4.17.1",
-    "fs-extra": "^10.0.0",
-    "http-errors": "^1.8.0",
-    "js-yaml": "^4.1.0",
-    "livereload": "^0.9.3",
-    "make-fetch-happen": "^9.0.2",
-    "multer": "^1.4.2",
-    "node-cache": "^5.1.2",
-    "pug": "^3.0.2",
-    "puppeteer": "^10.0.0",
-    "serve-favicon": "^2.5.0",
-    "uuid": "^8.3.2",
-    "validate.js": "^0.13.1",
+	"@supabase/supabase-js": "^1.13.1",
+	"cheerio": "^1.0.0-rc.9",
+	"cookie-parser": "^1.4.5",
+	"express": "^4.17.1",
+	"fs-extra": "^10.0.0",
+	"http-errors": "^1.8.0",
+	"js-yaml": "^4.1.0",
+	"livereload": "^0.9.3",
+	"make-fetch-happen": "^9.0.2",
+	"multer": "^1.4.2",
+	"node-cache": "^5.1.2",
+	"pug": "^3.0.2",
+	"puppeteer": "^10.0.0",
+	"serve-favicon": "^2.5.0",
+	"uuid": "^8.3.2",
+	"validate.js": "^0.13.1",
 	"airtable": "^0.11.1"
 },
   "devDependencies": {
-    "jsdom": "^16.6.0",
-	"ably": "^1.2.10",
-    "faucet": "^0.0.1",
-    "logzio-nodejs": "^2.0.2",
-    "permit": "^0.2.4",
-    "tape": "^5.2.2",
-    "jsonwebtoken": "^8.5.1"
+	"jsdom": "^16.6.0",
+	"faucet": "^0.0.1",
+	"logzio-nodejs": "^2.0.2",
+	"permit": "^0.2.4",
+	"tape": "^5.2.2",
+	"jsonwebtoken": "^8.5.1"
 }
 
 }
