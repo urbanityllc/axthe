@@ -9,8 +9,26 @@
 - http://github.com/axthe/axthe/discussions
 
 
-## More
+## More: you are done when there is nothing more to remove
 
 - Vanila.js Web Components for SPA/mobile apps
 - Ionic Capacitor in the cloud SDK compiler for Android/iOS
+- ZoHo email and back office
+- http://greensock.com/docs/v3/Installation?checked=core,cssRule#CDN
+- http://github.com/muicss/johnnydepp
 
+### Mangers
+
+- Sr. FE developer should have a public example and able to demonstrate experience in CSS, possibly a portfolio. 
+- Full stack developer is a lower/cheaper bar, mostly 'SQL for Smarties'
+- http://open.spotify.com
+- https://easydns.com/email/easymail-hosted-imap/#!
+- OKR (smallImporvments) 
+- Notion
+- Aha 
+- http://coda.io/for/meetings
+- Segment.com
+- Thunderbird
+- Stock options
+- Airtable
+- Loom

@@ -11,10 +11,11 @@
 
 ## Guide
 
+Pre-requsite knowledge ahed of AXthe is reading this book: HTML and CSS: Design and Build Websites by Jon Duckett
+
 Download a starter app:
 - <a href="starter.zip">starter.zip</a>
 Unzip. Rename the folder starter to the name of your webapp.
-
 
 You can start via x.sh in the unzip folder:
 
