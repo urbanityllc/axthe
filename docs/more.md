@@ -11,7 +11,8 @@
 
 ## More: you are done when there is nothing more to remove
 
-- Likely, soon after installing supabase, you'll instal Umami, a way to track your websites and webapps.
+- Likely, soon after installing supabase, you'll instal Umami, a way to track your websites and webapps. Check: http://dev.to/jakobbouchard/setting-up-umami-with-vercel-and-supabase-3a73
+
 - Vanila.js Web Components for SPA/mobile apps
 - Ionic Capacitor in the cloud SDK compiler for Android/iOS
 - ZoHo email and back office
@@ -23,7 +24,7 @@
 - Sr. FE developer should have a public example and able to demonstrate experience in CSS, possibly a portfolio. 
 - Full stack developer is a lower/cheaper bar, mostly 'SQL for Smarties'
 - http://open.spotify.com
-- https://easydns.com/email/easymail-hosted-imap/#!
+- http://easydns.com/email/easymail-hosted-imap
 - OKR (smallImporvments) 
 - Notion
 - Aha 

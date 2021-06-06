@@ -1,20 +1,25 @@
 
 {
-	auto_https disable_redirects
+
 	servers {
 		protocol {
 			experimental_http3
 		}
 	}
 }
-# caddy reload
+# caddy stop, start, validate
 ## #################################################### 
 
 1.axthe.net, 1.cekvenich.net, :8091  {
 	respond "hi"
 }
 
+ 2.axthe.net, 2.cekvenich.net, :8092 {
+	root * ./www
+  file_server
+}
 
+# admin
 a.axthe.net, a.cekvenich.net, :8093  {
 	reverse_proxy localhost:9090
 }
@@ -22,5 +27,14 @@ a.axthe.net, a.cekvenich.net, :8093  {
 
 ubay.axthe.net, ubay.cekvenich.net, :8094 {
 	reverse_proxy localhost:8080
+}
+
+# umani
+u.axthe.net, u.cekvenich.net, :8095 {
+	reverse_proxy localhost:3000
+}
+
+bark.axthe.net, bark.cekvenich.net, :8096 {
+	reverse_proxy localhost:9080
 }
 

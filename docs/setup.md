@@ -37,3 +37,5 @@ cd myApp
 killall node
 ps aux | grep node
 ```
+
+Affter setting up Caddy, and using somehting like EasyDNS: EasyDNS allows you to setup monitoring uptime and alterting.
