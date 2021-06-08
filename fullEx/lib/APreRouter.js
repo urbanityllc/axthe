@@ -12,9 +12,9 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
     this.bmodel = new BasicBModel()
 
+	this.firstPrep()
 
-
-    this.finalPrep()
+	this.finalPrep()
 
   }//()
 

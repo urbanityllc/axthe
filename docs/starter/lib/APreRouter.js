@@ -10,6 +10,8 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
 		this.bmodel = new AnBModel() // the model is used for data, validation, business layer and such. You would of course extends BasicBModel
 	
+		this.firstPrep()
+		
 		// the route loads the data
 		this.eapp.get('/1', (req, res) => {
 			res.render(this.getPath(req), {title: 'My name is Vic'})

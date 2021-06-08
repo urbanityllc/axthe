@@ -12,9 +12,10 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
     this.bmodel = new BasicBModel()
 
-
 	this.bmodel.cloneFolder('mix', 'mix1')
 
+	this.firstPrep()
+	
     /*
     console.log(fm.getTxt('1o','.c1'))
     console.log(fm.getImg('team/a_marietta','.team'))

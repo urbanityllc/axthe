@@ -2,44 +2,47 @@
 // ////////////////////////////////
 module.exports =  class BasicPreRouter {// pug templating
 
-    bmodel
+	bmodel
 
-    eapp
+	eapp
 
-    constructor(eapp_) {
+	constructor(eapp_) {
 
-      this.eapp = eapp_.eapp
+	  this.eapp = eapp_.eapp
 
-      // root only
-      this.eapp.get('/', (req, res) => {
-        console.log(this.constructor.name,'is root: true' + req.baseUrl)
-        res.render('index')
+	}
 
-      })
+	firstPrep() {
+	  // root only
+	  this.eapp.get('/', (req, res) => {
+		console.log(this.constructor.name,'is root: true' + req.baseUrl)
+		res.render('index')
 
-    }//()
+	  })
 
-    /**
-     * Must be called at end
-     */
-    finalPrep() {
+	}//()
 
-			// catch all for missed post
-			this.eapp.post('*', (req, res) =>{
-					console.log(this.constructor.name,'missed a POST', req.path.substring )
-      })
+	/**
+	 * Must be called at end
+	 */
+	finalPrep() {
 
-      // catch all for simple pug without args
-      this.eapp.get('*', (req, res) =>{
-        res.render(req.path.substring(1)+'index.pug' )
-      })
+		// catch all for missed post
+		this.eapp.post('*', (req, res) =>{
+				console.log(this.constructor.name,'missed a POST', req.path.substring )
+		})
 
-      console.log(this.constructor.name,'READY')
+	  // catch all for simple pug without args
+	  this.eapp.get('*', (req, res) =>{
+		res.render(req.path.substring(1)+'index.pug' )
+	  })
 
-    }//()
+	  console.log(this.constructor.name,'READY')
 
-    getPath(req) {
-      return req.path.substring(1)+'index.pug'
-    }
+	}//()
+
+	getPath(req) {
+	  return req.path.substring(1)+'index.pug'
+	}
 
 }//class
