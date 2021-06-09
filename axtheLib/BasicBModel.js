@@ -24,9 +24,10 @@ module.exports =  class BasicBModel{  // media files based DB
 
 	_mc  // memory cache
 
-	// like local storage
+	// fast DB based cache
 	_scs = new ServerCacheStore()
 
+	// cache time of media files
 	constructor(cacheTime=2){
 
 		/* example of cache use:
