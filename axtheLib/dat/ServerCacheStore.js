@@ -11,14 +11,14 @@ module.exports = class ServerCacheStore {
 	_db
 	
 	//  connect and create table if: not exists
-	firstPrep() {
+	async firstPrep() {
 		// pass in amount of RAM to use for the store, default is 256 meg, else it goes to file
 		this._db = new DBl()
 		this._db.firstPrep('serverStore.litedb')
 		if(this._db.tableExists('server_store'))
 		return
 
-		this._db.write(`
+		await this._db.write(`
 			CREATE TABLE server_store (
 					key VARCHAR(256),
 					val TEXT
@@ -54,14 +54,14 @@ module.exports = class ServerCacheStore {
 
 
 	//drops and recreate table
-	clear() {
+	async clear() {
 		this._db.write(`
 			DROP TABLE server_store;
 		`)
 		console.log('droped')
 
 		// new
-		this._db.write(`
+		await this._db.write(`
 			CREATE TABLE server_store (
 					key VARCHAR(256),
 					val TEXT
