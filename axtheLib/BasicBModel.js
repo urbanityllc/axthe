@@ -30,6 +30,15 @@ module.exports =  class BasicBModel{  // media files based DB
 	constructor(cacheTime=2){
 
 		this._scs.firstPrep()
+		this._scs.setItem('a','b')
+		console.log(this._scs.getItem('a'))
+		this._scs.removeItem('a')
+		console.log(this._scs.getItem('a'))
+
+		console.log('part 2')
+		this._scs.setItem('a','b')
+		this._scs.clear()
+		console.log(this._scs.getItem('a'))
 
 		this._mc = new NodeCache({
 			stdTTL:cacheTime,

@@ -4,7 +4,7 @@ const { v4: uuidv4 } = require('uuid')
 const bcrypt = require('bcryptjs')
 
 /*
-Like localStorage but on express server instance, great for caching, like REDIS, MemCache.
+Like localStorage but on express server instance, great for caching; like REDIS or MemCache.
 */
 module.exports = class ServerCacheStore {
 
@@ -34,27 +34,31 @@ module.exports = class ServerCacheStore {
 	 */
 	setItem(key, val){
 		return this._db.write(`
-			INSERT INTO server_store(key, value) VALUES(${key}, ${value});
+			INSERT INTO server_store(key, val) VALUES('${key}', '${val}');
 		`)
 	}//()
 
 	getItem(key){
-		return this._db.readOne(`
-			SELECT value FROM server_store where key=${key};
+		const ret= this._db.readOne(`
+			SELECT val FROM server_store where key='${key}';
+		`)
+		if(ret) return ret['val']
+		return null
+	}//()
+
+	removeItem(key){
+		return this._db.write(`
+			DELETE  FROM server_store where key='${key}';
 		`)
 	}//()
 
-	removeItem(){
-		return this._db.write(`
-			DELETE  FROM server_store where key=${key};
-		`)
-	}//()
 
 	//drops and recreate table
 	clear() {
 		this._db.write(`
 			DROP TABLE server_store;
 		`)
+		console.log('droped')
 
 		// new
 		this._db.write(`
@@ -63,7 +67,8 @@ module.exports = class ServerCacheStore {
 					val TEXT
 				);
 			`)
-		this._db.write(`CREATE UNIQUE INDEX ON server_store ( key, val);`)// yes, I know answer is in index
+		console.log('created')
+		this._db.write(`CREATE UNIQUE INDEX ON server_store ( key, val); `)// yes, I know answer is in index
 	}//()
 
 
