@@ -4,6 +4,8 @@ const NodeCache = require( "node-cache" );
 const fs = require('fs-extra')
 const { v4: uuidv4 } = require('uuid')
 
+const ServerStore = require('./util/ServerStore')
+
 // //////////////////////////////////////////////
 const IMG = 'iio'
 const TXT = 'ttt'
@@ -21,6 +23,9 @@ module.exports =  class BasicBModel{  // media files based DB
 	}
 
 	_mc  // memory cache
+
+	// like local storage
+	_serverStore = new ServerStore()
 
 	constructor(cacheTime=2){
 		this._mc = new NodeCache({
