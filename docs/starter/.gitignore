@@ -18,3 +18,5 @@ coverage/
 prepros.config
 
 *.html
+
+*.out

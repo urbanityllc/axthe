@@ -1,13 +1,13 @@
 
+// could be used to implement flux if needed:
+import { EventBusSingleton } from '/assets/js/leb/index.js'
 
-// helper for boilerplate web components for full stack developers
-// this is fun, but lower level work compared to SSR front end work
+// helper for boilerplate code in web components for full stack developers
 // a good time to use this is when you need a mobile app.
 // in AXthe we use ionic capacitor in the cloud to build native Anroid and iOS apps w/o a local SDK
 // based on http://developers.google.com/web/fundamentals/web-components/customelements
-// and http://docs.ficusjs.org
+// and similar to http://docs.ficusjs.org
 export class AXhe { 
-
 
 	el // element handle
 	
@@ -38,14 +38,14 @@ export class AXhe {
 		})
 		return ret
 	 }
-	 
+
 	/**
 	 * Get elements in a slot
 	 */
 	getSlotEls() {
 		// https://javascript.info/slots-composition
 		return this.el.sr.querySelector('slot').assignedElements()
-	}   
+	}
 
 	//- eg addScript('bla.js', null, 'api-key', 'key123') when they want you to use the tag: so you can in your own sequence
 	addScript(src, callback, attr, attrValue, id) {
