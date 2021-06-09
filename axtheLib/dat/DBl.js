@@ -28,12 +28,12 @@ const DB = require('better-sqlite3')
 		if (!mem)
 			mem = '256000000000';
 		this._db.pragma('cache_size = -' + mem); //
-		console.log(this._db.pragma('cache_size', { simple: true }));
+		console.log('cache', this._db.pragma('cache_size', { simple: true }));
+		this._db.unsafeMode(true)
 		this._db.pragma('busy_timeout=' + 120 * 1000); // 2 minutes
 		this._db.pragma('mmap_size=' + mem); // 
 		this._db.pragma('synchronous=OFF');
 
-		// this._db.unsafe(true)
 		this._db.pragma('journal_mode=OFF'); // MEMORY or WAL
 		this._db.pragma('SQLITE_THREADSAFE=1'); 
 		this._db.pragma('SQLITE_OMIT_SHARED_CACHE=true'); 
@@ -46,7 +46,7 @@ const DB = require('better-sqlite3')
 		this._db.pragma('read_uncommitted=true'); // no locking
 		this._db.pragma('cache_spill=false');
 		this._db.pragma('locking_mode=NORMAL'); // 3rd party connection,  NORMAL or EXCLUSIVE
-		console.log(this._db.pragma('locking_mode', { simple: true }));
+		console.log('locking', this._db.pragma('locking_mode', { simple: true }));
 	} //()
 
 	tableExists(tab) {

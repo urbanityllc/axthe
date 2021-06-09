@@ -11,21 +11,21 @@ module.exports = class ServerCacheStore {
 	_db
 	
 	//  connect and create table if: not exists
-	async firstPrep() {
+	firstPrep() {
 		// pass in amount of RAM to use for the store, default is 256 meg, else it goes to file
 		this._db = new DBl()
 		this._db.firstPrep('serverStore.litedb')
 		if(this._db.tableExists('server_store'))
 		return
 
-		await this._db.write(`
+		this._db.write(`
 			CREATE TABLE server_store (
-					key VARCHAR(256),
+					key VARCHAR(256) PRIMARY KEY,
 					val TEXT
 				);
 			`)
-		this._db.write(`CREATE UNIQUE INDEX ON server_store ( key, val); `)// yes, I know answer is in index
-	}//()
+		this._db.write(`CREATE UNIQUE INDEX kv ON server_store( key, val); `)// yes, I know answer is in index
+		}//()
 
 	/**
 	 * 
@@ -34,7 +34,11 @@ module.exports = class ServerCacheStore {
 	 */
 	setItem(key, val){
 		return this._db.write(`
-			INSERT INTO server_store(key, val) VALUES('${key}', '${val}');
+			INSERT INTO server_store(key, val) VALUES('${key}', '${val}')
+				ON CONFLICT(key) DO 
+					UPDATE SET val = '${val}'
+						WHERE key = '${key}'
+			;
 		`)
 	}//()
 
@@ -54,21 +58,19 @@ module.exports = class ServerCacheStore {
 
 
 	//drops and recreate table
-	async clear() {
+	clear() {
 		this._db.write(`
 			DROP TABLE server_store;
 		`)
-		console.log('droped')
 
 		// new
-		await this._db.write(`
+		this._db.write(`
 			CREATE TABLE server_store (
-					key VARCHAR(256),
+					key VARCHAR(256) PRIMARY KEY,
 					val TEXT
 				);
 			`)
-		console.log('created')
-		this._db.write(`CREATE UNIQUE INDEX ON server_store ( key, val); `)// yes, I know answer is in index
+		this._db.write(`CREATE UNIQUE INDEX kv ON server_store( key, val); `)// yes, I know answer is in index
 	}//()
 
 
