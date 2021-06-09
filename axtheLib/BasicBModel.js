@@ -28,6 +28,9 @@ module.exports =  class BasicBModel{  // media files based DB
 	_scs = new ServerCacheStore()
 
 	constructor(cacheTime=2){
+
+		this._scs.firstPrep()
+
 		this._mc = new NodeCache({
 			stdTTL:cacheTime,
 			useClones: false,
@@ -35,8 +38,7 @@ module.exports =  class BasicBModel{  // media files based DB
 			checkperiod: cacheTime*4 // to remove old from RAM
 		})
 		console.log(this.constructor.name,'ready')
-
-	}
+	}//()
 
 	cloneFolder(source, target) {
 		return new Promise((res,reject) => {

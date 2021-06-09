@@ -56,4 +56,6 @@ This is the specil part of the static files approach aka JamStack: that it can b
 
 - Compatible with http://prepros.io
 
-- AXthe stack also has AXthe npm module that has 3 main helper classes: one to setup the app, one for the routes and one for business/model layer. That last layer is the one you would create any intergrations tests.
+- AXthe stack also has AXthe npm module that has a few helper classes: one to setup the app, one for the routes and one for business/model layer. That last layer is the one you would create any intergrations tests.
+
+- http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl

@@ -11,7 +11,7 @@
 
 ## More: you are done when there is nothing more to remove
 
-- Likely, soon after installing supabase, you'll instal Umami, a way to track your websites and webapps. Check: http://dev.to/jakobbouchard/setting-up-umami-with-vercel-and-supabase-3a73
+- http://youtube.com/watch?v=piG91X4sV2U Nice login
 
 - Vanila.js Web Components for SPA/mobile apps
 - Ionic Capacitor in the cloud SDK compiler for Android/iOS

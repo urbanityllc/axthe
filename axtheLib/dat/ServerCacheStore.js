@@ -8,14 +8,14 @@ Like localStorage but on express server instance, great for caching, like REDIS,
 */
 module.exports = class ServerCacheStore {
 
-	_dbl
+	_db
 	
 	//  connect and create table if: not exists
 	firstPrep() {
 		// pass in amount of RAM to use for the store, default is 256 meg, else it goes to file
 		this._db = new DBl()
 		this._db.firstPrep('serverStore.litedb')
-		if(this._dbl.tableExists('server_store'))
+		if(this._db.tableExists('server_store'))
 		return
 
 		this._db.write(`

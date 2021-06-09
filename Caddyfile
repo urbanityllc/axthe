@@ -29,11 +29,6 @@ ubay.axthe.net, ubay.cekvenich.net, :8094 {
 	reverse_proxy localhost:8080
 }
 
-# umani
-u.axthe.net, u.cekvenich.net, :8095 {
-	reverse_proxy localhost:3000
-}
-
 bark.axthe.net, bark.cekvenich.net, :8096 {
 	reverse_proxy localhost:9080
 }
