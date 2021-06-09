@@ -71,7 +71,7 @@ export class ServerStore {
 	}//()
 
 	createNewGUID() {
-
+		return uuidv4()
 	}
 
 	/**
