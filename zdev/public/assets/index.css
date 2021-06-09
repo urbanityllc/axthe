@@ -1,0 +1,36 @@
+
+:root {
+    --menu-height: 50px;
+
+    --menu-backcolor: #eeeeee;
+    --menu-color: #333333;
+    --menu-backcolor_hover: #3498db;
+    --menu-color_hover: white;
+
+    --menu-drop-backcolor: rgb(173, 167, 167);
+    --menu-drop-color: #333333;
+    --menu-drop-backcolor_hover: #3498db;
+    --menu-drop-color_hover: white;
+
+}
+
+body, header, main, footer {
+    mxxin-width: 100vw;
+}
+/** sticky menu **/
+header {
+    position: sticky; 
+    top: 0;
+}
+.logo  {
+    position: relative;
+    top: -2px;
+    color: black;
+    letter-spacing: -.5px;
+
+    text-shadow: -1px 1px 2px #aba8a8;
+}
+
+footer {
+    background-color: var(--text-lighter);
+}
