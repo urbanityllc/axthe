@@ -7,7 +7,7 @@ const DB = require('better-sqlite3')
 /**
  * Local SQLite
  */
-export class DBl {
+ module.exports = class DBl {
 
     MAXINT = 9223372036854775807;
 

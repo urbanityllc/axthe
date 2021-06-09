@@ -1,16 +1,12 @@
 
 const DBl = require('./DBl')
 const { v4: uuidv4 } = require('uuid')
+const bcrypt = require('bcryptjs')
 
 /*
-Like localStorage but on express server instance, great for caching.
-Can be used to store cookies from browsers's localStorage: by passing encrypted json of email | phone, etc. in header or cookie
-At start of session on browser: read from browser's localStorage.
-For passwordless send number to phone for user to 'guess' in browser.
-
-Optional hashing for storage and encrypting for transport is a separate util
+Like localStorage but on express server instance, great for caching, like REDIS, MemCache.
 */
-export class ServerStore {
+module.exports = class ServerCacheStore {
 
 	_dbl
 	
@@ -18,7 +14,7 @@ export class ServerStore {
 	firstPrep() {
 		// pass in amount of RAM to use for the store, default is 256 meg, else it goes to file
 		this._db = new DBl()
-		this._db.firstPrep('serverStore.db')
+		this._db.firstPrep('serverStore.litedb')
 		if(this._dbl.tableExists('server_store'))
 		return
 
@@ -70,18 +66,5 @@ export class ServerStore {
 		this._db.write(`CREATE UNIQUE INDEX ON server_store ( key, val);`)// yes, I know answer is in index
 	}//()
 
-	createNewGUID() {
-		return uuidv4()
-	}
-
-	/**
-	 before transport, maybe just the key to keep the 'cookie' small
-	 */
-	enc(){}
-
-	/**
-	 after transport
-	 */
-	dec(){}
 
 }

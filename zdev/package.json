@@ -6,11 +6,10 @@
     "start": "npx nodemon"
   },
   "dependencies": {
-    "axthe": "file:../axtheLib"
-	
+    "axthe": "file:../axtheLib",
+    "livereload": "^0.9.3"
   },
   "devDependencies": {
-	"twilio": "^3.63.1"
-
+    "twilio": "^3.63.1"
   }
 }

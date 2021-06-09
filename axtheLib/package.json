@@ -38,6 +38,8 @@
     "logzio-nodejs": "^2.0.2",
     "socket.io": "^4.1.2",
     "systeminformation": "^5.7.5",
-    "tape": "^5.2.2"
-  }
+    "tape": "^5.2.2",
+	"legit": "^1.0.9"
+  }, 
+  "//": "reload"
 }
