@@ -31,16 +31,16 @@
   },
   "devDependencies": {
     "ably": "^1.2.10",
-	"reload": "^3.2.0",
     "express-session": "^1.17.2",
     "ip": "^1.1.5",
     "jsdom": "^16.6.0",
     "jsonwebtoken": "^8.5.1",
     "legit": "^1.0.9",
     "logzio-nodejs": "^2.0.2",
+    "reload": "^3.2.0",
     "socket.io": "^4.1.2",
     "systeminformation": "^5.7.6",
     "tape": "^5.2.2"
   },
-  "//": "comments"
+  "//": "comment: reload"
 }
