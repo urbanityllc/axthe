@@ -16,7 +16,9 @@ AXthe aims to be the most productive way to build webapps, including CMS webapps
  
 It is based on the most popular node.js library, express.js. Express.js generator emits a starter webapp using templeting: It uses pug(formerly known as Jade). Pug is templating you already know how to use, it is html markup tags that are self closing! It a fine alternative to PHP.
 Check out pug: http://html2pug.vercel.app
- 
+
+The difference between express.js generated Pug examples, is that AXthe is based on a static file approach, it is compliant with JamStack.org. One example of this is an Markdown based CMS http://docsify.js.org, where you edit .md (MarkDown) files. Markdown is just text files. Opposite of our approach for a CMS would be WordPress that does not use flat files: it stores pages in SQL. We are more like Docsify, expect instead of Markdown we use the fully powered Markup: Pug, that allows you to build anything and has express.js back end that you can use full power of node.js npm packages.
+
 AXthe tech stack approach is to eschew client side .js, and rely heavily on SSR. ( I really like the word eschew). The server side route in express.js intercepts the http request and passes any dynamic data to pug. That is 90% of AXthe. In addition to productivity, SSR is better at SEO and security than any client/browser side .js.
 
 

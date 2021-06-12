@@ -9,9 +9,18 @@
 - http://github.com/axthe/axthe/discussions
 
 
-## Guide
+## Prep
 
-Pre-requsite knowledge ahed of AXthe is reading this book: HTML and CSS: Design and Build Websites by Jon Duckett
+1. Pre-requsite knowledge ahed of AXthe is this book or similar - HTML and CSS: Design and Build Websites by Jon Duckett
+
+2. You should also have an idea of what you are building at a high level, best is to 'copy' another website or a web app. Or at least you should know how many pages/screens you can have at a high level:
+http://mockflow.com/pricing or http://balsamiq.com/buy/#cloud. There is no need to enter every field, just idea of what pages/screens will be doing. That would be the minimum. For maximum, follow the advice of Amazon CTO: http://allthingsdistributed.com/2006/11/working_backwards.html
+
+3. Likely you also want to setup a cadance/ritual, to meet at a regular time on a regular day, twice a week - bi-weekly at the same time via a video such as Zoom. Mostly you revew what was done, and plan what will be done by the next meeting. For tracking you can use Airtable or Notion.
+
+When you are ready, continue:
+
+## Guide
 
 Download a starter app:
 - <a href="starter.zip">starter.zip</a>
