@@ -1,6 +1,4 @@
-
 {
-
 	servers {
 		protocol {
 			experimental_http3
