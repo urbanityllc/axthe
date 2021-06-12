@@ -4,6 +4,8 @@
 
 apt-get update
 apt-get upgrade -y
+#reboot
+
 apt-get install unzip -y
 apt-get install git -y
 
@@ -33,5 +35,3 @@ apt install cockpit -y
 wget https://axthe.github.io/axthe/starter.zip
 unzip starter.zip
 mv starter myApp
-
-reboot

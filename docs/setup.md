@@ -16,26 +16,32 @@ If you already have node.js setup, greater than version 14, and have Caddy http 
 - A DNS name, I recommend http://easydns.com (and I recommend against GoDaddy)
 - A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, Digital Ocean, Linode, etc. Likely that anything in the cloud will work
 
-You should edit in the cloud, sign up for a cloud based IDE/editor,  I recommend http://codeanywhere.com/editor!
 
 
 ## Recipe
-After you create a linux in the cloud, run the setup script (from this github/docs) to install Caddy, node, etc.
+After you create a linux in the cloud, run the setup script (from this github/docs) to install Caddy, node, etc. 
 
-```
-wget -O - https://raw.githubusercontent.com/axthe/axthe/main/docs/setup.sh | bash
-```
-(or you can cust paste the script above: https://github.com/axthe/axthe/blob/main/docs/setup.sh )
+You should edit in the cloud, sign up for a cloud based IDE/editor,  I recommend http://codeanywhere.com/editor!
 
+You can cust paste the script above: http://github.com/axthe/axthe/blob/main/docs/setup.sh 
+
+(or you can wget -O - https://raw.githubusercontent.com/axthe/axthe/main/docs/setup.sh | bash )
+
+Then create Caddyfile similar to this:
+http://github.com/axthe/axthe/blob/main/Caddyfile
+
+and
 ```
-# when you come back
+caddy start
+```
+The DNS subdomains should point to caddy subdomains! I use EASYdns.
+
+### Optional as needed
 ufw status
-cd myApp
-./x.sh
-
-# optional
 killall node
 ps aux | grep node
 ```
+cd myApp
+./d.sh
 
-Affter setting up Caddy, and using somehting like EasyDNS: EasyDNS allows you to setup monitoring uptime and alterting.
+
