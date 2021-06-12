@@ -1,1 +1,1 @@
-nohup node ./lib/app.js &
+nohup node ./lib/wapp.js &
