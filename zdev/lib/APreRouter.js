@@ -29,15 +29,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 	// upload example from /upImgPg
 	
 	// should be in model!!!!!
-	const storage = multer.diskStorage({
-		destination: function (req, file, cb) {
-		  cb(null, 'uploads')
-		},
-		filename: function (req, file, cb) {
-		  cb(null, file.fieldname + '-' + Date.now())
-		}
-	})
-	const upload = multer({ storage: storage,  preservePath: true })
+	const upload =  multer({dest:'./upload/'})
 	
 	this.eapp.post('/api/upImg', upload.single('img1'), (req,res) =>{
 		console.log(req.file)

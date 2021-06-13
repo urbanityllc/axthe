@@ -1,11 +1,8 @@
 
-const createError = require('http-errors');
-const express = require('express');
-const cookieParser = require('cookie-parser');
+const createError = require('http-errors')
+const express = require('express')
+const cookieParser = require('cookie-parser')
 const favicon = require('serve-favicon')
-
-const multer = require('multer');
-const upload = multer()
 
 const livereload = require('livereload')
 
@@ -28,8 +25,6 @@ module.exports =  class BasicEWApp { // express web app
 	this.eapp.use(express.urlencoded({ extended: true }))
 	this.eapp.use(express.json({ extended: true }))
 	this.eapp.use(cookieParser())
-
-	this.eapp.use(upload.array())
 
 	this.eapp.use(express.static('public'))
 
