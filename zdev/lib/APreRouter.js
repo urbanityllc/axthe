@@ -24,9 +24,10 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
 		// /////////////////////////////////////////
 		// http://maximorlov.com/fix-unexpected-field-error-multer
-		// you should create  storage but in Model, like this: http://github.com/expressjs/multer/blob/master/StorageEngine.md 
-		// likely to save in a folder under ./public
-		const upImg = multer().single('img1')
+		// you should create  storage to pass to multer in {} but implement the storage in the Model, a bit like this: http://github.com/expressjs/multer/blob/master/StorageEngine.md 
+		// and put validation there, like that is an image extension.
+		// likely have storage save in user's folder under ./public
+		const upImg = multer({ }).single('img1')
 
 		this.eapp.post('/upImg', (req,res) =>{
 			upImg(req, res, function (err) {
@@ -50,15 +51,6 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 	
 	}//()
 
-  	// helper function
-	_imageFilter(req, file, cb) {
-		// Accept images only
-		if (!file.originalname.match(/\.(jpg|JPG|jpeg|JPEG|png|PNG)$/)) {
-			req.fileValidationError = 'Only image files are allowed!'
-			return cb(new Error('Only image files are allowed!'), false)
-		}
-		cb(null, true)
-	}//()
 
 }//class
 
