@@ -40,6 +40,11 @@ If you are already familiar with AXthe, you can download a starter app:
 Unzip. Rename the folder starter to the name of your webapp.
 
 
+### Forum
+
+- http://github.com/axthe/axthe/discussions
+
+
 #### Other links
 - http://npmjs.com/package/axthe
 
