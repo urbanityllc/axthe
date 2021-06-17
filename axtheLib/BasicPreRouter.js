@@ -12,6 +12,8 @@ module.exports =  class BasicPreRouter {// pug templating
 
 	}
 
+	firstPrep() { console.log('deprecated') }
+	/*
 	firstPrep() {
 	  // root only
 	  this.eapp.get('/', (req, res) => {
@@ -21,23 +23,30 @@ module.exports =  class BasicPreRouter {// pug templating
 	  })
 
 	}//()
+	*/
+
 
 	/**
 	 * Must be called at end
 	 */
 	finalPrep() {
 
+		// catch all for simple pug without args
+		this.eapp.get('*', (req, res, next) =>{
+			if(!req.path.includes('.'))
+				res.render(req.path.substring(1)+'index.pug' )
+			else {
+				res.end()
+				console.log('not found ' + req.path)
+			}
+		})
+		
 		// catch all for missed post
 		this.eapp.post('*', (req, res) =>{
-				console.log(this.constructor.name,'missed a POST', req.path.substring )
+			console.log(this.constructor.name,'missed a POST', req.path.substring )
 		})
 
-	  // catch all for simple pug without args
-	  this.eapp.get('*', (req, res) =>{
-		res.render(req.path.substring(1)+'index.pug' )
-	  })
-
-	  console.log(this.constructor.name,'READY')
+		console.log(this.constructor.name,'READY')
 
 	}//()
 

@@ -12,7 +12,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
 		this.bmodel = new BasicBModel()
 
-		this.bmodel.cloneFolder('mix', 'mix1')
+		//this.bmodel.cloneFolder('mix', 'mix1')
 
 		this.firstPrep()
 		

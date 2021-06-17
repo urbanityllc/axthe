@@ -36,6 +36,10 @@ caddy start
 ```
 The DNS subdomains should point to caddy subdomains! I use EASYdns.
 
+## PrePros.io
+- has a (weinre) mobile app debugger, facilitating movile first. In any case your FE apps should be compatible witn PrePros.io
+
+
 ### Optional as needed
 ufw status
 killall node
@@ -43,7 +47,7 @@ ps aux | grep node
 ```
 cd myApp
 ./d.sh
-
+```
 
 ## VS Code short cut:
 Control Shift P, > for commands else search for file name

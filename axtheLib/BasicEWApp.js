@@ -3,8 +3,7 @@ const createError = require('http-errors')
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const favicon = require('serve-favicon')
-
-const livereload = require('livereload')
+const httpLogger = require('morgan')
 
 // /////////////////////////////////////////////
 
@@ -19,6 +18,9 @@ module.exports =  class BasicEWApp { // express web app
 	// view engine setup
 	this.eapp.set('views', 'public');
 	this.eapp.set('view engine', 'pug');
+
+	this.eapp.use(httpLogger('dev'))
+
 	this.eapp.use(favicon('public/favicon.ico'))
 	this.eapp.use('*/favicon.ico', express.static('public/favicon.ico'))
 
@@ -37,14 +39,10 @@ module.exports =  class BasicEWApp { // express web app
 
   // must be called at end
   finalPrep(port) {
-	// catch 404 and forward to error handler
-	this.eapp.use(function(req, res, next) {
-	  next(createError(404))
-	});
 
 	// error handler
 	this.eapp.use(function(err, req, res, next) {
-			console.log('error', err)
+			console.log('error:::', err)
 
 	  res.locals.message = err.message
 	  res.locals.error =  err
@@ -57,7 +55,7 @@ module.exports =  class BasicEWApp { // express web app
 	this.eapp.listen(port) // listen on this port
 
 	console.log(this.constructor.name, 'Serving:', process.cwd() + '/public')
-	console.log(this.constructor.name, 'ready, you can now open browser at:', port)
+	console.log(this.constructor.name, 'WAPP ready, you can now open browser at:', port)
   }//()
 
 }

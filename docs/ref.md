@@ -13,9 +13,10 @@
 
 - Caddy
 - Express/Pug as file static/dynamic JAMstack
-- CodeAnywhere (or another cloud IDE)
+- CodeAnywhere (cloud IDE VS/Code based)
 - Supabase for full stack
-
+- AirTable
+- PrePros.io
 
 ## Docs
 
