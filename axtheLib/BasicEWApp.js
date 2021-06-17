@@ -30,11 +30,6 @@ module.exports =  class BasicEWApp { // express web app
 
 	this.eapp.use(express.static('public'))
 
-	// reload a page, not nodemon
-	//var relos = livereload.createServer({'exts':['pug', 'css', 'js', 'png', 'gif', 'jpg']})
-	// comment out livereload to disable for production:
-	//relos.watch( process.cwd() + "/public")
-
   }//()
 
   // must be called at end

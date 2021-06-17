@@ -7,7 +7,6 @@
   },
   "dependencies": {
     "axthe": "file:../axtheLib",
-    "livereload": "^0.9.3",
     "multer": "^1.4.2"
   },
   "devDependencies": {

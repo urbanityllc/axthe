@@ -7,24 +7,10 @@ module.exports =  class BasicPreRouter {// pug templating
 	eapp
 
 	constructor(eapp_) {
-
-	  this.eapp = eapp_.eapp
-
+		this.eapp = eapp_
 	}
 
 	firstPrep() { console.log('deprecated') }
-	/*
-	firstPrep() {
-	  // root only
-	  this.eapp.get('/', (req, res) => {
-		console.log(this.constructor.name,'is root: true' + req.baseUrl)
-		res.render('index')
-
-	  })
-
-	}//()
-	*/
-
 
 	/**
 	 * Must be called at end
@@ -32,7 +18,7 @@ module.exports =  class BasicPreRouter {// pug templating
 	finalPrep() {
 
 		// catch all for simple pug without args
-		this.eapp.get('*', (req, res, next) =>{
+		this.eapp.get('*', (req, res) =>{
 			if(!req.path.includes('.'))
 				res.render(req.path.substring(1)+'index.pug' )
 			else {

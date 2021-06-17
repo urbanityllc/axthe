@@ -29,7 +29,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 		// likely have storage save in user's folder under ./public
 		const upImg = multer({ }).single('img1')
 
-		this.eapp.post('/upImg', (req,res) =>{
+		this.eapp.post('/upImg', (req, res) =>{
 			upImg(req, res, function (err) {
 				if (err ) {
 					console.log(err)
