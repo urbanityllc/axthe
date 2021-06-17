@@ -37,7 +37,7 @@ export class AXhe {
 		   if(n.id==id) ret = n
 		})
 		return ret
-	 }
+	}
 
 	/**
 	 * Get elements in a slot

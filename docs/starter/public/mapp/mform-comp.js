@@ -6,8 +6,12 @@ import { EventBusSingleton } from '/assets/js/leb/index.js'
 import { AXhe } from '/assets/js/AXhe.js' // helper for boilerplate
 // https://cdn.jsdelivr.net/npm/axthe@0.0.26/CDN/js/AXhe.min.js
 
-// http://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements
-export class MyComp extends HTMLElement {
+// http://html.spec.whatwg.org/multipage/custom-elements.html
+// http://component.kitchen/blog/posts/writing-a-web-component-that-wraps-a-standard-html-element-might-alleviate-the-need-for-is-syntax
+// http://developers.google.com/web/fundamentals/web-components/customelements
+
+// extension / customized native element:
+export class MyForm extends HTMLFormElement {
 
 	template = `
 	<style>
@@ -21,12 +25,15 @@ export class MyComp extends HTMLElement {
 	`
 
 	sr // shadow root handle used by the helper class
-	
+
 	constructor () {
 		super()
 		// boilerplate:
 		this.ax = new AXhe(this)
 		this.ax.setup(this.template) // helper for boilerplate
+
+
+		console.log(this.getSlotEls())
 
 		// the rest of the example
 		this.sr.addEventListener('click', (e) => {
@@ -53,5 +60,5 @@ export class MyComp extends HTMLElement {
 
 }//class
 // now register the element
-customElements.define('my-comp', MyComp)
+customElements.define('mform-comp', MyForm, {extends: 'form'})
 console.log('registered')

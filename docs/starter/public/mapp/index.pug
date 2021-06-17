@@ -18,3 +18,30 @@ body
 	// and here is how you hide .js in the above DOM
 	script(src='my-comp.js' type='module')
 
+	p
+	br
+	p NComp: 2 examples, 1:
+	form(is='mform' action = "/form", method = "POST")
+		div
+			label(for = "say") Say:
+			input(name = "say" value = "Hi")
+		br
+		div
+			label(for = "ph") To:
+			input(name = "ph" value = "2125551212" myformat='phone')
+		br
+		button(type = "submit") Send my greetings
+
+	p Ex 2
+	form(is='mform' action = "/form", method = "POST")
+		div
+			label(for = "say") Say:
+			input(name = "say" value = "Hi")
+		br
+		div
+			label(for = "ph") To:
+			input(name = "ph" value = "2125551212" myformat='phone')
+		br
+		button(type = "submit") Send my greetings
+	
+	script(src='mform-comp.js' type='module')
