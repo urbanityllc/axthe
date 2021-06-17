@@ -21,7 +21,7 @@ body
 	p
 	br
 	p NComp: 2 examples, 1:
-	form(is='mform' action = "/form", method = "POST")
+	mform-comp( action = "/form", method = "POST")
 		div
 			label(for = "say") Say:
 			input(name = "say" value = "Hi")
@@ -33,7 +33,7 @@ body
 		button(type = "submit") Send my greetings
 
 	p Ex 2
-	form(is='mform' action = "/form", method = "POST")
+	mform-comp(action = "/form", method = "POST")
 		div
 			label(for = "say") Say:
 			input(name = "say" value = "Hi")

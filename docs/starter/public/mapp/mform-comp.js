@@ -11,17 +11,18 @@ import { AXhe } from '/assets/js/AXhe.js' // helper for boilerplate
 // http://developers.google.com/web/fundamentals/web-components/customelements
 
 // extension / customized native element:
-export class MyForm extends HTMLFormElement {
+export class MyForm extends HTMLElement {
 
 	template = `
 	<style>
 		:host{
-			color: red;
+			color: blue;
 		}
 	</style
-	<b>I'm a Cust. El</b>
-	<slot></slot>
-	<p id='p123'>X</p>
+	<b>I'm a Cust. Form:</b>
+	<form>
+		<slot></slot>
+	</form>
 	`
 
 	sr // shadow root handle used by the helper class
@@ -32,8 +33,8 @@ export class MyForm extends HTMLFormElement {
 		this.ax = new AXhe(this)
 		this.ax.setup(this.template) // helper for boilerplate
 
-
-		console.log(this.getSlotEls())
+		console.log('here')
+		console.log(this.ax.getSlotEls())
 
 		// the rest of the example
 		this.sr.addEventListener('click', (e) => {
@@ -53,6 +54,7 @@ export class MyForm extends HTMLFormElement {
 	}//()
 
 	myRender =(arg)=> {
+		if(true) return
 		let n = this.ax.query('#p123')
 		console.log(n)
 		n.innerHTML=`Hello ${arg}` // es string template
@@ -60,5 +62,5 @@ export class MyForm extends HTMLFormElement {
 
 }//class
 // now register the element
-customElements.define('mform-comp', MyForm, {extends: 'form'})
+customElements.define('mform-comp', MyForm)
 console.log('registered')
