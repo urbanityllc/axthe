@@ -14,7 +14,7 @@ module.exports =  class BasicEWApp { // express web app
 
   constructor() {
 	console.log(this.constructor.name,'node version:',JSON.stringify(process.versions.node))
-	this.eapp = express();
+	this.eapp = express()
 
 	// view engine setup
 	this.eapp.set('views', 'public');

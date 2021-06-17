@@ -33,6 +33,7 @@ export class MyComp extends HTMLElement {
 		this.getMyData()
 	}
 
+	// as opposed to pre-route, this happens post route
 	getMyData =()=> { // example call of course, we did not use the data to render here
 		fetch('https://jsonplaceholder.typicode.com/todos/1')
 			.then( response => {

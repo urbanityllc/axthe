@@ -45,3 +45,6 @@ cd myApp
 ./d.sh
 
 
+## VS Code short cut:
+Control Shift P, > for commands else search for file name
+

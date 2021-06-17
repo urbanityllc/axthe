@@ -45,4 +45,8 @@ module.exports =  class BasicPreRouter {// pug templating
 	  return req.path.substring(1)+'index.pug'
 	}
 
+	getExpressApp() {
+		return eapp
+	}
+
 }//class

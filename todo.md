@@ -5,22 +5,16 @@ pupeter systetic tests
 system transactions
 ZoHo
 stack
-keep those peple away
+keep   away
 
 Auth users
 
-
-sashido
-back4app
-
-xgenecloud - Complex
 
 
 steal
 &
 lie 
 
-https://desk.zoho.com/support/axthe/ShowHomePage.do#Cases
 
 
 micro fornts
@@ -30,3 +24,5 @@ full stack vs fe
 event driven integration
 
 mobile video integration
+
+bootstreap 5 example
