@@ -1,4 +1,5 @@
 /* eslint-disable linebreak-style */
+
 function EventBus() {
   const subscriptions = { };
 

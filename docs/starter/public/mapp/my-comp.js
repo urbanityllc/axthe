@@ -1,12 +1,9 @@
 
-import { EventBusSingleton } from '/assets/js/leb/index.js'
-// https://cdn.jsdelivr.net/npm/axthe@0.0.26/CDN/js/leb/index.min.js
+import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.29/CDN/js/leb/index.min.js'
 
 // based on http://developers.google.com/web/fundamentals/web-components/customelements
-import { AXhe } from '/assets/js/AXhe.js' // helper for boilerplate
-// https://cdn.jsdelivr.net/npm/axthe@0.0.26/CDN/js/AXhe.min.js
+import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.29/CDN/js/AXhe.min.js' // helper for boilerplate
 
-// http://developer.mozilla.org/en-US/docs/Web/Web_Components/Using_custom_elements
 export class MyComp extends HTMLElement {
 
 	template = `

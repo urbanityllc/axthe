@@ -1,6 +1,6 @@
 
 // could be used to implement flux if needed:
-import { EventBusSingleton } from '/assets/js/leb/index.js'
+import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.29/CDN/js/leb/index.min.js'
 
 // helper for boilerplate code in web components for full stack developers
 // a good time to use this is when you need a mobile app.
@@ -33,19 +33,59 @@ export class AXhe {
 
 	getSlotElById(id) {
 		let ret
-		this.getSlotEls.map(function(n){
-		   if(n.id==id) ret = n
+		this.getSlotEls().map((n)=>{
+			if(n.id==id) ret = n
 		})
 		return ret
-	 }
+	}
 
 	/**
 	 * Get elements in a slot
 	 */
 	getSlotEls() {
 		// https://javascript.info/slots-composition
-		return this.el.sr.querySelector('slot').assignedElements()
+		return this.el.sr.querySelector('slot').assignedElements({ flatten: true })
 	}
+
+
+	getInputsByAttribute(atrName) {
+		let res 
+		
+		let a = this.getDeepInputs()
+		//console.log(a)
+		a.map((li) => {
+			if(this.hasAtr(li, atrName)) {
+				res = li
+			}
+		})
+
+		return res
+	}//()  
+
+	// does it have the attribute?
+	hasAtr(li, atrName) {
+		let atrs = li.attributes
+		for(let i =0; i < atrs.length; i++) {
+			let a =  atrs.item(i)
+			if(a.name === atrName) { 
+				//console.log('found', a)
+				return true
+			}
+		}
+		return false
+	}
+
+	// get all the input fields in the sr
+	getDeepInputs=()=>{
+		let ret = []
+		this.getSlotEls().map((e)=>{
+			let hcol = Array.from(e.getElementsByTagName('input'))
+			hcol.map((i)=>{
+				ret.push(i)
+			})
+		})
+		return ret
+	}//()
 
 	//- eg addScript('bla.js', null, 'api-key', 'key123') when they want you to use the tag: so you can in your own sequence
 	addScript(src, callback, attr, attrValue, id) {

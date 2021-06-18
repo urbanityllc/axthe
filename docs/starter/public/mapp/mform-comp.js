@@ -1,16 +1,9 @@
 
-import { EventBusSingleton } from '/assets/js/leb/index.js'
-// https://cdn.jsdelivr.net/npm/axthe@0.0.26/CDN/js/leb/index.min.js
+import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.29/CDN/js/leb/index.min.js'
 
-// based on http://developers.google.com/web/fundamentals/web-components/customelements
-import { AXhe } from '/assets/js/AXhe.js' // helper for boilerplate
-// https://cdn.jsdelivr.net/npm/axthe@0.0.26/CDN/js/AXhe.min.js
+import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.29/CDN/js/AXhe.min.js' // helper for boilerplate
 
-// http://html.spec.whatwg.org/multipage/custom-elements.html
-// http://component.kitchen/blog/posts/writing-a-web-component-that-wraps-a-standard-html-element-might-alleviate-the-need-for-is-syntax
-// http://developers.google.com/web/fundamentals/web-components/customelements
-
-// extension / customized native element:
+// wraps a form, need to pass attribute
 export class MyForm extends HTMLElement {
 
 	template = `
@@ -33,10 +26,12 @@ export class MyForm extends HTMLElement {
 		this.ax = new AXhe(this)
 		this.ax.setup(this.template) // helper for boilerplate
 
-		console.log('here')
-		console.log(this.ax.getSlotEls())
 
-		// the rest of the example
+		// brent this get the inputs in the wraped form
+		console.log(this.ax.getInputsByAttribute('mypformat'))
+		// but you have to get the template to be configured with submit and other info passed on custom element
+
+
 		this.sr.addEventListener('click', (e) => {
 			// event bus:
 			EventBusSingleton.publish(this.constructor.name, e.composedPath()[0])
@@ -48,17 +43,10 @@ export class MyForm extends HTMLElement {
 	getMyData =()=> { // example call of course, we did not use the data to render here
 		fetch('https://jsonplaceholder.typicode.com/todos/1')
 			.then( response => {
-				console.log('got data')
-				this.myRender('World')
+
 			})
 	}//()
 
-	myRender =(arg)=> {
-		if(true) return
-		let n = this.ax.query('#p123')
-		console.log(n)
-		n.innerHTML=`Hello ${arg}` // es string template
-	}
 
 }//class
 // now register the element
