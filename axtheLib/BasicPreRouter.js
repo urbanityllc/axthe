@@ -10,7 +10,7 @@ module.exports =  class BasicPreRouter {// pug templating
 		this.eapp = eapp_
 	}
 
-	firstPrep() { console.log('roure firstPrep deprecated') }
+	firstPrep() { console.log('route firstPrep deprecated') }
 
 	/**
 	 * Must be called at end

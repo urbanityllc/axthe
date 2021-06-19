@@ -1,6 +1,6 @@
 
 // could be used to implement flux if needed:
-import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.29/CDN/js/leb/index.min.js'
+import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.30/CDN/js/leb/index.min.js'
 
 // helper for boilerplate code in web components for full stack developers
 // a good time to use this is when you need a mobile app.

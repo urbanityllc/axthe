@@ -1,8 +1,8 @@
 
-import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.29/CDN/js/leb/index.min.js'
+import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.30/CDN/js/leb/index.min.js'
 
 // based on http://developers.google.com/web/fundamentals/web-components/customelements
-import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.29/CDN/js/AXhe.min.js' // helper for boilerplate
+import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.30/CDN/js/AXhe.min.js' // helper for boilerplate
 
 export class MyComp extends HTMLElement {
 

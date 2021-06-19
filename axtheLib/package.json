@@ -1,6 +1,6 @@
 {
   "name": "axthe",
-  "version": "0.0.29",
+  "version": "0.0.30",
   "description": "AXthe tech stack is An opinionated eXpress.js and Templating HElper for high productivity webapp development",
   "homepage": "http://docs.axthe.net",
   "repository": {
@@ -10,28 +10,27 @@
   "license": "Apache",
   "dependencies": {
     "@supabase/supabase-js": "^1.15.1",
+    "ably": "^1.2.10",
     "airtable": "^0.11.1",
     "bcryptjs": "^2.4.3",
     "better-sqlite3": "^7.4.1",
     "cheerio": "^1.0.0-rc.10",
     "chokidar": "^3.5.2",
     "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
     "express": "^4.17.1",
     "express-interceptor": "^1.2.0",
     "fs-extra": "^10.0.0",
-    "js-yaml": "^4.1.0",
     "make-fetch-happen": "^9.0.3",
     "morgan": "^1.10.0",
     "node-cache": "^5.1.2",
     "pug": "^3.0.2",
     "puppeteer": "^10.0.0",
-    "reload": "^3.2.0",
     "serve-favicon": "^2.5.0",
     "uuid": "^8.3.2",
     "validate.js": "^0.13.1"
   },
   "devDependencies": {
-    "ably": "^1.2.10",
     "express-session": "^1.17.2",
     "ip": "^1.1.5",
     "jsonwebtoken": "^8.5.1",

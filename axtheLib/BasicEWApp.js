@@ -1,13 +1,14 @@
+require('dotenv').config()
 
 const express = require('express')
 const cookieParser = require('cookie-parser')
 const favicon = require('serve-favicon')
 const httpLogger = require('morgan')
 
-const reload = require('reload')
 const chokidar = require('chokidar')
 const interceptor = require('express-interceptor')
 const cheerio     = require('cheerio')
+const ably = new require('ably').Realtime(process.env.ABLY)
 
 // /////////////////////////////////////////////
 
@@ -38,22 +39,34 @@ constructor() {
 		return {
 			//  HTML responses will be intercepted
 			isInterceptable: ()=>{
-				return /text\/html/.test(res.get('Content-Type'));
+				return /text\/html/.test(res.get('Content-Type'))
 			},
-			// Appends a paragraph at the end of the response body
+			// appends to the response body
 			intercept: function(body, send) {
-				var $document = cheerio.load(body);
-				$document('body').append('<p>From interceptor!</p>');
-			
-				send($document.html());
+				var $document = cheerio.load(body)
+				$document('head').prepend(`<script src="https://cdn.ably.com/lib/ably.min-1.js"></script>`)
+				$document('body').append( `<script src="/reload.js" type="module"></script>`)
+
+				send($document.html())
 			}
 		}
 	})
 	this.eapp.use(inter)
 }//()
 
+reloadCh // reload
+
 // must be called at end
 finalPrep(port) {
+	this.eapp.listen(port) // listen on this port
+	console.log(this.constructor.name, 'Serving:', process.cwd() + '/public')
+	console.log(this.constructor.name, 'WAPP ready, you can now open browser at:', port)
+
+	this.reloadCh = ably.channels.get('reload')
+	chokidar.watch('./public').on('change', (event, path) => {
+		this.reloadCh.publish('reload','reload')
+		console.log('r', event)
+	})
 
 	// error handler
 	this.eapp.use(function(err, req, res, next) {
@@ -65,25 +78,6 @@ finalPrep(port) {
 		// render the error page
 		res.status(err.status || 500)
 		res.render('error')
-	})
-
-	// reload of public 
-	reload(this.eapp).then((reloadReturned)=> {
-		console.log('h')
-
-		this.eapp.listen(port) // listen on this port
-		console.log(this.constructor.name, 'Serving:', process.cwd() + '/public')
-		console.log(this.constructor.name, 'WAPP ready, you can now open browser at:', port)
-
-		reloadReturned.reload()
-		chokidar.watch('./public').on('change', (event, path) => {
-			console.log(event)
-			reloadReturned.reload()
-		})
-
-
-	}).catch(function (err) {
-		console.error('Reload could not start, could not start server app', err)
 	})
 
 }//()
