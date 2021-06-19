@@ -1,0 +1,47 @@
+
+head
+	script.
+
+body
+	p View console.
+
+	script(type='module').
+		// loosley coupled is better: 
+		import { EventBusSingleton } from '/assets/js/leb/index.js'
+		const subscription = EventBusSingleton.subscribe('MyComp', arg => console.log(arg))
+
+
+	// here is how to use it
+	my-comp(bla=3)#c1
+		p Slot In: click me!
+
+	// and here is how you hide .js in the above DOM
+	script(src='my-comp.js' type='module')
+
+	p
+	br
+	p NComp: 2 examples, 1:
+	mform-comp( action = "/form", method = "POST")
+		div
+			label(for = "say") Say:
+			input(name = "say" value = "Hi")
+		br
+		div
+			label(for = "ph") To:
+			input(name = "ph" value = "2125551212" mypformat='phone')
+		br
+		button(type = "submit") Send my greetings
+
+	p Ex 2
+	mform-comp(action = "/form", method = "POST")
+		div
+			label(for = "say") Say:
+			input(name = "say" value = "Hi")
+		br
+		div
+			label(for = "ph") To:
+			input(name = "ph" value = "2125551212" mypformat='phone')
+		br
+		button(type = "submit") Send my greetings
+	
+	script(src='mform-comp.js' type='module')
