@@ -30,7 +30,7 @@ body
 			label(for = "ph") To:
 			input(name = "ph" value = "2125551212" mypformat='phone')
 		br
-		button(type = "submit") Send my greetings
+		button#but1(type = "submit") Send my greetings
 
 	p Ex 2
 	mform-comp(action = "/form", method = "POST")
@@ -42,6 +42,6 @@ body
 			label(for = "ph") To:
 			input(name = "ph" value = "2125551212" mypformat='phone')
 		br
-		button(type = "submit") Send my greetings
+		button#but1(type = "submit") Send my greetings
 	
 	script(src='mform-comp.js' type='module')

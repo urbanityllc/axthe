@@ -13,7 +13,7 @@ export class MyForm extends HTMLElement {
 		}
 	</style
 	<b>I'm a Cust. Form:</b>
-	<form>
+	<form >
 		<slot></slot>
 	</form>
 	`
@@ -31,7 +31,12 @@ export class MyForm extends HTMLElement {
 		console.log(this.ax.getInputsByAttribute('mypformat'))
 		// but you have to get the template to be configured with submit and other info passed on custom element
 
+		let but = this.ax.getSlotElById('but1')
+		but.addEventListener('click', (e) => {
+			console.log('but')
+		})
 
+		// play
 		this.sr.addEventListener('click', (e) => {
 			// event bus:
 			EventBusSingleton.publish(this.constructor.name, e.composedPath()[0])
