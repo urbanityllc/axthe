@@ -23,7 +23,7 @@ When you are ready, continue:
 ## Guide
 
 Download a starter app:
-- <a href="starter.zip">starter.zip</a>
+- http://github.com/axthe/axthe/releases (or http://github.com/axthe/axthe and click Code/Download ZIP)
 Unzip. Rename the folder starter to the name of your webapp.
 
 You can start via x.sh in the unzip folder:
