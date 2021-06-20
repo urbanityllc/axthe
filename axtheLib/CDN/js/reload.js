@@ -18,4 +18,3 @@ setTimeout(()=>{
 	new Reload(key)
 }, 100 )
 */
-

@@ -1,3 +1,4 @@
+
 require('dotenv').config()
 
 const express = require('express')
@@ -5,10 +6,15 @@ const cookieParser = require('cookie-parser')
 const favicon = require('serve-favicon')
 const httpLogger = require('morgan')
 
+// start reload
 const chokidar = require('chokidar')
 const interceptor = require('express-interceptor')
 const cheerio     = require('cheerio')
 const ably = new require('ably').Realtime(process.env.ABLY)
+const FileHound = require('filehound')
+const sass = require('sass')
+const fs = require('fs-extra')
+// end reload
 
 // /////////////////////////////////////////////
 
@@ -54,8 +60,8 @@ constructor() {
 	this.eapp.use(inter)
 }//()
 
-reloadCh // reload
 
+reloadCh // reload ably channel
 // must be called at end
 finalPrep(port) {
 	this.eapp.listen(port) // listen on this port
@@ -64,7 +70,9 @@ finalPrep(port) {
 
 	this.reloadCh = ably.channels.get('reload')
 	chokidar.watch('./public').on('change', (event, path) => {
-		this.reloadCh.publish('reload','reload')
+		if(event.endsWith('.scss')) this._processMainScss()
+			else this.reloadCh.publish('reload','reload')
+
 		console.log('r', event)
 	})
 
@@ -79,7 +87,30 @@ finalPrep(port) {
 		res.status(err.status || 500)
 		res.render('error')
 	})
-
 }//()
+
+filehound = FileHound.create()
+
+async _processMainScss() {
+	const files = this.filehound
+		.paths('./public/assets')
+		.match('style.scss')
+		.findSync()
+	let mainScss = files[0]
+	console.log(mainScss)
+	if(!mainScss) return
+
+	const res = await sass.renderSync({
+		file: mainScss,
+		outFile: "./public/assets/style.css",
+		quietDeps: true
+	})
+	fs.writeFileSync("./public/assets/style.css", res.css.toString())
+	console.log(res.css.toString())
+	
+	this.reloadCh.publish('reload','reload')
+}
+
+
 
 }
