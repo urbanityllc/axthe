@@ -1,7 +1,7 @@
 
-import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.30/CDN/js/leb/index.min.js'
+import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/leb/index.min.js'
 
-import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.30/CDN/js/AXhe.min.js' // helper for boilerplate
+import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/AXhe.min.js' // helper for boilerplate
 
 // wraps a form, need to pass attribute
 export class MyForm extends HTMLElement {
