@@ -39,7 +39,8 @@ Above convention create 3 landing pages alternatives (suitable for testing of ma
 ### Starter app
 If you are already familiar with AXthe, you can download a starter app:
 - http://github.com/axthe/axthe/releases (or http://github.com/axthe/axthe and click Code/Download ZIP)
-Unzip. Rename the folder starter to the name of your webapp.
+Unzip. In MyApp rename file envEx to ```.env```. Rename the folder MyApp to the name of your webapp. Running ```d.sh``` should start your app :-).
+
 
 ### Forum
 
