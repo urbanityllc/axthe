@@ -1,8 +1,8 @@
 clear
 caddy version
 caddy validate
-# caddy start
-caddy reload
+caddy start
+# caddy reload
 
 
 

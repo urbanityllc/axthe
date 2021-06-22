@@ -1,5 +1,5 @@
 
-import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/leb/index.min.js'
+import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/leb/index.js'
 
 import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/AXhe.min.js' // helper for boilerplate
 

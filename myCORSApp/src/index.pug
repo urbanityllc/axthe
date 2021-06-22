@@ -7,7 +7,7 @@ body
 
 	script(type='module').
 		// loosley coupled is better: 
-		import { EventBusSingleton } from '/assets/js/leb/index.js'
+		import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/leb/index.js'
 		const subscription = EventBusSingleton.subscribe('MyComp', arg => console.log(arg))
 
 
@@ -44,4 +44,4 @@ body
 		br
 		button#but1(type = "submit") Send my greetings
 	
-	script(src='mform-comp.js' type='module')
+	xscript(src='mform-comp.js' type='module')

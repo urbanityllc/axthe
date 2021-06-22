@@ -1,3 +1,8 @@
+
+npm i -g parcel-bundler
+
+
+
 For mobile/cordova and edge/CDN/pure JAMstack w/ CORS and post rendering only via fetch and support for older browsers via packing(Parcell|PrePros.io) released on independent timeline.
 Rare devices supported. 
 No SEO

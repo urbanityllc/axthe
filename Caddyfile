@@ -8,14 +8,17 @@
 # caddy stop, start, validate
 ## #################################################### 
 
+
 1.axthe.net, 1.cekvenich.net, :8091  {
 	respond "hi"
 }
 
- 2.axthe.net, 2.cekvenich.net, :8092 {
+
+2.axthe.net, 2.cekvenich.net, :8092 {
 	root * ./www
-  file_server
+	file_server
 }
+
 
 # admin
 a.axthe.net, a.cekvenich.net, :8093  {
@@ -23,11 +26,13 @@ a.axthe.net, a.cekvenich.net, :8093  {
 }
 
 
-ubay.axthe.net, ubay.cekvenich.net, :8094 {
+myapp.axthe.net, myapp.cekvenich.net, :8094 {
 	reverse_proxy localhost:8080
 }
 
-bark.axthe.net, bark.cekvenich.net, :8096 {
-	reverse_proxy localhost:9080
+
+mycapp.axthe.net, mycapp.cekvenich.net, :8095 {
+	root * ./myCORSApp/dist
+	file_server
 }
 

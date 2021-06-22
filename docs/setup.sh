@@ -12,9 +12,11 @@ apt-get install git -y
 # node app server via nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
-nvm install 14.17.0 -y
+nvm install 14.17.1 -y
 npm i -g npm
-# install a tester for node
+npm i -g parcel-bundler
+npm i -g typescript
+# install a tester for node:
 npm i -g faucet
 
 # caddy http server
