@@ -1,6 +1,5 @@
 #!/bin/bash
-
-# setup cady, node and AXthe
+# setup cady, node and AXthe:
 
 apt-get update
 apt-get upgrade -y
@@ -30,7 +29,6 @@ caddy stop
 apt install cockpit -y
 # above is a monitoring server, read https://cockpit-project.org/documentation.html
 # for now it is ok to accept a bad cert, you can fix it w/ Caddy later via proxy to port 9090
-
 
 # get AXthe starter, and unzip
 wget https://axthe.github.io/axthe/starter.zip

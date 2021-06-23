@@ -1,0 +1,22 @@
+{
+  "name": "mycorsapp",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npx snowpack build",
+    "build": "npx snowpack build"
+  },
+  "engines": {
+    "node": ">=14.17.1",
+    "npm": ">=7.18.1"
+  },
+  "devDependencies": {
+    "@marlonmarcello/snowpack-plugin-pug": "^1.0.3",
+    "@snowpack/plugin-run-script": "^2.3.0",
+    "prettier": "^2.3.1",
+    "snowpack": "^3.6.1",
+    "typescript": "^4.3.4"
+},
+  "dependencies": {
+  }
+}

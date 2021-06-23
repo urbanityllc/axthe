@@ -6,6 +6,10 @@
     "watchNode": "npx nodemon",
     "test": "npx tape 'tests/**/*.test.js' | faucet"
   },
+  "engines": {
+    "node": ">=14.17.1",
+    "npm": ">=7.18.1"
+  },
   "dependencies": {
     "axthe": "^0.0.33"
   },
