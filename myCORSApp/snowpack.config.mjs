@@ -2,8 +2,7 @@
 export default {
 
 	buildOptions: {
-		out: './www',
-		watch: true
+		out: './www'
 	},
 	mount: {
 		src: { url: '/' }
