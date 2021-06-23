@@ -2,7 +2,7 @@
 import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/leb/index.min.js'
 
 // based on http://developers.google.com/web/fundamentals/web-components/customelements
-import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/AXhe.min.js' // helper for boilerplate
+import { AXslotHe } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/AXslotHe.min.js' // helper for boilerplate
 
 export class MyComp extends HTMLElement {
 
@@ -22,7 +22,7 @@ export class MyComp extends HTMLElement {
 	constructor () {
 		super()
 		// boilerplate:
-		this.ax = new AXhe(this)
+		this.ax = new AXslotHe(this)
 		this.ax.setup(this.template) // helper for boilerplate
 
 		// the rest of the example

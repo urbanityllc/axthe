@@ -1,7 +1,7 @@
 
 import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/leb/index.js'
 
-import { AXhe } from ' https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/AXhe.min.js' // helper for boilerplate
+import { AXslotHe } from 'https://cdn.jsdelivr.net/npm/axthe@0.0.31/CDN/js/AXslotHe.min.js' // helper for boilerplate
 
 // wraps a form, need to pass attribute
 export class MyForm extends HTMLElement {
@@ -23,7 +23,7 @@ export class MyForm extends HTMLElement {
 	constructor () {
 		super()
 		// boilerplate:
-		this.ax = new AXhe(this)
+		this.ax = new AXslotHe(this)
 		this.ax.setup(this.template) // helper for boilerplate
 
 

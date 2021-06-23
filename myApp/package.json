@@ -1,7 +1,6 @@
 {
   "name": "mywebapp",
   "version": "0.0.0",
-
   "private": true,
   "scripts": {
     "watchNode": "npx nodemon",
@@ -11,8 +10,8 @@
     "axthe": "^0.0.33"
   },
   "devDependencies": {
+    "faucet": "^0.0.1",
     "nodemon": "^2.0.7",
-	"faucet": "^0.0.1",
     "tape": "^5.2.2"
-  }
+}
 }
