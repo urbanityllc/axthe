@@ -12,14 +12,20 @@
 ### AXthe Stack:
 
 - Caddy
-- Express/Pug as file static/dynamic JAMstack
+- Express/Pug as file static/dynamic Jamstack
 - CodeAnywhere (cloud IDE VS/Code based)
 - Supabase for full stack
 - AirTable
-- PrePros.io
 
 ## Docs
 
 jsdocs coming soon.
 
 [<img src="vic.jpg" width="400"/>]
+
+
+- You can, and often do, make a call to dynamically get a list of the static files, pages or content you have in a folder! This is often used with pug template mixins. Here is how to enable that:
+```
+npm i axthe
+```
+This is the specil part of the static files approach aka Jamstack: that it can be/is dynamic, just happens to be file centric. You can and still and do use a DB in addition to static files, but Jamstack is a static file approach, so you'll have to learn the static file approach.

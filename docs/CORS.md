@@ -1,6 +1,6 @@
 
 
-For mobile/cordova and edge/CDN/pure JAMstack w/ CORS and post rendering only via fetch and support for older browsers via packing(Parcell|PrePros.io) released on independent timeline.
+For mobile/cordova and edge/CDN/pure Jamstack w/ CORS and post rendering only via fetch and support for older browsers via packing released on independent timeline.
 Rare devices supported. 
 No SEO
 No AMP
@@ -13,7 +13,6 @@ OK w/ polyfills
 Cordova/Electorn/Capacitor yes
 Electorn yes
 CDN yes
-Prepros 
 Parcel yes
 
 

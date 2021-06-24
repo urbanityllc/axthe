@@ -9,23 +9,22 @@
 - http://github.com/axthe/axthe/discussions
 
 ## Setup
-If you already have node.js setup, greater than version 14, and have Caddy http server running in the cloud, you are good to go, you can skip to guide.
+If you already have node.js setup, greater than version 14.17.0 (npm greater than 7.18.0), with Caddy http server running in the cloud and a Cloud based IDE, you are good to go, you can skip to guide.
 
 
 ### Pre-requestites
 - A DNS name, I recommend http://easydns.com (and I recommend against GoDaddy)
-- A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, http://soyoustart.com, Digital Ocean, Linode, etc. Likely that anything in the cloud will work
-
+- A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, http://soyoustart.com, Digital Ocean, Linode, etc. Likely that anything Ubuntu in the cloud will work.
 
 
 ## Recipe
-After you create a linux in the cloud, run the setup script (from this github/docs) to install Caddy, node, etc. 
+After you create an Ubuntu machine in the cloud, run the setup script: http://github.com/AXthe/AXthe/blob/main/setup.sh
 
-You should edit in the cloud, sign up for a cloud based IDE/editor,  I recommend http://codeanywhere.com/editor!
+You should edit in the cloud, sign up for a free VS Code cloud based IDE/editor,  I recommend http://codeanywhere.com/editor. For SSR mostly use the Cloud IDE, and for Jamstack/CORS you can use local VS Code, but don't need to.
 
-You can cust paste the script above: http://github.com/axthe/axthe/blob/main/docs/setup.sh 
+You can cust paste the script above: http://github.com/axthe/axthe/blob/main/setup.sh 
 
-(or you can wget -O - https://raw.githubusercontent.com/axthe/axthe/main/docs/setup.sh | bash )
+(or you can try #wget -O - https://raw.githubusercontent.com/axthe/axthe/main/setup.sh | bash )
 
 Then create Caddyfile similar to this:
 http://github.com/axthe/axthe/blob/main/Caddyfile
@@ -34,10 +33,7 @@ and
 ```
 caddy start
 ```
-The DNS subdomains should point to caddy subdomains! I use EASYdns.
-
-## PrePros.io
-- has a (weinre) mobile app debugger, facilitating movile first. In any case your FE apps should be compatible witn PrePros.io
+The DNS subdomains should point to caddy subdomains! Amd Caddyfile should point direct to CORS/www and for SSR app should use a proxy setting, as per examples in Caddyfile.
 
 
 ### Optional as needed
@@ -48,7 +44,3 @@ ps aux | grep node
 cd myApp
 ./d.sh
 ```
-
-## VS Code short cut:
-Control Shift P, > for commands else search for file name
-

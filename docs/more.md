@@ -35,6 +35,22 @@
 - Airtable
 - Loom
 
+- A nice article http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
+
+
+
+## PrePros.io
+http://developer.chrome.com/docs/devtools/remote-debugging
+or
+http://github.com/liriliri/eruda
+
+
+## VS Code short cut:
+Control Shift P, > for commands else search for file name
+
+
+
+
 
 ### Author:
 
