@@ -1,4 +1,21 @@
 
+mimnium viable tech stack
+mirofronets
+
+fe - harder: user chalenage
+
+no docker
+
+pug followers
+exploateiry programing
+
+don't be weired
+use node like LAMP
+
+palermo
+
+
+
 # An eXpress.js and Templating HElper (AXthe)
 <i>AXthe tech stack is <b>A</b>n opinionated e<b>X</b>press.js and <b>T</b>emplating <b>HE</b>lper for high productivity webapp development</i>
 
@@ -8,6 +25,7 @@
 ### Support
 - http://github.com/axthe/axthe/discussions
 
+Exploratiry programing
 
 ## More: you are done when there is nothing more to remove
 

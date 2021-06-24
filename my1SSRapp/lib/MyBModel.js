@@ -1,4 +1,6 @@
 
+'use strict';
+
 const BasicBModel     = require('axthe/BasicBModel.js')
 
 // /////////////////////////////////////////////////////////////

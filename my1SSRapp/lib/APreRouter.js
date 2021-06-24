@@ -1,3 +1,5 @@
+'use strict';
+
 
 // ////////////////////////////////
 const BasicPreRouter = require('axthe/BasicPreRouter.js')

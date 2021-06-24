@@ -1,3 +1,4 @@
+'use strict';
 
 // needs .env with ABLYr=xxx:
 const EWApp  = require('axthe/EWApp.js')

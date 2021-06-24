@@ -1,3 +1,4 @@
+'use strict';
 
 const BasicBrowser     = require('axthe/util/BasicBrowser.js')
 
