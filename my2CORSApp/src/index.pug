@@ -1,48 +1,7 @@
 doctype html
 
 head
-	script.
+	script(src="//cdn.jsdelivr.net/npm/eruda")
 
 body
-	p View console.
-
-	script(type='module').
-		// loosley coupled is better: 
-		import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.1.0/CDN/js/leb/index.js'
-		const subscription = EventBusSingleton.subscribe('MyComp', arg => console.log(arg))
-
-
-	// here is how to use it
-	my-comp(bla=3)#c1
-		p Slot In: click me!
-
-	// and here is how you hide .js in the above DOM
-	script(src='my-comp.js' type='module')
-
-	p
-	br
-	p NComp: 2 examples, 1:
-	mform-comp( action = "/form", method = "POST")
-		div
-			label(for = "say") Say:
-			input(name = "say" value = "Hi")
-		br
-		div
-			label(for = "ph") To:
-			input(name = "ph" value = "2125551212" mypformat='phone')
-		br
-		button#but1(type = "submit") Send my greetings
-
-	p Ex 2
-	mform-comp(action = "/form", method = "POST")
-		div
-			label(for = "say") Say:
-			input(name = "say" value = "Hi")
-		br
-		div
-			label(for = "ph") To:
-			input(name = "ph" value = "2125551212" mypformat='phone')
-		br
-		button#but1(type = "submit") Send my greetings
-	
-	xscript(src='mform-comp.js' type='module')
+	p oh hi

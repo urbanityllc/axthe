@@ -33,14 +33,20 @@ and
 ```
 caddy start
 ```
-The DNS subdomains should point to caddy subdomains! Amd Caddyfile should point direct to CORS/www and for SSR app should use a proxy setting, as per examples in Caddyfile.
 
+### And last:
+- Download http://github.com/axthe/axthe/releases (or http://github.com/axthe/axthe and click Code/Download ZIP)
+
+Lets start the second app first. The Caddyfile should point direct to CORS/www and if you run.sh in the CORS you should be able to develop locally.
+For SSR app should use a proxy setting, as per examples in Caddyfile, and you can go to SSRapp folder. In my1SSRapp folder rename file envEx to ```.env```. Running ```d.sh``` should start your SSR app :-).
+
+The DNS subdomains should point to Caddyfile subdomains/ports.
 
 ### Optional as needed
 ufw status
 killall node
 ps aux | grep node
+
 ```
-cd myApp
-./d.sh
+
 ```

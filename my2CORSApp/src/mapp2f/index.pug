@@ -11,14 +11,6 @@ body
 		import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.1.0/CDN/js/leb/index.js'
 		const subscription = EventBusSingleton.subscribe('MyComp', arg => console.log(arg))
 
-
-	// here is how to use it
-	my-comp(bla=3)#c1
-		p Slot In: click me!
-
-	// and here is how you hide .js in the above DOM
-	script(src='my-comp.js' type='module')
-
 	p
 	br
 	p NComp: 2 examples, 1:
@@ -45,4 +37,4 @@ body
 		br
 		button#but1(type = "submit") Send my greetings
 	
-	xscript(src='mform-comp.js' type='module')
+	script(src='mform-comp.js' type='module')

@@ -13,7 +13,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 		this.firstPrep()
 		
 		// the route loads the data
-		this.eapp.get('/1', (req, res) => {
+		this.eapp.get('/1data', (req, res) => {
 			res.render(this.getPath(req), {title: 'My name is Vic'})
 		})
 
