@@ -46,7 +46,7 @@ The DNS subdomains should point to Caddyfile subdomains/ports.
 ufw status
 killall node
 ps aux | grep node
-
+nvm alias default 14.17.1
 ```
 
 ```

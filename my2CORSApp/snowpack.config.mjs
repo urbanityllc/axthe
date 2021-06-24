@@ -22,7 +22,6 @@ export default {
   optimize: {
     "bundle": true,
 	"minify": true,
-	"preload": true,
 	"treeshake": true,
 	"target": "es2017"
   }

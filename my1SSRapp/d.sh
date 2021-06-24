@@ -1,5 +1,6 @@
 
 clear
+node -v
 npm i -g npm
 npm i -g npm-check-updates
 ncu

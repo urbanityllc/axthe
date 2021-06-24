@@ -51,3 +51,6 @@ Control Shift P, > for commands else search for file name
 ### Author:
 
 - http://cekvenich.github.io/cekvenich
+
+
+     "exec": "DEBUG=* node --trace-warnings ./lib/wapp.js"
