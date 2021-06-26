@@ -1,6 +1,5 @@
 'use strict';
 
-
 // ////////////////////////////////
 const BasicPreRouter = require('axthe/BasicPreRouter.js')
 // const MyBModel     = require('./MyBModel.js')
@@ -11,12 +10,12 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 		super(eapp)// call base and pass the express app, so it knows
 
 		//this.bmodel = new MyBModel() // the model is used for data, validation, business layer and such. You would of course extends BasicBModel
-	
-		this.firstPrep()
-		
+
 		// the route loads the data
 		this.eapp.get('/1data', (req, res) => {
-			res.render(this.getPath(req), {title: 'My name is Vic'})
+			let dat = {title: 'My name is Vic'}
+			this.rend(res, dat)
+
 		})
 
 		this.eapp.post('/form', (req, res) => {
@@ -24,8 +23,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			res.send("received your request!")
 		})
 
-		// to finish setup
-		this.finalPrep()
+
 	}//()
 
 }//class

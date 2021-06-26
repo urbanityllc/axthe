@@ -10,12 +10,13 @@ export default {
 
 	plugins: [
 		[
-			"@marlonmarcello/snowpack-plugin-pug",
-				{
-					"data": {
-						"title": "My website"
-					}
-				}
+			"@marlonmarcello/snowpack-plugin-pug",{
+				"pretty": false,
+				"base": "./www",
+				},
+			"@epandco/snowpack-riot-plugin",{
+				template: 'pug'
+			}
 		]
 	],
 

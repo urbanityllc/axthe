@@ -3,7 +3,7 @@ clear
 node -v
 npm i -g npm
 npm i -g npm-check-updates
-ncu
+ncu -u
 npm i
 
 # uses nodemon
