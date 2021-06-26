@@ -39,7 +39,7 @@ Above convention create 3 landing pages alternatives (suitable for testing of ma
  
 ### Starter app
 If you are already familiar with AXthe, you can download a starter app, that includes the Caddyfile to setup the http server and includes both environments:
-- http://github.com/axthe/axthe/releases (or http://github.com/axthe/axthe and click Code/Download ZIP)
+- http://github.com/axthe/axthe/releases (or BETTER, for latest: http://github.com/axthe/axthe and click Code/Download ZIP)
 Unzip. In my1SSRapp folder rename file envEx to ```.env```. Running ```d.sh``` should start your SSR app :-).
  
  

@@ -35,7 +35,7 @@ caddy start
 ```
 
 ### And last:
-- Download http://github.com/axthe/axthe/releases (or http://github.com/axthe/axthe and click Code/Download ZIP)
+- Download http://github.com/axthe/axthe/releases (or BETTER, for latest: http://github.com/axthe/axthe and click Code/Download ZIP)
 
 Lets start the second app first. The Caddyfile should point direct to CORS/www and if you run.sh in the CORS you should be able to develop locally.
 For SSR app should use a proxy setting, as per examples in Caddyfile, and you can go to SSRapp folder. In my1SSRapp folder rename file envEx to ```.env```. Running ```d.sh``` should start your SSR app :-).
