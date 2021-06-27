@@ -14,12 +14,12 @@ export default {
 	plugins: [
 		['@epandco/snowpack-riot-plugin',{}],
 		["@marlonmarcello/snowpack-plugin-pug", {
-				"pretty": true,
+				"pretty": false,
 				"base": "./www",
 			}]
 	],
 
-  oXptimize: {
+  optimize: {
     "bundle": true,
 	"minify": true,
 	"treeshake": true,
