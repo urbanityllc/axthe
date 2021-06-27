@@ -11,7 +11,10 @@
 		"npm": ">=7.18.0"
 	},
 	"dependencies": {
-		"@riotjs/custom-elements": "^5.0.0"
+		"@riotjs/custom-elements": "^5.0.0",
+		"axthe": "^0.1.10",
+		"cordova-js": "^6.0.0",
+		"eruda": "^2.4.1"
 	},
 	"devDependencies": {
 		"@epandco/snowpack-riot-plugin": "^1.0.0",

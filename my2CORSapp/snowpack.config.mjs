@@ -2,6 +2,7 @@
 export default {
 
 	buildOptions: {
+		baseUrl: "./",
 		out: './www'
 	},
 	mount: {
@@ -12,7 +13,10 @@ export default {
 	},
 
 	plugins: [
-		['@epandco/snowpack-riot-plugin',{}],
+		['@epandco/snowpack-riot-plugin',{
+			pretty: true
+		}],
+
 		["@marlonmarcello/snowpack-plugin-pug", {
 				"pretty": false,
 				"base": "./www",
