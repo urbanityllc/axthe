@@ -1,3 +1,15 @@
 <one-tag>
-	<p>Comp one</p>
+	<p>Tag # 1</p>
+	<p>{props.message}</p>
+	<p><slot/></p>
+
+
+	<script>
+		import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.1.4/CDN/js/leb/index.js'
+
+		export default {
+			// the message property will be automatically updated anytime the DOM `message` attribute will change
+			observedAttributes: ['message']
+		}
+	</script>
 </one-tag>
