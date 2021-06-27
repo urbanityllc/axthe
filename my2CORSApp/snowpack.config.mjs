@@ -6,24 +6,26 @@ export default {
 	},
 	mount: {
 		src: { url: '/' }
-  	},
+	},
+	devOptions: {
+		port:9090
+	},
 
 	plugins: [
-		[
-			"@marlonmarcello/snowpack-plugin-pug",{
-				"pretty": false,
+		['@snowpack/plugin-svelte',{
+
+		}],
+		["@marlonmarcello/snowpack-plugin-pug", {
+				"pretty": true,
 				"base": "./www",
-				},
-			"@epandco/snowpack-riot-plugin",{
-				template: 'pug'
-			}
-		]
+			}]
 	],
 
-  optimize: {
+  oXptimize: {
     "bundle": true,
 	"minify": true,
 	"treeshake": true,
 	"target": "es2017"
   }
+
 };
