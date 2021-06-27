@@ -5,4 +5,11 @@ head
 body
 	p oh hi
 
+	one-tag
+
 	script(type='module').
+		import define from '@riotjs/custom-elements'
+
+		import OneTag from './one-tag.riot'
+
+		define('one-tag', OneTag)

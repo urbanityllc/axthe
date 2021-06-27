@@ -12,9 +12,7 @@ export default {
 	},
 
 	plugins: [
-		['@snowpack/plugin-svelte',{
-
-		}],
+		['@epandco/snowpack-riot-plugin',{}],
 		["@marlonmarcello/snowpack-plugin-pug", {
 				"pretty": true,
 				"base": "./www",
