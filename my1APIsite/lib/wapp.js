@@ -17,4 +17,4 @@ const wapp = new EWApp() // make an app
 new APreRouter(wapp.eapp) // tell the router about the app
 
 // to finish setup
-wapp.finalPrep(8083) // listen on this port
+wapp.finalPrep() // listen on this port
