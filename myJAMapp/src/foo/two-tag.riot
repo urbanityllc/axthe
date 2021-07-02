@@ -1,8 +1,10 @@
-<one-tag>
-	<p>Tag # </p>
+<two-tag>
+	<p>Tag # 12</p>
 	<p>{props.message}</p>
-	<p>And:<slot/></p>
+	<p>Tag # 12</p>
 	
+	<slot/>
+
 
 	<script>
 		import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.1.4/CDN/js/leb/index.js'
@@ -12,4 +14,4 @@
 			observedAttributes: ['message']
 		}
 	</script>
-</one-tag>
+</two-tag>

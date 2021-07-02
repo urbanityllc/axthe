@@ -1,0 +1,16 @@
+doctype html
+
+head
+
+body
+	p oh hi foo
+
+	two-tag(message='yes? or no')
+		p in the slot
+	
+	script(type='module').
+		import { EventBusSingleton } from 'https://cdn.jsdelivr.net/npm/axthe@0.1.4/CDN/js/leb/index.js'
+		import define from '@riotjs/custom-elements'
+
+		import TwoTag from './foo/two-tag.riot'
+		define('two-tag', TwoTag)

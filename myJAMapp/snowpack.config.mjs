@@ -13,10 +13,7 @@ export default {
 	},
 
 	plugins: [
-		['@epandco/snowpack-riot-plugin',{
-			pretty: true
-		}],
-
+		['snowpack-riot-plugin'],
 		["@marlonmarcello/snowpack-plugin-pug", {
 				"pretty": false,
 				"base": "./www",
