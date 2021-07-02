@@ -11,7 +11,7 @@ apt-get install git -y
 # node app server via nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
 source ~/.bashrc
-nvm install 14.17.1 -y
+nvm install 14.17.2 -y
 npm i -g npm
 npm install -g cordova
 # install a tester for node:

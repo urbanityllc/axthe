@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "watchNode": "npx nodemon",
-    "test": "npx tape 'tests/**/*.test.js' | faucet"
+    "test": "npx tape 'testi/**/*.test.js' | faucet"
   },
   "engines": {
     "node": ">=14.17.0",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "faucet": "^0.0.1",
-    "nodemon": "^2.0.7",
+    "nodemon": "^2.0.9",
     "tape": "^5.2.2"
 }
 }
