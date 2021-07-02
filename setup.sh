@@ -15,7 +15,8 @@ nvm install 14.17.2 -y
 npm i -g npm
 npm install -g cordova
 # install a tester for node:
-npm i -g faucet
+npm i -g colortape
+npm i -g tape
 
 # caddy http server
 # https://caddyserver.com/docs/install#debian-ubuntu-raspbian

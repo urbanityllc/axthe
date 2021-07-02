@@ -3,7 +3,7 @@
 const test = require('tape')
 const AnBModel     = require('../lib/AnBModel.js')
 
-test('test sample', async function (t) {
+test('test sample', async (t)=> {
     t.plan(1)
 
     const abm = new AnBModel()
