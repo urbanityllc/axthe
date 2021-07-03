@@ -1,6 +1,8 @@
 
-import { html, renderer } from 'https://cdn.skypack.dev/@ficusjs/renderers@3/htm'
-import { createCustomElement } from 'https://cdn.skypack.dev/ficusjs@3/custom-element'
+
+import { createCustomElement } from 'ficusjs/custom-element'
+import { html, renderer } from '@ficusjs/renderers/htm'
+
 
 createCustomElement('hello-world', {
 	renderer,
