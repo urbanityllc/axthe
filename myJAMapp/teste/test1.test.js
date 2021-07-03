@@ -1,12 +1,26 @@
 'use strict';
 
 const test = require('tape')
-const AnBModel     = require('../lib/AnBModel.js')
+const BasicBrowser     = require('axthe/util/BasicBrowser.js')
 
-test('test sample', async function (t) {
-    t.plan(1)
+// ////////////////////////////////
+test.onFinish (() => {process.exit (0)})
 
-    const abm = new AnBModel()
-    const c = await abm._config
-    t.ok(c)
+test('test sample', async (t)=> {
+	t.plan(1)
+
+	const bro1 = new BasicBrowser()
+	await bro1.init()
+	await bro1.page.goto('https://news.ycombinator.com', { waitUntil: "networkidle2" })
+
+	const res = await bro1.page.evaluate(() => { // has scope of document
+		return document.querySelectorAll(`a.storylink`)
+	})
+	t.comment('oh hi', res)
+	console.log('oh hi2', res)
+
+	bro1.browser.close()
+	t.ok(true)
 })
+
+
