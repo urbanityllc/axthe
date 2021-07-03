@@ -17,6 +17,13 @@ export default {
 				"pretty": false,
 				"base": "./www",
 			}]
-	]
+	],
 
+	optimize: {
+		"bundle": true,
+		"minify": true,
+		"treeshake": true,
+		"target": "es2017"
+	  }
+	
 }
