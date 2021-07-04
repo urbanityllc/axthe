@@ -6,7 +6,7 @@
 	}
 }
 # caddy stop, start, validate
-## #################################################### 
+## ###################################################
 
 
 1.axthe.net, 1.cekvenich.net, :8091  {
@@ -35,4 +35,3 @@ mycapp.axthe.net, mycapp.cekvenich.net, :8095 {
 	root * ./myCORSApp/dist
 	file_server
 }
-
