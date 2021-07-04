@@ -1,0 +1,1 @@
+npx docco ./lib/**.* --output ./docs --extension .js
