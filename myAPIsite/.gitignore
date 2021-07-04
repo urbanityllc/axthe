@@ -20,3 +20,5 @@ prepros.config
 *.html
 
 *.out
+
+.docs
