@@ -9,7 +9,7 @@
 - http://github.com/axthe/axthe/discussions
 
 ## Setup
-If you already have node.js setup, greater than version 14.17.0 (npm greater than 7.18.0), with Caddy http server running in the cloud and a Cloud based IDE, you are good to go, you can skip to guide.
+If you already have node.js setup, greater than version 14.17.1 (npm greater than 7.18.0), with Caddy http server running in the cloud and a Cloud based IDE, you are good to go, you can skip to guide.
 
 
 ### Pre-requestites

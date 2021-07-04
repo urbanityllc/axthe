@@ -7,11 +7,11 @@
 		"test": "npx tape -- --verbose 'testi/**/*.test.js' | npx colortape"
 	},
 	"engines": {
-		"node": ">=14.17.0",
+		"node": ">=14.17.1",
 		"npm": ">=7.19.0"
 	},
 	"dependencies": {
-	"axthe": "^0.1.10",
+	"axthe": "^0.1.16",
 	"multer": "^1.4.2",
 	"validate.js": "^0.13.1",
 	"dotenv": "^10.0.0"
