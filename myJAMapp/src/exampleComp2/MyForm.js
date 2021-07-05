@@ -12,16 +12,15 @@ createCustomElement('hello-world', {
 			.then(json => console.log(json))
 	},
 	renderer,
-	handleClick () {
-		window.alert('Hello to you!')
-	},
+	handleClick () { },
+
 	render () {
 		return html`
-		<div>
+		<form>
 			<p>FicusJS hello world</p>
 			<button type="button" onclick="${this.handleClick}">Click me</button>
 			${this.slots.default}
-		</div>
+		</form>
 	`
 	}
 })

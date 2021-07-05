@@ -1,0 +1,18 @@
+doctype html
+
+head
+
+body
+	p oh hi foo:
+
+	my-form(ep='https://mysite/api/data1')
+		label(for='fname') First name:
+		input#fname(type='text' name='fname' value='John')
+
+		label(for='lname') Last name:
+		input#lname(type='text' name='lname' value='Doe')
+
+		input(type='submit' value='Submit')
+
+
+	script(src='exampleComp/MyForm.js' type='module')
