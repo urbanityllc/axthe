@@ -1,12 +1,13 @@
 {
   "name": "11",
   "version": "0.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy-navigation": "^0.3.2",
+    "eleventy-plugin-sass": "^1.2.0",
+    "pug": "^3.0.2"
   },
-
   "dependencies": {
-    "@11ty/eleventy": "^0.12.1"
   }
 }

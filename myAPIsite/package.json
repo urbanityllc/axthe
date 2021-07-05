@@ -2,6 +2,7 @@
 	"name": "mywebapp",
 	"version": "0.0.0",
 	"private": true,
+	"main": "./lib/wapp.js",
 	"scripts": {
 		"watchNode": "npx nodemon",
 		"test": "npx tape -- --verbose 'testi/**/*.test.js' | npx colortape"
