@@ -13,7 +13,6 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPlugin(eleventyNavigationPlugin)
 	eleventyConfig.addPlugin(pluginSass, {})
 
-
 	eleventyConfig.addPassthroughCopy("css")
 	eleventyConfig.addPassthroughCopy("js")
 	eleventyConfig.addPassthroughCopy("images")
