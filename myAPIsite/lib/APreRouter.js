@@ -19,7 +19,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
 		this.eapp.post('/form', (req, res) => {
 			console.log(this.constructor.name, req.body)
-			res.send("received your request!") 
+			res.send("OK") 
 		})
 
 
@@ -32,10 +32,51 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
 		this.eapp.post('/api/form1', (req, res) => {
 			console.log(this.constructor.name, req.body)
-			res.send("received your request!") 
+			res.send("OK") 
 		})
 
 	}//()
 
 }//class
 
+function onMount() {
+	console.log('mount!!')
+
+	$('#mailFrm').on('submit', function(e) {
+		e.preventDefault()
+		console.log('klik')
+		var msg = val()
+
+		if(msg==='OK') {
+
+
+			const data = {}
+			const fdata = new FormData(document.getElementById('mailFrm'))
+			for (var [key, value] of fdata.entries()) {
+				data[key] =value;
+			}
+			console.log(JSON.stringify(data))
+			fetch("/wapi/email",{
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify(data),
+				})
+				.then(res => {
+					console.log('emailing ', res.statusText)
+				})
+
+			vex.dialog.confirm({ message: 'Your message has been sent', callback: function(){} })//vexAlert
+
+			$("#name, #email, textarea[name='msg']").val('')
+
+			console.log('SUCCESS!');
+
+
+		} else {
+			console.info('wrong', msg)
+			vex.dialog.confirm({ message: msg, callback: function(){} })//vexAlert
+		}
+	})
+}
