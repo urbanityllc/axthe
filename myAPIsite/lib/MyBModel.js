@@ -1,7 +1,6 @@
 
 'use strict';
 
-const BasicBModel     = require('axthe/BasicBModel.js')
 
 // /////////////////////////////////////////////////////////////
 // use for pgSQL
@@ -13,7 +12,7 @@ const validate = require("validate.js")
 /**
  * base class has sb property for supabase, used for full stack programming
  */
-module.exports =  class MyBModel extends BasicBModel {
+module.exports =  class MyBModel {
 
 	constructor() {
 		super()
