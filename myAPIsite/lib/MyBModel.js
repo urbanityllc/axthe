@@ -15,7 +15,6 @@ const validate = require("validate.js")
 module.exports =  class MyBModel {
 
 	constructor() {
-		super()
 		console.log(process.cwd(), this._config)
 	}
 

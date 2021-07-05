@@ -9,7 +9,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 	constructor(eapp) {
 		super(eapp)// call base and pass the express app, so it knows
 
-		//this.bmodel = new MyBModel() // the model is used for data, validation, business layer and such. You would of course extends BasicBModel
+		//this.bmodel = new MyBModel() // the model is used for data, validation, business layer and such. 
 
 		// the route loads the data
 		this.eapp.get('/1data', (req, res) => {
