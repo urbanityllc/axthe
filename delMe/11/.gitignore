@@ -1,6 +1,7 @@
-_site/
+
 
 static/
 
-site2/
 
+*.css
+*.map

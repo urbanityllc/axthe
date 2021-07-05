@@ -1,5 +1,10 @@
-// 11ty configuration
+
+// http://getbootstrap.com/docs/5.0/customize/sass
+
 // http://snipcart.com/blog/11ty-tutorial
+// http://www.sitepoint.com/getting-started-with-eleventy
+
+// 11ty configuration
 
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation")
 const pluginSass = require("eleventy-plugin-sass")
@@ -13,6 +18,15 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPlugin(eleventyNavigationPlugin)
 	eleventyConfig.addPlugin(pluginSass, {})
 
+	eleventyConfig.htmlTemplateEngine= "pug"
+	eleventyConfig.setTemplateFormats(['pug'])
+	eleventyConfig.dataTemplateEngine= "pug"
+
+	eleventyConfig.dir= {
+		input: 'src',
+		output: 'static'
+	}
+
 	eleventyConfig.addPassthroughCopy("css")
 	eleventyConfig.addPassthroughCopy("js")
 	eleventyConfig.addPassthroughCopy("images")
@@ -23,17 +37,5 @@ module.exports = eleventyConfig => {
 	eleventyConfig.addPassthroughCopy("./_redirects")
 	eleventyConfig.addPassthroughCopy("./*.png")
 
-	return {
-		"dataTemplateEngine": "pug",
-		markdownTemplateEngine: "pug",
-		htmlTemplateEngine: "pug",
-		templateFormats: ["pug"],
-
-		pathPrefix: '/site2',
-
-		dir: {
-		input: 'src',
-		output: 'static'
-		}
-	}
+	return eleventyConfig
 };
