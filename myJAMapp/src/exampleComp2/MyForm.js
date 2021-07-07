@@ -18,7 +18,7 @@ createCustomElement('my-form', {
 		e.preventDefault()
 		const data = Object.fromEntries(new FormData(e.target).entries())
 		console.log(data)
-		fetch("/wapi/email",
+		fetch("http://localhost:8080/api/form1",
 			{ method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'

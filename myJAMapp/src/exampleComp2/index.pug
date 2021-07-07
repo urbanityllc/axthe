@@ -5,6 +5,7 @@ head
 body
 	p oh hi foo:
 
+	<!-- specify the end point as attribute -->
 	my-form(ep='https://localhost:8080/api/form1')
 		label(for='fname') First name:
 		input#fname(type='text' name='fname' value='John')
@@ -13,6 +14,5 @@ body
 		input#lname(type='text' name='lname' value='Doe')
 
 		input#but1(type='submit' value='Submit')
-
 
 	script(src='exampleComp2/MyForm.js' type='module')
