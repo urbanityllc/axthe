@@ -2,8 +2,6 @@
 import { createCustomElement } from 'ficusjs/custom-element'
 import { html, renderer } from '@ficusjs/renderers/htm'
 
-// https://github.com/axthe/committers/blob/8d3f7c9ee39de7d804de3b086bfbfb4305c24c16/axtheLib/CDN/js/AXslotHe.js
-
 createCustomElement('my-form', {
 	render () {
 		return html`
@@ -14,11 +12,17 @@ createCustomElement('my-form', {
 		</form>
 	`
 	},
+	props: {
+		ep: {
+			type: String,
+			required: true
+		}
+	},
 	onSubmit (e) {
 		e.preventDefault()
 		const data = Object.fromEntries(new FormData(e.target).entries())
-		console.log(data)
-		fetch("http://localhost:8080/api/form1",
+		console.log(data, this.props.ep )
+		fetch(this.props.ep, // gets the attribute
 			{ method: 'POST',
 				headers: {
 					'Content-Type': 'application/json'
