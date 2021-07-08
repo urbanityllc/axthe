@@ -1,5 +1,5 @@
 
-* [About](overview.md)
+* [Overview](readme.md)
 * [Gentle setup](setup.md)
 * [Guide and Intro](guide.md)
 
