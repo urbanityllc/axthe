@@ -12,6 +12,7 @@
 		"npm": ">=7.19.0"
 	},
 	"dependencies": {
+		"@supabase/supabase-js": "^1.18.0",
 		"axthe": "^0.1.19",
 		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
