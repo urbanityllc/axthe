@@ -19,7 +19,7 @@ try {
 
 const test = require('tape')
 
-const Model1 = require('../lib/Model1.js')
+const Model1 = require('../lib/dat/Model1.js')
 
 // ////////////////////////////////
 // test.onFinish (() => {process.exit (0)})
