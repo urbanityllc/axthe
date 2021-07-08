@@ -18,12 +18,18 @@ try {
 // ***
 
 const test = require('tape')
-const AnBModel     = require('../lib/AnBModel.js')
+
+const Model1 = require('../lib/Model1.js')
+
+// ////////////////////////////////
+// test.onFinish (() => {process.exit (0)})
 
 test('test sample', async (t)=> {
-    t.plan(1)
-
-    const abm = new AnBModel()
-    const c = await abm._config
-    t.ok(c)
+	//t.plan(1)
+	const m = new Model1()
+	m.ins()
+	
+	//t.ok(true)
 })
+
+
