@@ -34,7 +34,7 @@ In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should star
 
 ## Layout
 Pug is templating you already know how to use, it is html markup tags that are self closing! It is a fine alternative to PHP.
-Check out pug: http://html2pug.vercel.app
+Check out pug: http://html2pug.vercel.app. Pug is similar to Haml or Slim, if you have not used it yet, you'll love it.
  
 AXthe has a convention of always(with some exceptions) naming files as index.pug. That means if you have 3 pages in your webapp, you need 3 folders.
 ```
@@ -53,7 +53,7 @@ That is the biggest difference with the Express generator. Also there is a base 
 Things like header.pug, or footer.pug you would not name index.pug, you can put in ./public/includes
  
 ### A more concepts:
-- AXthe aims to be the most productive way to build any webapp, including mobile or CMS webapps. Specifically it aims to be better than the old productivity leader: LAMP.
+- AXthe aims to be the most productive way to build any webapp, including mobile or CMS webapps. Specifically it aims to be better than the old productivity leader, LAMP, or even 'low code' tools. It make development fun, and productivity is fast, so that you can build exerimental apps.
  - AXthe tech stack approach is to eschew client side .js, and rely heavily on SSR. ( I really like the word eschew). The server side route in express.js intercepts the http request and passes any dynamic data to pug. That is 90% of AXthe. In addition to productivity, SSR is better at SEO and security than any client/browser side .js.
 - AXthe is a designer friendly tech stack, so it is not just for front end and full stack developers. Even civilians, people not trained in software development can write professional grade webapps.
 - AXthe stack also has AXthe npm module that has a few helper classes

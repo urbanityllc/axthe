@@ -20,25 +20,26 @@ In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should star
 - A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, http://soyoustart.com, Digital Ocean, Linode, etc. Likely that anything Ubuntu in the cloud will do the job.
 
 
-## Recipe
+## Setup recipe part I
 After you create an Ubuntu instance in the cloud:
 You should edit in the cloud, sign up for a cloud based IDE, I recommend http://codeanywhere.com/editor. For SSR mostly use a Cloud IDE, and for JAMstack or mobile|cordova development you chould use local VS Code.
 
-- Step number one, using the Cloud IDE (CodeAnywhere) after you open the IDE, connect to the Ubunty instance in the cloud via ssh. You should see the editor and be able to ssh. Like this:
+- Step number one(Cloud IDE), using the Cloud IDE (CodeAnywhere) after you open the IDE, connect to the Ubunty instance in the cloud via ssh. You should see the editor and be able to ssh. Like this:
 
-[<img src="ide.png" />]
+<img src="ide.png" />
 
 And this is the screen to setup the connection, select ssh:
-[<img src="ide_setup.png" width="400"/>]
+<img src="ide_setup.png" width="400"/>
 
 
-- Step number two:
+- Step number two(Ubuntu config):
 
- run the setup script: http://github.com/AXthe/AXthe/blob/main/setup.sh
-
-You can cust paste the script above: http://github.com/axthe/axthe/blob/main/setup.sh 
+ run the setup script: http://github.com/AXthe/AXthe/blob/main/setup.sh, you can cut and paste, line by line. I cut and paste a few line in at a time (into the Cloud IDE)
 
 (or you can try #wget -O - https://raw.githubusercontent.com/axthe/axthe/main/setup.sh | bash )
+
+
+- Step number three(Caddy):
 
 Then create Caddyfile similar to this:
 http://github.com/axthe/axthe/blob/main/Caddyfile
@@ -47,23 +48,49 @@ and
 ```
 caddy start
 ```
+or caddy stop as needed. Everytime you change the Caddyfile you need to stop and start it.
 
-### And last:
-- Download http://github.com/axthe/axthe/releases (or BETTER, for latest: http://github.com/axthe/axthe and click Code/Download ZIP)
+Notice that there is a:
+```
+{
+	respond "hi"
+}
+```
 
-Lets start the second app first. The Caddyfile should point direct to CORS/www and if you run.sh in the CORS you should be able to develop locally.
-For SSR app should use a proxy setting, as per examples in Caddyfile, and you can go to SSRapp folder. In my1SSRapp folder rename file envEx to ```.env```. Running ```d.sh``` should start your SSR app :-).
+Configure a sub domain in your dns to go there! :-)
 
-The DNS subdomains should point to Caddyfile subdomains/ports.
+You may need to glance the Caddy docs on their web site, but: you must know how to connect a DNS to your server. That is this step, don't go to next step till you are comfortable connecting N number of apps installed on your linux server to DNS, so that you can go to it from your browser via HTTPS.
+
+
+- Step number four(AXthe):
+
+For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file.
+In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-). Also you can run.sh in my JAMapp.
+
+There are several folders, you should connect each to Caddy/DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup!
+
+
+### Setup recipe part II
+
+Optional part, to demo scss, Ably and live reloading.
+1. Create account on Ably. In .env file create a field ```ABLYr=``` and your Ably key. 
+2. In ./lib/wapp add wapp.enablePageReload() 
+3. If you now edit any pug file, the browser will reload :-)
+4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development.
 
 
 ## How to update to a newer version of AXthe tech stack
 
-From time to time we update our stack and scripts, including the setup scripts.
+From time to time we update our stack, enviroment and scripts. Here is how to upgrade to a newer version:
+1. Setup a new Ubuntu instance as per above.
+2. Edit Caddyfile so you have new subdomains, for example version2.mydomain.com, and get it to just do hello world type stuff.
+3. Rename folders to match your app names. (I assume you did not leave it as myAPIapp and myJAMapp, so change it to what your folders are called)
+4. Option A: if using git, you can just create a new branch with the new clean version without your code and then merge branches with the old version with your code.
+Option B: if not using git, just copy and paste your files over the new AXthe stack.
+5. Now you can move your DNS around as needed, for example you have your old box with older code and your new box with newer code. Maybe use legacy.mydomain.com to point to the old app, and alpha.mydomain.com to point to the new app.
 
 
-
-### Optional as needed
+### As needed shell commands that you can cut/paste:
 
 ```
 ufw status
