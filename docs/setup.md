@@ -16,7 +16,7 @@ In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should star
 
 
 ### Pre-requestites
-- You need A DNS name/domain, I recommend http://easydns.com or Porkbun.com (and I recommend against GoDaddy).
+- You need A DNS name/domain, I recommend Porkbun.com or http://easydns.com (and I recommend against GoDaddy), so get(or transfer) a domain that you can control.
 - A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, http://soyoustart.com, Digital Ocean, Linode, etc. Likely that anything Ubuntu in the cloud will do the job.
 
 
@@ -69,6 +69,7 @@ In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should st
 
 There are several folders, you should connect each to Caddy/DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup!
 
+You can also setup http://pm2.io one you are ready for production.
 
 ### Setup recipe part II
 
@@ -77,11 +78,6 @@ Optional part, to demo scss, Ably and live reloading.
 2. In ./lib/wapp add wapp.enablePageReload() 
 3. If you now edit any pug file, the browser will reload :-)
 4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development. So create something using one of the CSS frameworks.
-
-#### Setup part III
-
-Optionally, you can setup Caddy/DNS to use static11tyPug folder, it is just another type of development.
-And for JAMapp, optionaly you can try to build a hello world Cordova based browser app or at least make a web component.
 
 ## How to update
 

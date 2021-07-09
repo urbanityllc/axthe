@@ -32,7 +32,7 @@ If you are already familiar with AXthe, you can download a starter app/kit, that
 In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-).
 
 
-## Layout
+## Directory structure
 Pug is templating you already know how to use, it is html markup tags that are self closing! It is a fine alternative to PHP.
 Check out pug: http://html2pug.vercel.app. Pug is similar to Haml or Slim, if you have not used it yet, you'll love it.
  
