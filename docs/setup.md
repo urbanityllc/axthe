@@ -20,7 +20,7 @@ In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should star
 - A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, http://soyoustart.com, Digital Ocean, Linode, etc. Likely that anything Ubuntu in the cloud will do the job.
 
 
-## Setup recipe part I
+## Setup recipe
 After you create an Ubuntu instance in the cloud:
 You should edit in the cloud, sign up for a cloud based IDE, I recommend http://codeanywhere.com/editor. For SSR mostly use a Cloud IDE, and for JAMstack or mobile|cordova development you chould use local VS Code.
 
@@ -79,9 +79,9 @@ Optional part, to demo scss, Ably and live reloading.
 4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development.
 
 
-## How to update to a newer version of AXthe tech stack
+## How to update
 
-From time to time we update our stack, enviroment and scripts. Here is how to upgrade to a newer version:
+From time to time we update our AXthe stack, enviroment and scripts. Here is how to upgrade to a newer version:
 1. Setup a new Ubuntu instance as per above.
 2. Edit Caddyfile so you have new subdomains, for example version2.mydomain.com, and get it to just do hello world type stuff.
 3. Rename folders to match your app names. (I assume you did not leave it as myAPIapp and myJAMapp, so change it to what your folders are called)

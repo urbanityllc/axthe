@@ -10,7 +10,7 @@
 ### Pre-requsite 
 Pre-requsite knowledge ahed of AXthe is this book (or a similar book) - 'HTML and CSS: Design and Build Websites by Jon Duckett'
 
-# Overview of the AXthe curated tech stack:
+# Overview
  
 AXthe offer more than one development style, and allows you to combine them:
 - A classic full stack development(based on JAMstack), with Snowpack build and Micro frontends(similar to microservices), that is compatible with Cordova cross platform development for Mobile(iOS and Android) from a single code base.
@@ -26,7 +26,7 @@ Other parts of the tech stack:
 - The example starter apps are using BootStrap v5.x, including scss hot-reload in development mode.
 
 
-##  For the impatient, download it:
+##  For the impatient
 If you are already familiar with AXthe, you can download a starter app/kit, that includes the Caddyfile to setup the http server and includes both environments:
 - For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file.
 In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-).
