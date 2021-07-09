@@ -76,8 +76,12 @@ Optional part, to demo scss, Ably and live reloading.
 1. Create account on Ably. In .env file create a field ```ABLYr=``` and your Ably key. 
 2. In ./lib/wapp add wapp.enablePageReload() 
 3. If you now edit any pug file, the browser will reload :-)
-4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development.
+4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development. So create something using one of the CSS frameworks.
 
+#### Setup part III
+
+Optionally, you can setup Caddy/DNS to use static11tyPug folder, it is just another type of development.
+And for JAMapp, optionaly you can try to build a hello world Cordova based browser app or at least make a web component.
 
 ## How to update
 

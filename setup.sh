@@ -17,6 +17,7 @@ npm install -g cordova
 # install a tester for node:
 npm i -g colortape
 npm i -g tape
+npm install pm2@latest -g
 
 # caddy http server
 # https://caddyserver.com/docs/install#debian-ubuntu-raspbian
@@ -29,7 +30,7 @@ caddy stop
 
 apt install cockpit -y
 # above is a monitoring server, read https://cockpit-project.org/documentation.html
-# for now it is ok to accept a bad cert, you can fix it w/ Caddy later via proxy to port 9090
+# for now it is ok to accept a bad cert, you can fix it w/ Caddy later via proxy to port 9090 to monitor your OS
 
 # get AXthe starter, and unzip
 wget https://axthe.github.io/axthe/starter.zip
