@@ -18,6 +18,7 @@ npm install -g cordova
 npm i -g colortape
 npm i -g tape
 npm install pm2@latest -g
+npm i -g yarn
 
 # caddy http server
 # https://caddyserver.com/docs/install#debian-ubuntu-raspbian
