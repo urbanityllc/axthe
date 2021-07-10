@@ -12,8 +12,6 @@
 		"npm": ">=7.19.0"
 	},
 	"dependencies": {
-		"@sentry/node": "^6.8.0",
-		"@sentry/tracing": "^6.8.0",
 		"@supabase/supabase-js": "^1.18.1",
 		"axthe": "^0.2.0",
 		"cors": "^2.8.5",

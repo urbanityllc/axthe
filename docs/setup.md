@@ -72,8 +72,6 @@ In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should st
 
 There are several folders, you should connect each to Caddy/DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup!
 
-You can also setup http://pm2.io one you are ready for production.
-
 ### Setup recipe part II
 
 Optional part, to demo scss, Ably and live reloading.

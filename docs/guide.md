@@ -30,8 +30,6 @@ That lets you write an API.
 
 - And for JAMapp, optionaly you can try to build a hello world Cordova based browser app.
 
-- For monitoring you can use: http://sentry.io/onboarding/axthe/get-started both on node|server and in the client/browser/mobile app.
-
 # Guide part II
 
 Lets level up to some more topics:
