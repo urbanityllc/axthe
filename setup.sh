@@ -7,6 +7,7 @@ apt-get upgrade -y
 
 apt-get install unzip -y
 apt-get install git -y
+apt-get install openssh-client
 
 # node app server via nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash

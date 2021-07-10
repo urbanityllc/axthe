@@ -17,15 +17,16 @@ http://mockflow.com/pricing or http://balsamiq.com/buy/#cloud. There is no need 
 
 # Guide part I
 
+You will not learn to dance by reading about dancing. What I'm saying you have to write code to learn to code.
+
 - After setting up based on setup instructions, you should be running the myAPI project node. If you open the browser and edit Bootstrap SCSS or Pug it should auto-refresh. You should be able to edit it via a Cloud IDE and see the https web page/site changes.
 
 - The directory structure, as mentioned in the outline on the home page mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop.
 
-
 - You can glance package json write some tests. For example a business model layer that uses http://npmjs.com/package/@supabase/supabase-js
 That lets you write an API.
 
-- In the myJAMapp there is a exampleComp2, that calls an API from a web component (in aligment ), we use http://docs.ficusjs.org
+- In the myJAMapp there is a exampleComp2, that calls an API from a web component (in aligment ), we use http://docs.ficusjs.org. You should know the difference between a page and a component, not as easy as you may think.
 
 - And for JAMapp, optionaly you can try to build a hello world Cordova based browser app.
 

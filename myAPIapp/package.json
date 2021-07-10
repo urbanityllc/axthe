@@ -24,8 +24,9 @@
 	"devDependencies": {
 		"colortape": "^0.1.2",
 		"docco": "^0.8.1",
-		"nodemon": "^2.0.11",
-		"tape": "^5.2.2"
+		"nodemon": "^2.0.12",
+		"tape": "^5.2.2",
+		"faker": "^5.5.3"
 	},
 	"browserslist": [
 		"last 3 versions",

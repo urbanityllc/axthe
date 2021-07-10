@@ -29,8 +29,11 @@ You should edit in the cloud, sign up for a cloud based IDE, I recommend http://
 <img src="ide.png" />
 
 And this is the screen to setup the connection, select ssh:
+
 <img src="ide_setup.png" width="400"/>
 
+
+Optional: Additionally, you can add a VS Code plugin in to develop remotely, by following instructions here http://code.visualstudio.com/docs/remote/ssh, read 'Connect to a remote host' (F1 then 'SSH connect window to a remote host')
 
 - Step number two(Ubuntu config):
 
