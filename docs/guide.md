@@ -36,6 +36,8 @@ That lets you write an API.
 Lets level up to some more topics:
 - Connect the static11ty site w/ Caddy/DNS. More static front end development based on Pug.
 
+- Optional, setup the Acke Analytics with Caddy/DNS from zAckeAnalytics folder. (it needs Mongo, you can host it on MongoDB.com)
+
 Now back to the myAPIapp
 - Everthing myAPIapp is just standard express.js, the most popular node.js module:
  http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
