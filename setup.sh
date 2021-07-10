@@ -20,13 +20,14 @@ source ~/.bashrc
 nvm install 14.17.3 -y
 nvm alias default node
 npm i -g npm
+npm -v
+
 npm install -g cordova
 # install a tester for node:
 npm i -g colortape
-npm i -g tape
-npm install pm2@latest -g
 npm i -g yarn
-npm -v
+npm install pm2@latest -g
+pm2
 
 # caddy http server
 # https://caddyserver.com/docs/install#debian-ubuntu-raspbian
