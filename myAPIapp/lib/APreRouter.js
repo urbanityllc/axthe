@@ -17,13 +17,6 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			this.rend(req, res, dat) // notice the rend sytax!!!
 		})
 
-		this.eapp.post('/form', (req, res) => {
-			console.log(this.constructor.name, req.body)
-			res.send("OK") 
-		})
-
-
-
 		// just api, no path
 		this.eapp.get('/api/data1', (req, res) => {
 			let dat = {title: 'My name is Vic'}

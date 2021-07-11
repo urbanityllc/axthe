@@ -14,6 +14,13 @@ use node like LAMP
 
 palermo
 
+### Pre-project start (optional)
+
+- You should  have an idea of what you are building at a high level, one way is to 'be inspired' by another website or a web app. Or you should mock up so we know at least the number of pages/screen:
+http://mockflow.com/pricing or http://balsamiq.com/buy/#cloud. There is no need to enter every field, just an idea of what pages/screens will be doing. That would be the minimum. For maximum, follow the advice of Amazon CTO: http://allthingsdistributed.com/2006/11/working_backwards.html
+
+- Likely you also want to setup a cadance/ritual, to meet at a regular time on a regular day, twice a week | bi-weekly at the same time via a video such as Zoom or Loom. Mostly you revew what was done, and plan what will be done by the next meeting. For tracking tasks you can use Notion or Airtable
+
 
 
 # An eXpress.js and Templating HElper (AXthe)
