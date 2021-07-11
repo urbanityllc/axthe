@@ -16,7 +16,8 @@
 		"axthe": "^0.2.1",
 		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
-		"logzio-nodejs": "^2.0.2",
+		"debug": "^4.3.2",
+		"@logdna/logger": "^2.3.2",
 		"multer": "^1.4.2",
 		"validate.js": "^0.13.1"
 	},

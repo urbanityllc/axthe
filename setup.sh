@@ -51,3 +51,5 @@ rm *.zip
 # optional, if you install PHP, install latest v7, not v8
 apt -y install php7.4
 php -v
+curl -sS https://getcomposer.org/installer | sudo php -- --install-dir=/usr/local/bin --filename=composer
+composer self-update
