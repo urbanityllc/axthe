@@ -1,5 +1,5 @@
 
-mimnium viable tech stack
+
 mirofronets
 
 fe - harder: user chalenage

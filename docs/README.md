@@ -16,6 +16,8 @@ AXthe offer more than one development style, and allows you to combine them:
 - A classic full stack development(based on JAMstack), with Snowpack build and Micro frontends(similar to microservices), that is compatible with Cordova cross platform development for Mobile(iOS and Android) from a single code base.
 - A modern static site and blog development based on 11ty.
 - An application server, based on Express to server API's from above; or to host SSR with a 'pre-route'. (inspired by Express.js generator, first thing we set up so all have an API to call)
+ 
+AXthe curates a minimum viable tech stack that includes Express, Supabase, SnowPack, Ficus, CaddyServer, Ably, Pug, Bootstrap, Cordova.
 
 Other parts of the tech stack:
 - For a modern http server we use Caddy instead of Apache or NGINX, as much easier to use, we show you how to set it up behind a DNS for auto-https. All the apps are normally behind Caddy or behind a CDN.
@@ -57,6 +59,3 @@ Things like header.pug, or footer.pug you would not name index.pug, you can put 
  - AXthe tech stack approach is to eschew client side .js, and rely heavily on SSR. ( I really like the word eschew). The server side route in express.js intercepts the http request and passes any dynamic data to pug. That is 90% of AXthe. In addition to productivity, SSR is better at SEO and security than any client/browser side .js.
 - AXthe is a designer friendly tech stack, so it is not just for front end and full stack developers. Even civilians, people not trained in software development can write professional grade webapps.
 - AXthe stack also has AXthe npm module that has a few helper classes
- 
-## Docs
-- http://docs.AXthe.net

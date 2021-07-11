@@ -10,16 +10,16 @@
 
 # Guide part I
 
-You will not learn to dance by reading about dancing. What I'm saying you have to write code to learn to code.
+You will not learn to dance by reading about dancing. What I'm saying you have to write code to learn to code. Lets jump in!
 
-- The directory structure, as mentioned in the outline on the home page mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop.
+1. The directory structure, as mentioned in the outline on the home page mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop.
 
-- You can glance package json, and write some tests. For example a business model layer that uses http://npmjs.com/package/@supabase/supabase-js
-That lets you write an API.
+2. You can glance package json, and see an integration test. A business model layer that uses http://npmjs.com/package/@supabase/supabase-js as a data layer. 
 
-- In the myJAMapp there is a exampleComp2, that calls an API from a web component (in aligment ), we use http://docs.ficusjs.org. You should know the difference between a page and a component, not as easy as you may think.
+3. In the myJAMapp there is a exampleComp2. There is a web component on a page that calls an API in myAPIapp. You need to run both the myAPIapp that hosts the API and myJAMapp that hosts the web compoent.
 
-- And for JAMapp, optionaly you can try to build a hello world Cordova based browser app.
+For web component we use http://docs.ficusjs.org. 
+
 
 # Guide part II
 
@@ -33,7 +33,12 @@ Lets level up to some more topics:
 - There are a few helper classes for S3 content storage, SQL, cache, scraping, file managment, etc. here, that you leverage via npm package: https://github.com/axthe/committers/tree/main/axtheLib/dat, there is a helper function rend() that you can leverage in the router.
 
 
+
 ### Optional
+
+- Also there is an S3 example for a store, as well as a distributed cache baed on SQLite.
+
+- And for JAMapp, optionaly you can try to build a hello world Cordova based browser app.
 
 - Optionaly, connect the static11tyPug site (in ./optional folder) w/ Caddy/DNS. More static front end development based on Pug.
 
