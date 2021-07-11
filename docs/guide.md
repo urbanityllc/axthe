@@ -35,9 +35,9 @@ Lets level up to some more topics:
 
 ### Optional
 
-- Optionaly, connect the static11ty site w/ Caddy/DNS. More static front end development based on Pug.
+- Optionaly, connect the static11tyPug site (in ./optional folder) w/ Caddy/DNS. More static front end development based on Pug.
 
-- Optionaly, setup the Ackee Analytics with Caddy/DNS from zAckeeAnalytics folder. (it needs Mongo, you can host it on MongoDB.com)
+- Optionaly, setup the Ackee Analytics with Caddy/DNS from optional/AckeeAnalytics folder. (it needs Mongo, you can host it on MongoDB.com)
 
 ## Summary
 
