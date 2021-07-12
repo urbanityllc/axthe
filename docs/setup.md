@@ -15,16 +15,16 @@ If you already have node.js setup, greater than version 14.17.1 (npm greater tha
 In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-).
 
 
-### Pre-requestites
+### Domain and server
 - You need A DNS name/domain, I recommend Porkbun.com or http://easydns.com (and I recommend against GoDaddy), so get(or transfer) a domain that you can control.
 - A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, http://soyoustart.com, Digital Ocean, Linode, etc. Likely that anything Ubuntu in the cloud will do the job.
 
 
 ## Setup recipe
 After you create an Ubuntu instance in the cloud:
-You should edit in the cloud, sign up for a cloud based IDE, I recommend http://codeanywhere.com/editor. For SSR mostly use a Cloud IDE, and for JAMstack or mobile|cordova development you chould use local VS Code.
+You should edit in the cloud, sign up for a cloud based IDE, I recommend http://codeanywhere.com/editor. For SSR mostly use a Cloud IDE, and for JAMstack or mobile|cordova development you could use local VS Code.
 
-- Step number one(Cloud IDE), using the Cloud IDE (CodeAnywhere) after you open the IDE, connect to the Ubunty instance in the cloud via ssh. You should see the editor and be able to ssh. Like this:
+- Step number one(Cloud IDE), using the Cloud IDE (CodeAnywhere) after you open the IDE, connect to the Ubuntu instance in the cloud via ssh. You should see the editor and be able to ssh. Like this:
 
 <img src="ide.png" />
 

@@ -10,8 +10,8 @@
 ### Support and Forum
 - http://github.com/axthe/axthe/discussions
 
-### Pre-requsite 
-Pre-requsite knowledge ahed of AXthe is this book (or a similar book) - 'HTML and CSS: Design and Build Websites by Jon Duckett'
+### Prerequisite
+Prerequisite knowledge ahed of AXthe is this book (or a similar book) - 'HTML and CSS: Design and Build Websites by Jon Duckett'
 
 # Overview
  
