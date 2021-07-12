@@ -13,11 +13,9 @@ You will not learn to dance by reading about dancing. What I'm saying you have t
  
 1. The directory structure, as mentioned in the outline on the home page mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop. That is the major difference from Express generator. You can start myAPIapp with ```./r.sh```.
  
-2. You can glance package json, and see an integration test. A business model layer that uses http://npmjs.com/package/@supabase/supabase-js as a data layer.
- 
-3. In the myJAMapp there is a exampleComp1 and 2. There is a web component on a page that calls an API in myAPIapp. You need to run both the myAPIapp that hosts the API and myJAMapp that hosts the web component.
- 
-For web component we use http://docs.ficusjs.org.
+2. You can glance package json, and see an integration test. A business model layer that uses http://npmjs.com/package/@supabase/supabase-js as a data layer. You can run ts.sh to run a sample integration test.
+
+3. For web components we use http://docs.ficusjs.org library. In the myJAMapp folder, there is a exampleComp1 and 2. There is a web component on a page that calls an API in myAPIapp. You need to run both the myAPIapp that hosts the API and myJAMapp that hosts the web component. In addtion to running the myAPIapp in 1, you should start myJAMapp build watcher in that folder via ```run.sh```.
 
  
 # Guide part II

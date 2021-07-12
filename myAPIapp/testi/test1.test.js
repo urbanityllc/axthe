@@ -15,7 +15,7 @@ try {
 	console.error(`.env file does not exist, this won't work`)
 	process.exit(1)
 }
-// ***
+// *** end setup ***
 
 const test = require('tape')
 
