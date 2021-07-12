@@ -13,16 +13,10 @@ export default {
 	},
 
 	plugins: [
-		["@marlonmarcello/snowpack-plugin-pug", {
+		["snowpack-plugin-pug", {
 				"pretty": false,
 				"base": "./www",
 			}]
 	],
 
-	optimize: {
-		"bundle": false,
-		"minify": false,
-		"treeshake": false,
-		"target": "es2017"
-	}
 }

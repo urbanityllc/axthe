@@ -22,6 +22,7 @@ nvm alias default node
 npm i -g npm
 npm -v
 
+npm i -g snowpack@3.7.1
 npm install -g cordova
 # install a tester for node:
 npm i -g colortape
