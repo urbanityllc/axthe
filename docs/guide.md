@@ -18,7 +18,7 @@ You will not learn to dance by reading about dancing. What I'm saying you have t
 3. In the myJAMapp there is a exampleComp1 and 2. There is a web component on a page that calls an API in myAPIapp. You need to run both the myAPIapp that hosts the API and myJAMapp that hosts the web component.
  
 For web component we use http://docs.ficusjs.org.
- 
+
  
 # Guide part II
  
