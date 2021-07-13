@@ -6,7 +6,7 @@
 		"test": "npx tape -- --verbose 'teste/**/*.test.js' | npx colortape",
 		"dev": "snowpack dev",
 		"build": "snowpack build",
-		"ver": " snowpack --version",
+		"ver": "snowpack --version",
 		"install": "npm i -g snowpack@3.7.0"
 	},
 	"engines": {
