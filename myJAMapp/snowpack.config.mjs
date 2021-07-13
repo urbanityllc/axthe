@@ -17,6 +17,6 @@ export default {
 				"pretty": false,
 				"base": "./www",
 			}]
-	],
+	]
 
 }
