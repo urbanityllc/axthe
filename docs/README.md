@@ -14,7 +14,6 @@ Prerequisite knowledge ahed of AXthe is this book (or a similar book) - 'HTML an
  
 AXthe offer more than one development style, and allows you to combine them:
 - A classic full stack development(based on JAMstack), with Snowpack build and Micro frontends(similar to microservices), that is compatible with Cordova cross platform development for Mobile(iOS and Android) from a single code base.
-- A modern static site and blog development based on 11ty.
 - An application server, based on Express to server API's from above; or to host SSR with a 'pre-route'. (inspired by Express.js generator, first thing we set up so all have an API to call)
  
 AXthe curates a minimum viable tech stack that includes Express, Supabase, SnowPack, Ficus, CaddyServer, Ably, Pug, Bootstrap, Cordova.
