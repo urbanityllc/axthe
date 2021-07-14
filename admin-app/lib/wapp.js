@@ -22,4 +22,4 @@ wapp.eapp.use(function (req, res, next) {
 new APreRouter(wapp.eapp) // tell the router about the app
 
 // to finish setup
-wapp.finalPrep(9090) // listen on this port
+wapp.finalPrep() // listen on this port

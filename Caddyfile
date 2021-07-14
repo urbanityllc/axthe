@@ -9,7 +9,7 @@
 # caddy stop, start, validate
 ## #################################################### 
 
-1.axthe.net {
+1.justinpacquing.me {
 	respond "hi"
 }
 
@@ -18,12 +18,7 @@ a.axthe.net {
 	reverse_proxy localhost:9090
 }
 
-mysite.axthe.net{
-	root * ./site/www
-	file_server
-}
-
-ubay.axthe.net {
+justinpacquing.me {
 	reverse_proxy localhost:8080
 }
 
