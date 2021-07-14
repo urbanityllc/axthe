@@ -1,0 +1,3 @@
+{   "watch": ["./lib"],
+    "exec": "node ./lib/wapp.js"
+}
