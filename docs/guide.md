@@ -10,6 +10,7 @@
 # Guide part I
  
 You will not learn to dance by reading about dancing. What I'm saying you have to write code to learn to code. Lets jump in!
+Note, you will need to create an account on Supabase.io and Ably to follow this guide.
  
 1. The directory structure, as mentioned in the outline on the home page mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop. That is the major difference from Express generator. You can start myAPIapp with ```./r.sh```.
  
@@ -29,10 +30,13 @@ Lets level up to some more topics:
 http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
  
 - After setting up based on setup instructions, you should be running the myAPI project node. If you open the browser and edit Bootstrap SCSS or Pug it should auto-refresh. You should be able to edit it via a Cloud IDE and see the https web page/site changes ( after setting up Ably). I hope you can see that you can quickly prototype.
- 
+
 ## Summary
  
 Ideally part II should show you the different styles of development:
 - SSR + API
 - JAM/mobile w/ a builder
  
+### Appendix
+
+- AXthe tries to follow http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
