@@ -45,9 +45,9 @@ apt install cockpit -y
 apt autoremove -y
 
 # get AXthe starter, and unzip
-wget https://github.com/axthe/axthe/archive/refs/heads/main.zip
-unzip main.zip
-rm *.zip
+#wget https://github.com/axthe/axthe/archive/refs/heads/main.zip
+#unzip main.zip
+#rm *.zip
 
 # optional, if you install PHP, install latest v7, not v8
 apt -y install php7.4
