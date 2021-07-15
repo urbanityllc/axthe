@@ -35,9 +35,9 @@ And this is the screen to setup the connection, select ssh:
 
 Optional: Additionally, you can add a VS Code plugin in to develop remotely, by following instructions here http://code.visualstudio.com/docs/remote/ssh, read 'Connect to a remote host' (F1 then 'SSH connect window to a remote host')
 
-- Step number two(Ubuntu config):
+- Ubuntu config:
 
- run the setup script: http://github.com/AXthe/AXthe/blob/main/setup.sh, you can cut and paste, line by line. I cut and paste a few line in at a time (into the Cloud IDE)
+ run the setup script: http://github.com/AXthe/AXthe/blob/main/setup.sh, you can cut and paste, line by line. I cut and paste a few line in at a time (into the Cloud IDE). As a part of setup you should make sure you are running Python v3.X and not the older version.
 
 (or you can try #wget -O - https://raw.githubusercontent.com/axthe/axthe/main/setup.sh | bash )
 
