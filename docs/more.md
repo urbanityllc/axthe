@@ -1,5 +1,12 @@
 
 
+
+ 
+### Appendix
+
+- AXthe tries to follow http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
+
+
 mirofronets
 
 fe - harder: user chalenage
