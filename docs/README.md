@@ -17,7 +17,7 @@ AXthe tech stack (and 'best' pratices for high productivity web app) offer more 
 2. An application server, based on Express to server API's from above; or to host SSR with a 'pre-route'. (inspired by Express.js generator, first thing we set up so all have an API to call). Great at SEO.
 3. 11ty, modern and static, with templeting(eg Pug). You can create some hybrid mix combo of all 3, 11ty that can host the above #1 classic - and call APIs. Great at SEO.
 
-AXthe curates a minimum viable tech stack that includes Express, Supabase, SnowPack, Ficus, CaddyServer, Ably, Pug, Bootstrap, Cordova.
+AXthe curates a minimum viable tech stack that includes Express, Supabase, SnowPack, Ficus, CaddyServer, Ably, Pug, Bootstrap, Cordova and 11ty.
 
 Other parts of the tech stack:
 - For a modern http server we use Caddy instead of Apache or NGINX, as much easier to use, we show you how to set it up behind a DNS for auto-https. All the apps are normally behind Caddy or behind a CDN.
