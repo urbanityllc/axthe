@@ -11,13 +11,14 @@
 - http://github.com/axthe/axthe/discussions
 
 ### Prerequisite
-Prerequisite knowledge ahed of AXthe is this book (or a similar book) - 'HTML and CSS: Design and Build Websites by Jon Duckett'
+Prerequisite knowledge ahed of AXthe is this book (or a similar book) - 'HTML and CSS: Design and Build web sites by Jon Duckett'
 
 # Overview
  
-AXthe offer more than one development style, and allows you to combine them:
-- A classic full stack development(based on JAMstack), with Snowpack build and Micro frontends(similar to microservices), that is compatible with Cordova cross platform development for Mobile(iOS and Android) from a single code base.
-- An application server, based on Express to server API's from above; or to host SSR with a 'pre-route'. (inspired by Express.js generator, first thing we set up so all have an API to call)
+AXthe tech stack (and 'best' pratices for high productivity web app) offer more than one development style, and allows you to combine them:
+1. A classic full stack development(based on JAMstack), with Snowpack build and Micro frontends(similar to microservices), that is compatible with Cordova cross platform development for Mobile(iOS and Android) from a single code base. Not great at SEO.
+2. An application server, based on Express to server API's from above; or to host SSR with a 'pre-route'. (inspired by Express.js generator, first thing we set up so all have an API to call). Great at SEO.
+3. 11ty, modern and static, with templeting(eg Pug). You can create some hybrid mix combo of all 3, 11ty that can host the above #1 classic - and call APIs. Great at SEO.
  
 AXthe curates a minimum viable tech stack that includes Express, Supabase, SnowPack, Ficus, CaddyServer, Ably, Pug, Bootstrap, Cordova.
 
@@ -40,7 +41,7 @@ In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should star
 Pug is templating you already know how to use, it is html markup tags that are self closing! It is a fine alternative to PHP.
 Check out pug: http://html2pug.vercel.app. Pug is similar to Haml or Slim, if you have not used it yet, you'll love it.
  
-AXthe has a convention of always(with some exceptions) naming files as index.pug. That means if you have 3 pages in your webapp, you need 3 folders.
+AXthe has a convention of always(with some exceptions) naming files as index.pug. That means if you have 3 pages in your web app, you need 3 folders.
 ```
 - ./public/lading/A/index.pug
 - ./public/lading/B/index.pug
@@ -57,7 +58,7 @@ That is the biggest difference with the Express generator. Also there is a base 
 Things like header.pug, or footer.pug you would not name index.pug, you can put in ./public/includes
  
 ### A more concepts:
-- AXthe aims to be the most productive way to build any webapp, including mobile or CMS webapps. Specifically it aims to be better than the old productivity leader, LAMP, or even 'low code' tools. It make development fun, and productivity is fast, so that you can build rapid prototypes.
+- AXthe aims to be the most productive way to build any web app, including mobile or CMS web apps. Specifically it aims to be better than the old productivity leader, LAMP, or even 'low code' tools. It make development fun, and productivity is fast, so that you can build rapid prototypes.
  - AXthe tech stack approach is to eschew client side .js, and rely heavily on SSR. ( I really like the word eschew). The server side route in express.js intercepts the http request and passes any dynamic data to pug. That is 90% of AXthe. In addition to productivity, SSR is better at SEO and security than any client/browser side .js.
-- AXthe is a designer friendly tech stack, so it is not just for front end and full stack developers. Even civilians, people not trained in software development can write professional grade webapps.
+- AXthe is a designer friendly tech stack, so it is not just for front end and full stack developers. Even civilians, people not trained in software development can write professional grade web apps.
 - AXthe stack also has AXthe npm module that has a few helper classes
