@@ -15,6 +15,7 @@ wapp.eapp.use(function (req, res, next) {
 	next()
 })
 
+
 // enable reload on assets/**/style.scss and pug edits, make sure you register for Ably events
 wapp.enablePageReload()
 
