@@ -14,8 +14,9 @@ wapp.eapp.use(function (req, res, next) {
 	res.set('Cache-control', 'public, s-maxage=1')
 	next()
 })
+
 // enable reload on assets/**/style.scss and pug edits, make sure you register for Ably events
-/wapp.enablePageReload()
+wapp.enablePageReload()
 
 
 // now you can add routes
