@@ -1,6 +1,7 @@
 clear
 rm -rf _site
 rm -rf static
+npm i
 
 npx @11ty\/eleventy --serve
 

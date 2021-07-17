@@ -1,14 +1,16 @@
 
  
+prepros.io
+
 ### Optional
  
 - Also there is an S3 example for a store, as well as a distributed cache baed on SQLite.
  
 - And for JAMapp, optionally you can try to build a hello world Cordova based browser app.
  
-- Optionaly, connect the static11tyPug site (in ./optional folder) w/ Caddy/DNS. More static front end development based on Pug.
+- Optionaly, connect the static11tyPug site (in ./optional folder) w/ Caddy+DNS. More static front end development based on Pug.
  
-- Optionaly, setup the Ackee Analytics with Caddy/DNS from optional/AckeeAnalytics folder. (it needs Mongo, you can host it on MongoDB.com)
+- Optionaly, setup the Ackee Analytics with Caddy+DNS from optional/AckeeAnalytics folder. (it needs Mongo, you can host it on MongoDB.com)
  
 - Optionaly, check out prepros.io to learn about generators.
 

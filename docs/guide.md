@@ -26,7 +26,9 @@ Note, you will need to create an account on Supabase.io and Ably to follow this 
  
 Lets level up to some more topics:
 
-- Lets add 11tyPug to Caddy/DNS. For more on 11ty check their docs. (You should find it similar to Docsify used in ./docs, nice use for a wiki or such). Maybe some of the myJAMapp outputs end up here.
+- ./docs folder is Docsify. Connect it to Caddy+DNS.
+
+- Lets add 11tyPug to Caddy+DNS. For more on 11ty check their docs. (You should find it similar to Docsify used in ./docs, nice use for a wiki or such). Maybe some of the myJAMapp outputs end up here.
 
 - Everything myAPIapp is just standard express.js, the most popular node.js module:
 http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a

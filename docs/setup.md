@@ -70,7 +70,7 @@ You may need to glance the Caddy docs on their web site, but: you must know how 
 For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file.
 In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-). Also you can run.sh in my JAMapp.
 
-There are several folders, you should connect each to Caddy/DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup!
+There are several folders, you should connect each to Caddy+DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup!
 
 ### Setup recipe part II
 
