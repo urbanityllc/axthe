@@ -29,7 +29,7 @@ alias python='python3'
 
 apt install cockpit -y
 # above is a monitoring server, read https://cockpit-project.org/documentation.html
-# for now it is ok to accept a bad cert, you can fix it w/ Caddy later via proxy to port 9090 to monitor your OS
+# for now it is ok to accept a bad cert, you can fix it w/ Caddy+DNS later via proxy to port 9090 to monitor your OS
 
 # node app server via nvm
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash

@@ -46,4 +46,5 @@ http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
 Ideally you can see that the different styles of development:
 - SSR + API
 - JAM/mobile w/ a builder or static generator(11ty)
+
 And you can see that you can make somethings SSR, somethings JAM and some thigs static-gen, all in the same app. (via subdomains or by copying the build optputs).
