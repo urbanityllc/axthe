@@ -70,9 +70,11 @@ You may need to glance the Caddy docs on their web site, but: you must know how 
 For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file.
 In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-). Also you can run.sh in my JAMapp.
 
-There are several folders, you should connect each to Caddy+DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup!
+There are several folders, you should connect each to Caddy+DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup! 
 
-## How to update
+You should now know how to setup up Caddy+DNS to a subdomain.
+
+## How to upgrade 
 
 From time to time we update our AXthe stack, enviroment and scripts. Here is how to upgrade to a newer version:
 1. Setup a new Ubuntu instance as per above.
