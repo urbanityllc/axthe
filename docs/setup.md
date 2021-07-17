@@ -72,14 +72,6 @@ In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should st
 
 There are several folders, you should connect each to Caddy+DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup!
 
-### Setup recipe part II
-
-Optional part, to demo scss, Ably and live reloading.
-1. Create account on Ably. In .env file create a field ```ABLYr=``` and your Ably key. 
-2. In ./lib/wapp add wapp.enablePageReload() 
-3. If you now edit any pug file, the browser will reload :-)
-4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development. So create something using one of the CSS frameworks.
-
 ## How to update
 
 From time to time we update our AXthe stack, enviroment and scripts. Here is how to upgrade to a newer version:

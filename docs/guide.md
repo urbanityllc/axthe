@@ -16,7 +16,6 @@ Note, you will need to create an account on Supabase.io and Ably to follow this 
  
 2. You can glance package json, and see an integration test. A business model layer that uses http://npmjs.com/package/@supabase/supabase-js as a data layer. You can run ts.sh to run a sample integration test. This allows you to write an API, take a look at myJAMapp/lib/APreRouter.js for ```this.eapp.get('/api/data1', (req, res) => {```, you can just go to the browser /api/data1 and see how an API is called.
 
-
 3. For web components we use http://docs.ficusjs.org library. In the myJAMapp folder, there is a exampleComp1 and 2. There is a web component on a page that calls an API in myAPIapp. You need to run both the myAPIapp that hosts the API and myJAMapp that hosts the web component. In addtion to running the myAPIapp in 1, you should start myJAMapp build watcher in that folder via ```run.sh```. If you navigate in browser to /exampleComp2 and click submit you should see the myJAMapp update the myAPIapp.
 
 4. If you need to build 'native' mobile apps, you can use Cordova, in myJAMapp folder.
@@ -26,18 +25,25 @@ Note, you will need to create an account on Supabase.io and Ably to follow this 
  
 Lets level up to some more topics:
 
-- ./docs folder is Docsify. Connect it to Caddy+DNS.
+- ./docs folder is Docsify. You can connect it to Caddy+DNS.
 
-- Lets add 11tyPug to Caddy+DNS. For more on 11ty check their docs. (You should find it similar to Docsify used in ./docs, nice use for a wiki or such). Maybe some of the myJAMapp outputs end up here.
+- You can add static11tyPug to Caddy+DNS. For more on 11ty check their docs. You can copy some of the class myJAMapp outputs into 11ty.
 
 - Everything myAPIapp is just standard express.js, the most popular node.js module:
 http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
  
 - After setting up based on setup instructions, you should be running the myAPI project node. If you open the browser and edit Bootstrap SCSS or Pug it should auto-refresh. You should be able to edit it via a Cloud IDE and see the https web page/site changes ( after setting up Ably). I hope you can see that you can quickly prototype.
+    1. Create account on Ably. In .env file create a field ```ABLYr=``` and your Ably key. 
+    2. In ./lib/wapp add wapp.enablePageReload() 
+    3. If you now edit any pug file, the browser will reload :-)
+    4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development. So create something using one of the CSS frameworks.
+
+- And back to what was mentioned on the home page, SSR via ```rend(req, res, dat)``` in the PreRouter.
 
 
 ## Summary
  
-Ideally part II should show you the different styles of development:
+Ideally you can see that the different styles of development:
 - SSR + API
-- JAM/mobile w/ a builder
+- JAM/mobile w/ a builder or static generator(11ty)
+And you can see that you can make somethings SSR, somethings JAM and some thigs static-gen, all in the same app. (via subdomains or by copying the build optputs).
