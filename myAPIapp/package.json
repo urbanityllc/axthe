@@ -13,7 +13,7 @@
 	},
 	"dependencies": {
 		"@supabase/supabase-js": "^1.19.0",
-		"axthe": "^0.3.3",
+		"axthe": "^0.4.0",
 		"cors": "^2.8.5",
 		"dotenv": "^10.0.0",
 		"debug": "^4.3.2",
