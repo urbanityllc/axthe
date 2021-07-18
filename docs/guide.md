@@ -24,9 +24,9 @@ Note that the data|model|business layer can/should be used to offload .js to the
  
 # Guide part II
  
-- We are going to connect to DNS via Caddy as the last step in Guide part II.
-   1. ./docs folder is Docsify, it uses markdown. You can connect it to Caddy+DNS.
-   2. You can add static11tyPug to Caddy+DNS. It is configured to use Pug as the markup/templeting For more on 11ty check their docs. Both 11ty and Docsify are listed on http://JAMstack.org/generators page.
+- We are going to connect to DNS via Caddy as the last step in Guide part II/here.
+	1. ./docs folder is Docsify, it uses markdown. You can connect it to Caddy+DNS.
+	2. You can add static11tyPug to Caddy+DNS. It is configured to use Pug as the markup/templeting For more on 11ty check their docs. Both 11ty and Docsify are listed on http://JAMstack.org/generators page.
  
 - The directory|folder structure, as mentioned in the outline on the home page, mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop. That is the major difference from the express.js generator. (http://expressjs.com/en/starter/generator.html ). Take a look at myAPIapp/public/content.
  
@@ -41,16 +41,16 @@ http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a ), but AXthe 
  
 ```
    1.axthe.net {
-       respond "hi"
+	   respond "hi"
    }
  
    a.axthe.net {
-       reverse_proxy localhost:9090
+	   reverse_proxy localhost:9090
    }
  
    mysite.axthe.net{
-       root * ./static11tyPug/static
-       file_server
+	   root * ./static11tyPug/static
+	   file_server
    }
 ```
  
@@ -66,7 +66,7 @@ Ideally you can comprehend the different styles of development:
  
 - To make sure, here is the SSR way again: While the myAPIapp is running(r.sh), lets navigate via a browser to /data2. In public/data2 you can in IDE see the Pug. Via IDE you can see in ./lib/APreRouter.js you can see the route passing in the data. You can see how if this is good for SEO. Even if the route does not exist, you can dynamically render something for SEO. ( In the JAM/components style, the page/route has to exist, but you can pass it a query string to make it dynamic.)
 
-- Here is a interesting article: - http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
+- Here is a relevant article: - http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
 One way to have less .js in your page is to leverage large grained components and data|model|business layer. This allows for higher level and more productive development.
 
-- And you can mix, run static, JAM/components and SSR at the same time. Either as a subdomain or by copying static or JAM/component artifacts to myAPIapp/public. Lets look at one last example of the AXthe tech stack:  it needs the two servers to run as the same time: start myAPIapp and myCOMPs. If you open exampleComp2, and submit, you can see the data goes to the myAPIapp. Aside, you can see how the page has very little .js as the component leverages slots.
+- And you can mix, run static, JAM/components and SSR at the same time. Either as a subdomains; or by copying static or JAM/component artifacts to myAPIapp/public. Lets look at one last example of the AXthe tech stack:  it needs the two servers to run as the same time: start myAPIapp and myCOMPs. If you open exampleComp2, and submit, you can see the data goes to the myAPIapp. Aside, you can see how the page has very little .js as the component leverages slots. AXthe is all about high development productivity. 
