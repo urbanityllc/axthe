@@ -57,15 +57,17 @@ It shows 3 ways of using Caddy, as proxy, file server, or just to test that a su
  
 # Summary of I + II
  
-Ideally you can comprehend the different styles of development from section I and II:
+Ideally you grok the different styles of development from section I and II:
+
 I. JAM/components/mobile w/ a builder or static generator(11ty) calling CORS API. This works great with a CDN if you need to scale.
+
 II. SSR. SSR is the other style, it works great for SEO, but needs more than a CDN to scale (for example Caddy load balancing by an IP hash)
  
 - To make sure, here is the SSR way again: While the myAPIapp is running(r.sh), lets navigate via a browser to /data2. In *** public/data2 *** you can in IDE see the Pug. Via IDE you can see in ./lib/APreRouter.js you can see the route passing in the data. AXthe has a few lines of helper files, eg. SSR via ```rend(req, res, dat)``` in the PreRouter.
 
 You can see how if this is good for SEO. Even if the route does not exist, you can dynamically render something for SEO. ( In the JAM/components style, the page/route has to exist, but you can pass it a query string to make it dynamic.).
 
-- Here is a relevant article: - http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
+- Here is a relevant article: http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
 One way to have less .js in your page is to leverage large grained components and data|model|business layer. Reducing .js allows for higher level and more productive development.
 
 - And you can mix, run static, JAM/components and SSR at the same time. Either as a subdomains; or by copying static or JAM/component artifacts to myAPIapp/public. Lets look at one last example of the AXthe tech stack:  it needs the two servers to run as the same time: start myAPIapp and myCOMPs. If you open exampleComp2, and submit, you can see the data goes to the myAPIapp. Aside, you can see how the page has very little .js as the component leverages slots. AXthe is all about high development productivity. 
