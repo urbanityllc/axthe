@@ -38,24 +38,26 @@ http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a ), but AXthe 
 	2. In ./lib/wapp.js add wapp.enablePageReload() 
 
 - Caddy is a modern http server similar to older Apache and NGINX. Here is an example CaddyFile, it shows 3 subdomains, 1, a, and mysite: 
-```
-1.axthe.net {
-	respond "hi"
-}
 
-# admin
-a.axthe.net {
-	reverse_proxy localhost:9090
-}
-
-mysite.axthe.net{
-	root * ./site/www
-	file_server
-}
 ```
+	1.axthe.net {
+		respond "hi"
+	}
+
+	a.axthe.net {
+		reverse_proxy localhost:9090
+	}
+
+	mysite.axthe.net{
+		root * ./site/www
+		file_server
+	}
+```
+
 It shows 3 ways of using Caddy, as proxy, file server, or just to test the subdomain. After you save the Caddyfile and ```caddy start```, you should go to your DNS service and setup up A records to point to the IP address of your server. Caddy will recognize the subdomain (such as www) based on the configuration in Caddyfile.
 
-## Summary 
+# Summary 
+
 #### I + II
 
 - If you navigate in browser to /exampleComp2 and click submit you should see the myCOMPapp update the myAPIapp.
