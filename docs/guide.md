@@ -38,7 +38,7 @@ http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
     3. If you now edit any pug file, the browser will reload :-)
     4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development. So create something using one of the CSS frameworks.
 
-- And back to what was mentioned on the home page, SSR via ```rend(req, res, dat)``` in the PreRouter.
+- And back to what was mentioned on the home page: SSR via ```rend(req, res, dat)``` in the PreRouter.
 
 
 ## Summary
