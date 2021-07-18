@@ -20,7 +20,7 @@ a.axthe.net {
 }
 
 mysite.axthe.net{
-	root * ./site/www
+	root * ./static11tyPug/static
 	file_server
 }
 

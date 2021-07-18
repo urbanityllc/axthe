@@ -6,7 +6,7 @@ prepros.io
  
 - Also there is an S3 example for a store, as well as a distributed cache baed on SQLite.
  
-- And for myCOMPapp, optionally you can try to build a hello world Cordova based browser app.
+- And for myCOMPs, optionally you can try to build a hello world Cordova based browser app.
  
 - Optionaly, connect the static11tyPug site (in ./optional folder) w/ Caddy+DNS. More static front end development based on Pug.
  
