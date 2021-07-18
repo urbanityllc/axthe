@@ -39,7 +39,8 @@ In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should star
 
 ## Directory structure
 Pug is templating you already know how to use, it is html markup tags that are self closing! It is a fine alternative to PHP.
-Check out pug: http://html2pug.vercel.app. Pug is similar to Haml or Slim, if you have not used it yet, you'll love it.
+Check out pug: http://html2pug.vercel.app. Pug is similar to Haml or Slim, if you have not used it yet, you'll love it. Like you use scss files to generate css (with tools like PrePros.io)
+ 
  
 AXthe has a convention of always(with some exceptions) naming files as index.pug. That means if you have 3 pages in your web app, you need 3 folders.
 ```
