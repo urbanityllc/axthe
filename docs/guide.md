@@ -26,17 +26,18 @@ In the myCOMPs folder type ```./run.sh```, and navigate in a browser to ```/exam
  
 # Guide part II
  
-- We are going to connect to DNS via Caddy as the last step in Guide part II/here.
-	1. ./docs folder is Docsify, it uses markdown. You can connect it to Caddy+DNS.
-	2. You can add static11tyPug to Caddy+DNS. It is configured to use Pug as the markup/templeting. For more on 11ty check their docs. Both 11ty and Docsify are listed on http://JAMstack.org/generators page.
- 
-- The directory|folder structure, as mentioned in the outline on the home page, mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop. That is the major difference from the express.js generator. (http://expressjs.com/en/starter/generator.html ). Take a look at myAPIapp/public/content folder. Everything myAPIapp is just standard express.js (
-http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a, except that AXthe mostly uses index.pug).
- 
-- MyAPIapp also auto reloads on a page change, or if scss file is changed. There must be one file called style.scc, and that can reference other scss files. (The example in myAPIapp/public includes bootstrap v5 scss). If you open the browser and edit Bootstrap SCSS or Pug it should auto-refresh. You should be able to edit it via a Cloud IDE and see the https web page/site changes ( after setting up Ably). I hope you can see that you can quickly prototype an application.
+- MyAPIapp can also auto reloads on a page change, or if a scss file is changed(most/all tech stack have this feature). There must be one file called style.scc, and that can reference other scss files. (The example in myAPIapp/public includes bootstrap v5 scss). If you open the browser and edit Bootstrap SCSS or Pug it should auto-refresh. You should be able to edit it via a Cloud IDE and see the web page/site changes ( after setting up Ably). You can see that you can quickly prototype an application.
 	1. Create account on Ably. In .env file create a field ```ABLYr=``` and your Ably key.
-	2. In ./lib/wapp.js uncomment wapp.enablePageReload()
- 
+	2. In ./lib/wapp.js uncomment wapp.enablePageReload().
+	3. Now you can change a pug or scss file and it will autoreload.
+
+We are going to connect to DNS via Caddy as the last step in Guide part II/here.
+	1. ./docs folder is index.html, that uses Docsify. Docsify uses markdown. You can connect Docsify to Caddy+DNS at the end of this secion.
+	2. Also there is static11tyPug. 11ty is configured to use Pug as the markup/templeting. For more on 11ty check their docs. Both 11ty and Docsify are listed on http://JAMstack.org/generators page. You can connect 11ty to Caddy+DNS at the end of this secion, after you see how to configure Caddyfile.
+
+- The directory|folder structure, as mentioned in the outline on the home page, mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop. That is the major difference from the express.js generator. (http://expressjs.com/en/starter/generator.html ). Take a look at myAPIapp/public/content folder. Everything myAPIapp is just standard express.js (
+http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a ), except that AXthe mostly uses index.pug, so you have to use folders as routes. Take a look at myAPIapp/public/content.
+
 - Caddy is a modern http server similar to the older Apache and NGINX. Here is an example CaddyFile, it shows 3 subdomains, 1, a, and mysite:
  
 ```
@@ -58,9 +59,9 @@ It shows 3 ways of using Caddy, as proxy, file server, or just to test that a su
  
 # Summary of I + II
  
-Ideally you can comprehend the different styles of development:
-1. JAM/components/mobile w/ a builder or static generator(11ty) calling CORS API. This works great with a CDN if you need to scale.
-2. SSR. SSR is the other style, it works great for SEO, but needs more than a CDN to scale (for example Caddy load balancing by an IP hash)
+Ideally you can comprehend the different styles of development from section I and II:
+I. JAM/components/mobile w/ a builder or static generator(11ty) calling CORS API. This works great with a CDN if you need to scale.
+II. SSR. SSR is the other style, it works great for SEO, but needs more than a CDN to scale (for example Caddy load balancing by an IP hash)
  
 - To make sure, here is the SSR way again: While the myAPIapp is running(r.sh), lets navigate via a browser to /data2. In public/data2 you can in IDE see the Pug. Via IDE you can see in ./lib/APreRouter.js you can see the route passing in the data. AXthe has a few lines of helper files, eg. SSR via ```rend(req, res, dat)``` in the PreRouter.
 
