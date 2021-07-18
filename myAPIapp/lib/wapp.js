@@ -15,10 +15,8 @@ wapp.eapp.use(function (req, res, next) {
 	next()
 })
 
-
 // enable reload on assets/**/style.scss and pug edits, make sure you register for Ably events
-wapp.enablePageReload()
-
+//wapp.enablePageReload()
 
 // now you can add routes
 new APreRouter(wapp.eapp) // tell the router about the app
