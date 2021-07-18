@@ -12,18 +12,16 @@
 You will not learn to dance by reading about dancing. What I'm saying you have to write code to learn to code. Lets jump in and see the AXthe tech stack!
 Note, you will need to create an account on Supabase.io and Ably to follow this guide.
 
-- For web components we use http://docs.ficusjs.org in the myCOMPs folder. There is a exampleComp1 in myCOMPs ./src. You can see a pug page and and a .js component. By following Micro Front Ends application architecture ( http://tinyurl.com/microFronts ) you can hide some of the .js in a large grained component so that page creators mostly leverage slots and attributes, and not have to deal with .js. 
+- For web components we use http://docs.Ficusjs.org in the myCOMPs folder. There is a exampleComp1 in myCOMPs ./src. You can see a pug page and and a .js component. By following Micro Front Ends application architecture ( http://tinyurl.com/microFronts ) you can hide some of the .js in a large grained component so that page creators mostly leverage slots and attributes, and not have to deal with .js. 
 
 In the myCOMPs folder type ```./run.sh```, and navigate in a browser to ```/exampleComp1```.
 
- 
 - If you need to build 'native' mobile apps, you can use Cordova ( in myCOMPs folder ). There is not an example of that, as making cross platform native mobile apps is trivial with Cordova.
  
 - From the myAPIapp folder you can start express.js via ```./r.sh```. (First copy envEx to .env and enter Ably and Supabase keys that you get when you register on their sites). In a browser type in ```/api/data1```, you can get the port from .env, likely http://localhost:8080/api/data1. That is an API and we can call it from a client/browser via fetch().
- 
+
 - You can peak at myAPIapp/lib/dat to model. Note that the data|model|business layer can/should be used to offload .js to the server from the client/browser, and to facilitate easier integration testing. (It is a good practice that for each page|screen there is a corresponding data|model|business layer class that does the heavy lifting and state management)
- 
- 
+
 # Guide part II
  
 - MyAPIapp can also auto reloads on a page change, or if a scss file is changed(most/all tech stack have this feature). There must be one file called style.scc, and that can reference other scss files. (The example in myAPIapp/public includes bootstrap v5 scss). If you open the browser and edit Bootstrap SCSS or Pug it should auto-refresh. You should be able to edit it via a Cloud IDE and see the web page/site changes ( after setting up Ably). You can see that you can quickly prototype an application.
@@ -63,9 +61,9 @@ Ideally you can comprehend the different styles of development from section I an
 I. JAM/components/mobile w/ a builder or static generator(11ty) calling CORS API. This works great with a CDN if you need to scale.
 II. SSR. SSR is the other style, it works great for SEO, but needs more than a CDN to scale (for example Caddy load balancing by an IP hash)
  
-- To make sure, here is the SSR way again: While the myAPIapp is running(r.sh), lets navigate via a browser to /data2. In public/data2 you can in IDE see the Pug. Via IDE you can see in ./lib/APreRouter.js you can see the route passing in the data. AXthe has a few lines of helper files, eg. SSR via ```rend(req, res, dat)``` in the PreRouter.
+- To make sure, here is the SSR way again: While the myAPIapp is running(r.sh), lets navigate via a browser to /data2. In *** public/data2 *** you can in IDE see the Pug. Via IDE you can see in ./lib/APreRouter.js you can see the route passing in the data. AXthe has a few lines of helper files, eg. SSR via ```rend(req, res, dat)``` in the PreRouter.
 
- You can see how if this is good for SEO. Even if the route does not exist, you can dynamically render something for SEO. ( In the JAM/components style, the page/route has to exist, but you can pass it a query string to make it dynamic.).
+You can see how if this is good for SEO. Even if the route does not exist, you can dynamically render something for SEO. ( In the JAM/components style, the page/route has to exist, but you can pass it a query string to make it dynamic.).
 
 - Here is a relevant article: - http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
 One way to have less .js in your page is to leverage large grained components and data|model|business layer. Reducing .js allows for higher level and more productive development.

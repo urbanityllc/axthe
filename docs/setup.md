@@ -15,7 +15,7 @@ In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should star
  
 ### Domain and server
 - You need A DNS name/domain, I recommend Porkbun.com or http://easydns.com (and I recommend against GoDaddy), so get(or transfer) a domain that you can control.
-- A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://primcast.com, http://vultr.com, http://hetzner.com, http://soyoustart.com, Digital Ocean, Linode, etc. Likely that anything Ubuntu in the cloud will do the job.
+- A $5-$10 / month ubuntu based OS server in the cloud. You can pick anything similar to http://vultr.com, http://primcast.com, http://hetzner.com, http://soyoustart.com, Digital Ocean, Linode, etc. Likely that anything Ubuntu in the cloud will do the job.
  
  
 ## Setup recipe
@@ -31,7 +31,7 @@ And this is the screen to setup the connection, select ssh:
 <img src="ide_setup.png" width="400"/>
  
  
-Optional: Additionally, you can add a VS Code plugin in to develop remotely, by following instructions here http://code.visualstudio.com/docs/remote/ssh, read 'Connect to a remote host' (F1 then 'SSH connect window to a remote host')
+In addition to the Cloud IDE, you can add a VS Code plugin in to develop remotely, by following instructions here http://code.visualstudio.com/docs/remote/ssh, read 'Connect to a remote host' section (F1 then 'SSH connect window to a remote host')
  
 - Ubuntu config:
  
@@ -61,7 +61,6 @@ Notice that there is a:
 Configure a sub domain in your dns to go there! :-)
  
 You may need to glance the Caddy docs on their web site, but: you must know how to connect a DNS to your server. That is this step, don't go to next step till you are comfortable connecting N number of apps installed on your linux server to DNS, so that you can go to it from your browser via HTTPS.
- 
  
 - Step number four(AXthe):
  
