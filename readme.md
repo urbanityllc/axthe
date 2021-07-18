@@ -31,7 +31,7 @@ Other parts of the tech stack:
 ##  For the impatient
 If you are already familiar with AXthe, you can download a starter app/kit, that includes the Caddyfile to setup the http server and includes both environments:
 - For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file.
-In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-).
+In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-).
  
  
 ## Directory structure

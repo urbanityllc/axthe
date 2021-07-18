@@ -10,7 +10,7 @@
 If you already have node.js setup, greater than version 14.17.1 (npm greater than 7.18.0), with Caddy http server running in the cloud and a Cloud based IDE, you are good to go, you can skip to guide.
  
 - For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file.
-In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-).
+In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-).
  
  
 ### Domain and server
