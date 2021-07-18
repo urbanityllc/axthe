@@ -56,9 +56,7 @@ http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a ), but AXthe 
  
 It shows 3 ways of using Caddy, as proxy, file server, or just to test that a subdomain ***DNS*** works, that you can get to it from a browser via the DNS subdomain. After you save the Caddyfile and ```caddy start```, you should go to your DNS service and setup up A records to point to the IP address of your server. Caddy will recognize the subdomain (such as www) based on the configuration in Caddyfile.
  
-# Summary
- 
-#### I + II = :
+# Summary of I + II
  
 Ideally you can comprehend the different styles of development:
 1. JAM/components/mobile w/ a builder or static generator(11ty) calling CORS API. This works great with a CDN if you need to scale.
