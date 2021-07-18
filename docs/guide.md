@@ -31,15 +31,29 @@ Note that the data|model|business layer can/should be used to offload .js to the
 - The directory|folder structure, as mentioned in the outline on the home page, mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop. That is the major difference from the express.js generator. (http://expressjs.com/en/starter/generator.html ). Take a look at myAPIapp/public/content.
 
 - Everything myAPIapp is just standard express.js (
-http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a ), but I did add a few lines of helper files, eg. SSR via ```rend(req, res, dat)``` in the PreRouter. 
+http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a ), but AXthe has a few lines of helper files, eg. SSR via ```rend(req, res, dat)``` in the PreRouter. 
 
-- MyAPIapp also does an autoreload on a page change, or if scss file is changed. (The example in myAPIapp/public includes bootstrap v5). After setting up based on setup instructions, you should be running the myAPI project node. If you open the browser and edit Bootstrap SCSS or Pug it should auto-refresh. You should be able to edit it via a Cloud IDE and see the https web page/site changes ( after setting up Ably). I hope you can see that you can quickly prototype.
+- MyAPIapp also autoreloads on a page change, or if scss file is changed. There must be one file called style.scc, and that can reference other scss files. (The example in myAPIapp/public includes bootstrap v5 scss). If you open the browser and edit Bootstrap SCSS or Pug it should auto-refresh. You should be able to edit it via a Cloud IDE and see the https web page/site changes ( after setting up Ably). I hope you can see that you can quickly prototype an application.
 	1. Create account on Ably. In .env file create a field ```ABLYr=``` and your Ably key. 
-	2. In ./lib/wapp add wapp.enablePageReload() 
-	3. If you now edit any pug file, the browser will reload :-)
-	4. If you have a style.scss file, and you edit any scss file, it will build style.css :-). For example, I renamed Bootstrap.scss to style.scss and now I can edit variables.scss and it will live reload my browser during development. So create something using one of the CSS frameworks.
+	2. In ./lib/wapp.js add wapp.enablePageReload() 
 
-- DNS
+- Caddy is a modern http server similar to older Apache and NGINX. Here is an example CaddyFile, it shows 3 subdomains, 1, a, and mysite: 
+```
+1.axthe.net {
+	respond "hi"
+}
+
+# admin
+a.axthe.net {
+	reverse_proxy localhost:9090
+}
+
+mysite.axthe.net{
+	root * ./site/www
+	file_server
+}
+```
+It shows 3 ways of using Caddy, as proxy, file server, or just to test the subdomain. After you save the Caddyfile and ```caddy start```, you should go to your DNS service and setup up A records to point to the IP address of your server. Caddy will recognize the subdomain (such as www) based on the configuration in Caddyfile.
 
 ## Summary 
 #### I + II
