@@ -22,7 +22,7 @@ In MyAapp folder rename file envEx to ```.env```. Running ```r.sh``` should star
 
 ## Setup recipe
 After you create an Ubuntu instance in the cloud:
-You should edit in the cloud, sign up for a cloud based IDE, I recommend http://codeanywhere.com/editor. For SSR mostly use a Cloud IDE, and for JAMstack or mobile|cordova development you could use local VS Code.
+You should edit in the cloud, sign up for a cloud based IDE, I recommend http://codeanywhere.com/editor. For SSR mostly use a Cloud IDE, and for components or mobile|cordova development you could use local VS Code.
 
 - Step number one(Cloud IDE), using the Cloud IDE (CodeAnywhere) after you open the IDE, connect to the Ubuntu instance in the cloud via ssh. You should see the editor and be able to ssh. Like this:
 
@@ -68,9 +68,9 @@ You may need to glance the Caddy docs on their web site, but: you must know how 
 - Step number four(AXthe):
 
 For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file.
-In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-). Also you can run.sh in my JAMapp.
+In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-). Also you can run.sh in my myCOMPapp.
 
-There are several folders, you should connect each to Caddy+DNS. Likely you want to rename myAPIapp and myJAMapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup! 
+There are several folders, you should connect each to Caddy+DNS. Likely you want to rename myAPIapp and myCOMPapp folders to your app names, so that you can write more than one app, or have more than one version. The is the end of the setup! 
 
 You should now know how to setup up Caddy+DNS to a subdomain.
 
@@ -79,7 +79,7 @@ You should now know how to setup up Caddy+DNS to a subdomain.
 From time to time we update our AXthe stack, enviroment and scripts. Here is how to upgrade to a newer version:
 1. Setup a new Ubuntu instance as per above.
 2. Edit Caddyfile so you have new subdomains, for example version2.mydomain.com, and get it to just do hello world type stuff.
-3. Rename folders to match your app names. (I assume you did not leave it as myAPIapp and myJAMapp, so change it to what your folders are called)
+3. Rename folders to match your app names. (I assume you did not leave it as myAPIapp and myCOMPapp, so change it to what your folders are called)
 4. Option A: if using git, you can just create a new branch with the new clean version without your code and then merge branches with the old version with your code.
 Option B: if not using git, just copy and paste your files over the new AXthe stack.
 5. Now you can move your DNS around as needed, for example you have your old box with older code and your new box with newer code. Maybe use legacy.mydomain.com to point to the old app, and alpha.mydomain.com to point to the new app.

@@ -13,10 +13,9 @@ Prerequisite knowledge ahed of AXthe is this book (or a similar book) - 'HTML an
 # Overview
  
 AXthe tech stack (and 'best' pratices for high productivity web app) offer more than one development style, and allows you to combine them:
-1. A classic full stack development(based on JAMstack), with Snowpack build and Micro frontends(similar to microservices), that is compatible with Cordova cross platform development for Mobile(iOS and Android) from a single code base. Not great at SEO.
-2. An application server, based on Express to server API's from above; or to host SSR with a 'pre-route'. (inspired by Express.js generator, first thing we set up so all have an API to call). Great at SEO.
-3. 11ty, modern and static, with templeting(eg Pug). You can create some hybrid mix combo of all 3, 11ty that can host the above #1 classic - and call APIs. Great at SEO.
-
+1. A classic full stack development(based on JAMstack), with Snowpack build and Micro frontends(similar to microservices) with native web components, that is compatible with Cordova cross platform development for Mobile(iOS and Android) from a single code base. Not great at SEO.
+2. 11ty, modern and static, with templeting(eg Pug). You can create some hybrid mix combo of all 3, 11ty that can host the above #1 classic - and call APIs. Great at SEO.
+3. An application server, based on Express to server API's from above; or to host SSR with a 'pre-route'. (inspired by Express.js generator, first thing we set up so all have an API to call). Great at SEO.
 AXthe curates a minimum viable tech stack that includes Express, Supabase, SnowPack, Ficus, CaddyServer, Ably, Pug, Bootstrap, Cordova and 11ty.
 
 Other parts of the tech stack:

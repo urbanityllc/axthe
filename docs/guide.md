@@ -9,25 +9,26 @@
  
 # Guide part I
  
-You will not learn to dance by reading about dancing. What I'm saying you have to write code to learn to code. Lets jump in!
+You will not learn to dance by reading about dancing. What I'm saying you have to write code to learn to code. Lets jump in and see the AXthe tech stack!
 Note, you will need to create an account on Supabase.io and Ably to follow this guide.
- 
-1. The directory structure, as mentioned in the outline on the home page mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop. That is the major difference from Express generator. You can start myAPIapp with ```./r.sh```, and in a browser open the port indicated, likely 8080.
- 
-2. You can glance package json, and see an integration test. A business model layer that uses http://npmjs.com/package/@supabase/supabase-js as a data layer. You can run ts.sh to run a sample integration test. This allows you to write an API, take a look at myJAMapp/lib/APreRouter.js for ```this.eapp.get('/api/data1', (req, res) => {```, you can just go to the browser /api/data1 and see how an API is called.
 
-3. For web components we use http://docs.ficusjs.org library. In the myJAMapp folder, there is a exampleComp1 and 2. There is a web component on a page that calls an API in myAPIapp. You need to run both the myAPIapp that hosts the API and myJAMapp that hosts the web component. In addtion to running the myAPIapp in 1, you should start myJAMapp build watcher in that folder via ```run.sh```. If you navigate in browser to /exampleComp2 and click submit you should see the myJAMapp update the myAPIapp.
+- For web components we use http://docs.ficusjs.org in the myCOMPapp folder. There is a exampleComp1 in myCOMPapp ./src. You can see a pug page and and a .js component. By following Micro Front Ends application architecture ( http://tinyurl.com/microFronts ) you can hide some of the .js in a large grained component so that page creators mostly leverage slots and attributes, and not have to deal with .js. In the myCOMPapp folder type ```./run.sh```, and navigate in a browser to ```/exampleComp1```.
 
-4. If you need to build 'native' mobile apps, you can use Cordova, in myJAMapp folder.
+- If you need to build 'native' mobile apps, you can use Cordova ( in myCOMPapp folder ). There is not an example of that, as it is trivial.
+
+- From the myAPIapp folder you can start express.js via ```./r.sh```. (First copy envEx to .env and enter Ably and Supabase keys that you get when you register on their sites). In a browser type in ```/api/data1```, you can get the port from .env, likely http://localhost:8080/api/data1. That is how an API is called.
+
+- You can peak at myAPIapp/lib
 
 
 # Guide part II
- 
-Lets level up to some more topics:
 
 - ./docs folder is Docsify. You can connect it to Caddy+DNS.
 
-- You can add static11tyPug to Caddy+DNS. For more on 11ty check their docs. You can copy some of the class myJAMapp outputs into 11ty.
+- You can add static11tyPug to Caddy+DNS. For more on 11ty check their docs. You can copy some of the class myCOMPapp outputs into 11ty.
+
+
+- The directory|folder structure, as mentioned in the outline on the home page mostly has index.pug in every folder. This makes the navigation in the browser nicer and makes it easier to develop. That is the major difference from Express generator. You can start myAPIapp with ```./r.sh```, and in a browser open the port indicated, likely 8080.
 
 - Everything myAPIapp is just standard express.js, the most popular node.js module:
 http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
@@ -40,11 +41,18 @@ http://gist.github.com/cekvenich2/a4764a1946356e387b6d47d988b5050a
 
 - And back to what was mentioned on the home page: SSR via ```rend(req, res, dat)``` in the PreRouter.
 
+- DNS
 
-## Summary
- 
+## Summary 
+#### I + II
+
+- If you navigate in browser to /exampleComp2 and click submit you should see the myCOMPapp update the myAPIapp.
+
+
 Ideally you can see that the different styles of development:
 - SSR + API
-- JAM/mobile w/ a builder or static generator(11ty)
+- JAM/components/mobile w/ a builder or static generator(11ty)
 
-And you can see that you can make somethings SSR, somethings JAM and some thigs static-gen, all in the same app. (via subdomains or by copying the build optputs).
+And you can see that you can make somethings SSR, somethings JAM/components and some thigs static-gen, all in the same app. (via subdomains or by copying the build optputs).
+
+- http://dev.to/ducksoupdev/less-javascript-more-html-and-css-49gl
