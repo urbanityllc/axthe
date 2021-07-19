@@ -43,6 +43,7 @@ npm i -g snowpack@3.7.0
 npm install -g cordova
 # install a tester for node:
 npm i -g colortape
+npm install -g node-gyp
 
 # just a clean up step
 apt autoremove -y

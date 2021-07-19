@@ -30,7 +30,8 @@ Other parts of the tech stack:
  
 ##  For the impatient
 If you are already familiar with AXthe, you can download a starter app/kit, that includes the Caddyfile to setup the http server and includes both environments:
-- For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file.
+- For latest: http://github.com/axthe/axthe and click Code/Download ZIP), or use wget from shell to download the file. ```wget https://github.com/axthe/axthe/archive/refs/heads/main.zip ```
+[![asciicast](https://asciinema.org/a/eVl09pd9zi2fCzjxA16MviMmN.svg)](https://asciinema.org/a/eVl09pd9zi2fCzjxA16MviMmN)
 In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should start your SSR app :-).
  
  
@@ -38,17 +39,21 @@ In MyAPIapp folder rename file envEx to ```.env```. Running ```r.sh``` should st
 Pug is templating you already know how to use, it is html markup tags that are self closing! It is a fine alternative to PHP.
 Check out pug: http://html2pug.vercel.app. Pug is similar to Haml or Slim, if you have not used it yet, you'll love it. Like you use scss files to generate css (with tools like PrePros.io)
 AXthe has a convention of always(with some exceptions) naming files as index.pug. That means if you have 3 pages in your web app, you need 3 folders.
+
 ```
-- ./public/lading/A/index.pug
-- ./public/lading/B/index.pug
-- ./public/lading/C/index.pug
+	- ./public/lading/A/index.pug
+	- ./public/lading/B/index.pug
+	- ./public/lading/C/index.pug
 ```
+
 Above convention create 3 landing pages alternatives (suitable for testing of marketing variations):
+
 ```
-- http://localhost/lading/a
-- http://localhost/lading/b
-- http://localhost/lading/c
+	- http://localhost/lading/a
+	- http://localhost/lading/b
+	- http://localhost/lading/c
 ```
+
 That is the biggest difference with the Express generator. Also there is a base class with a neat helper function ```rend(req, res, dat)``` the helps pass data to pug before the render.
 Things like header.pug, or footer.pug you would not name index.pug, you can put in ./public/includes
 ### A more concepts:
