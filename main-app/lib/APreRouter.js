@@ -2,6 +2,8 @@
 
 // ////////////////////////////////
 const BasicPreRouter = require('axthe/BasicPreRouter.js')
+const path = require('path')
+const fs = require('fs')
 // const MyBModel     = require('./MyBModel.js')
 
 module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Most pages don't need a pre render, but some do
@@ -21,6 +23,44 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 		this.eapp.get('/api/data1', (req, res) => {
 			let dat = {title: 'My name is Vic'}
 			res.send(JSON.stringify(dat)) 
+		})
+
+		this.eapp.get('/api/articles', (req, res) => {
+			const directory = './public/articles'
+			res.render('articles/second/')
+			/*
+			let f = { 'd': [], 'f': [] }
+			fs.readdir(directory, (err, files) => {
+				files.forEach(file => {
+					if (fs.lstatSync(path.resolve(directory, file)).isDirectory()) {
+						console.log('Directory: ' + file);
+						f['d'].push(file);
+					} else {
+						console.log('File: ' + file);
+						f['f'].push(file);
+					}
+				});
+				res.send(JSON.stringify(f))
+			});		*/	
+		})
+
+		this.eapp.get('/api/articles1', (req, res) => {
+			const directory = './public/articles'
+			res.render('articles/third/')
+			/*
+			let f = { 'd': [], 'f': [] }
+			fs.readdir(directory, (err, files) => {
+				files.forEach(file => {
+					if (fs.lstatSync(path.resolve(directory, file)).isDirectory()) {
+						console.log('Directory: ' + file);
+						f['d'].push(file);
+					} else {
+						console.log('File: ' + file);
+						f['f'].push(file);
+					}
+				});
+				res.send(JSON.stringify(f))
+			});		*/
 		})
 
 		this.eapp.post('/api/form1', (req, res) => {

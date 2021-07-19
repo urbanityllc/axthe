@@ -1,3 +1,14 @@
-
-h1 second
-p Welcome to second
+doctype html
+html
+  head
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script.
+      $(document).ready(function(){
+      $.ajax({url: "/api/articles1", success: function(result){
+      $("#div2").html(result);
+      }});
+      });
+  body
+    h1 second
+    p Welcome to second
+    #div2
