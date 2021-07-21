@@ -1,3 +1,47 @@
-
-h1 third
-p Welcome to third
+doctype html
+html
+  head
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
+    script.
+      $(document).ready(function(){
+      articleId = 'third'
+      ex = [articleId]
+      if($('#' + articleId).parent().length && $('#' + articleId).parent().attr("class")){
+        nestList = $('#' + articleId).parent().attr("class").split(/\s+/);
+            $.each(nestList, function(index, value){
+              if (value != 'nested') ex.push(value);
+      })
+      }
+      console.log(ex)
+      $.ajax({
+      url: "/api/articles",
+      data: {articles: ex }, 
+      success: function(result){
+      console.log(result)
+      $("#nested-" + articleId).addClass(ex.toString().replace(',',' ')).html(result);
+      }});
+      });
+  body
+    h1#third third
+    p Welcome to third
+    #nested-
+//-
+    script.
+      $(document).ready(function(){
+      articleId = 'first'
+      ex = [articleId]
+      if($('#' + articleId).parent().length && $('#' + articleId).parent().attr("class")){
+        nestList = $('#' + articleId).parent().attr("class").split(/\s+/);
+            $.each(nestList, function(index, value){
+              if (value != 'nested') ex.push(value);
+      })
+      }
+      console.log(ex)
+      $.ajax({
+      url: "/api/articles",
+      data: {articles: ex }, 
+      success: function(result){
+      console.log(result)
+      $("#nested-" + articleId).addClass(ex.toString().replace(',',' ')).html(result);
+      }});
+      });

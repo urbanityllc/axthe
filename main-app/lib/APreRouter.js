@@ -27,40 +27,38 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
 		this.eapp.get('/api/articles', (req, res) => {
 			const directory = './public/articles'
-			res.render('articles/second/')
-			/*
-			let f = { 'd': [], 'f': [] }
+			let f = [] 
 			fs.readdir(directory, (err, files) => {
 				files.forEach(file => {
 					if (fs.lstatSync(path.resolve(directory, file)).isDirectory()) {
 						console.log('Directory: ' + file);
-						f['d'].push(file);
-					} else {
-						console.log('File: ' + file);
-						f['f'].push(file);
-					}
+						f.push(file);
+					} 
 				});
-				res.send(JSON.stringify(f))
-			});		*/	
+				let intersection = f.filter(x => !req.query['articles'].includes(x))
+				console.log(intersection)
+				if (intersection.length) res.render('articles/' + intersection[0] + '/')
+				else res.render("")
+			});			
 		})
 
 		this.eapp.get('/api/articles1', (req, res) => {
+			console.log(req.query)
 			const directory = './public/articles'
-			res.render('articles/third/')
-			/*
 			let f = { 'd': [], 'f': [] }
 			fs.readdir(directory, (err, files) => {
 				files.forEach(file => {
 					if (fs.lstatSync(path.resolve(directory, file)).isDirectory()) {
 						console.log('Directory: ' + file);
-						f['d'].push(file);
+						f['d'].push('articles/' + file + '/');
 					} else {
 						console.log('File: ' + file);
 						f['f'].push(file);
 					}
 				});
-				res.send(JSON.stringify(f))
-			});		*/
+				console.log(f)
+				res.render('articles/third/')
+			});
 		})
 
 		this.eapp.post('/api/form1', (req, res) => {
