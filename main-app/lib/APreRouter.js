@@ -38,7 +38,6 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 				let intersection = f.filter(x => !req.query['articles'].includes(x))
 				console.log(intersection)
 				if (intersection.length) res.render('articles/' + intersection[0] + '/')
-				else res.render("")
 			});			
 		})
 

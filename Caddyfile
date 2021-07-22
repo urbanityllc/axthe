@@ -21,7 +21,3 @@ a.axthe.net {
 justinpacquing.me, app.urbanitymag.com {
 	reverse_proxy localhost:8080
 }
-
-jasonchen.me {
-	reverse_proxy localhost:7070
-}
