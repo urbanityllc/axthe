@@ -31,13 +31,16 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			fs.readdir(directory, (err, files) => {
 				files.forEach(file => {
 					if (fs.lstatSync(path.resolve(directory, file)).isDirectory()) {
-						console.log('Directory: ' + file);
+						//console.log('Directory: ' + file);
 						f.push(file);
 					} 
 				});
-				let intersection = f.filter(x => !req.query['articles'].includes(x))
-				console.log(intersection)
-				if (intersection.length) res.render('articles/' + intersection[0] + '/')
+				if (req.query['articles']){
+					let intersection = f.filter(x => !req.query['articles'].includes(x))
+					//console.log(intersection)
+					if (intersection.length) res.render('articles/' + intersection[0] + '/')
+				}
+				else res.render('articles/' + f[0] + '/')
 			});			
 		})
 
