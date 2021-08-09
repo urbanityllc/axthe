@@ -4,6 +4,11 @@
 const BasicPreRouter = require('axthe/BasicPreRouter.js')
 const path = require('path')
 const fs = require('fs')
+const supa = require('@supabase/supabase-js')
+
+const supabaseUrl = 'https://qjztgscvebluwsbdxull.supabase.co'
+const supabaseKey = process.env.SUPABASE_KEY
+const supabase = supa.createClient(supabaseUrl, supabaseKey)
 // const MyBModel     = require('./MyBModel.js')
 
 module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Most pages don't need a pre render, but some do
@@ -44,24 +49,14 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			});			
 		})
 
-		this.eapp.get('/api/articles1', (req, res) => {
-			console.log(req.query)
-			const directory = './public/articles'
-			let f = { 'd': [], 'f': [] }
-			fs.readdir(directory, (err, files) => {
-				files.forEach(file => {
-					if (fs.lstatSync(path.resolve(directory, file)).isDirectory()) {
-						console.log('Directory: ' + file);
-						f['d'].push('articles/' + file + '/');
-					} else {
-						console.log('File: ' + file);
-						f['f'].push(file);
-					}
-				});
-				console.log(f)
-				res.render('articles/third/')
-			});
+		this.eapp.get('/api/supaarticles', async (req, res) => {
+			let { data: articles, error } = await supabase
+				.from('articles')
+				.select('*')
+			console.log(articles)
+			res.send(JSON.stringify(articles))
 		})
+
 
 		this.eapp.post('/api/form1', (req, res) => {
 			console.log(this.constructor.name, req.body)

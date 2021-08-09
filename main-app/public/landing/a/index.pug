@@ -3,57 +3,36 @@ head
 	meta(charset='UTF-8')
 	meta(name='viewport' content='width=device-width, initial-scale=1.0')
 	meta(http-equiv='X-UA-Compatible' content='ie=edge')
+	link(href='/assets/css/style.css' rel='stylesheet')
+	link(rel='stylesheet' href='/assets/css/header.css')
+	link(href='/assets/css/landingA.css' rel='stylesheet')
 	meta(name='Description' content='Enter your description here')
-	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css')
-	link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css')
-	link(rel='stylesheet' href='../../assets/landingA.css')
 	title Title
 
 body
-	include ../../includes/header
+	include /includes/header
 
 	.container
-		.row
-			.col-sm-3
-				#side-card.card
-					.card-body
-						.row.side-card-title
-							h5.card-title Trending Section
-						.row.side-card-user
-							h6.card-user Insert User
-						.row.side-card-content
-							p.card-text
-								| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-								| ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-								| laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-								| velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-								| sunt in culpa qui officia deserunt mollit anim id est laborum.
-						.row.side-card-meta
-							span User
-							span Likes
-							span Comments
-			.col-sm-9
-				#main-card.card
-					.card-body
-						.row.content-header 
-							div.content-header-inner
-								a insert img
-								div 
-									a 
-										span insert name 
-								div 
-									p insert meta data
-						.row.main-card-title 
-							h5.card-title Title
-						.row.main-card-content 
-							p.card-text
-							| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-							| ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-							| laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-							| velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-							| sunt in culpa qui officia deserunt mollit anim id est laborum.
-						.row.main-card-meta
-							span User
-							span Likes
-							span Comments
-						
+		.main-body 
+			.row
+				.col-sm-3
+					#side-card.card
+						.card-body
+							.row.side-card-title
+								h5.card-title Trending Section
+							.row.side-card-user
+								include /assets/pug/user-profile
+							.row.side-card-content
+								p.card-text
+									| Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+									| ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+									| laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
+									| velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+									| sunt in culpa qui officia deserunt mollit anim id est laborum.
+							.row.side-card-meta
+								span User
+								span Likes
+								span Comments
+				.col-sm-9
+					include /assets/pug/main-card.pug
+							
