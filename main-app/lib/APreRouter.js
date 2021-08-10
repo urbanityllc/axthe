@@ -57,6 +57,23 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			res.send(JSON.stringify(articles))
 		})
 
+		this.eapp.post('/api/supaarticles', async (req, res) => {
+			//need to implement auth
+			console.log({
+				title: req.body.title,
+				author: req.body.author,
+				content: req.body.content
+			})
+			const { data, error } = await supabase
+				.from('articles')
+				.insert([{
+				title: req.body.title,
+				author: req.body.author,
+				content: req.body.content
+				},])
+			res.send(JSON.stringify(data))
+		})
+
 
 		this.eapp.post('/api/form1', (req, res) => {
 			console.log(this.constructor.name, req.body)
