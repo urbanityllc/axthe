@@ -1,6 +1,4 @@
 
-// http://getbootstrap.com/docs/5.0/customize/sass
-
 // http://snipcart.com/blog/11ty-tutorial
 // http://www.sitepoint.com/getting-started-with-eleventy
 // http://github.com/vktrwlt/pugsum

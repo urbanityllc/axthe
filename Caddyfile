@@ -6,6 +6,7 @@
 		}
 	}
 }
+# you shold be comfortable seting up DNS subdomains to Caddy
 # caddy stop, start, validate
 ## #################################################### 
 
