@@ -1,0 +1,18 @@
+.main-body{
+    margin-top: 1%;
+}
+
+.card-user-profile{
+    background: url('default-avatar-icon.jpg');
+    height: 40px;
+    width: 40px;
+}
+
+img{  
+    height: 40px;
+    width: 40px; 
+}
+
+.content-header-inner{
+    display: inline-block;    
+}

@@ -24,6 +24,16 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			this.rend(req, res, dat) // notice the rend sytax!!!
 		})
 
+		this.eapp.get('/', async (req, res) => {
+			let { data: articles, error } = await supabase
+				.from('articles')
+				.select('*')
+			let dat = {
+				articles: JSON.stringify(articles)
+			}
+			this.rend(req, res, dat)
+		})
+
 		// just api, no path
 		this.eapp.get('/api/data1', (req, res) => {
 			let dat = {title: 'My name is Vic'}

@@ -1,0 +1,10 @@
+link(href='/assets/css/main-card.css' rel='stylesheet')
+
+#main-card.card
+    .card-body
+        .main-card-title
+            h5.card-title=article.title
+        .row.main-card-content 
+            p.card-text=article.content
+        .row.main-card-meta
+            include /assets/pug/main-card-footer.pug
