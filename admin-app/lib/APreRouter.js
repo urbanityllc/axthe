@@ -12,7 +12,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 		//this.bmodel = new MyBModel() // the model is used for data, validation, business layer and such. 
 
 		// routes!!! loads the data
-		this.eapp.get('/1data', (req, res) => {
+		this.eapp.get('/data2', (req, res) => {
 			let dat = {title: 'My name is Vic'}
 			this.rend(req, res, dat) // notice the rend sytax!!!
 		})
