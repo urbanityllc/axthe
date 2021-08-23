@@ -1,0 +1,17 @@
+link(href='/assets/css/main-page.css' rel='stylesheet')
+
+.content-entry-wrap  
+        input#collapsible.toggle(type="checkbox")
+        label.content-label-toggle(for="collapsible") Create Content
+        .content-input-collapsible-content 
+            form.collapsible-content-inner(id="login" action="/api/articles" method="post")
+                .row 
+                    .col-md-12
+                        input.content-input-title(type="text" name="title" placeholder="Enter a title (optional)")
+                        input.content-input-links(type="text" name="author" value="John Smith" readonly)
+                        textarea.content-input-area(name="content" placeholder="Start typing")
+                .row 
+                    .col-md-10
+                        //- text
+                    .col-md-2.d-flex.justify-content-end
+                        button.content-input-submit(type="submit") Post

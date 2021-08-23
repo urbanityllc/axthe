@@ -13,8 +13,8 @@
 	},
 	"dependencies": {
 		"@logdna/logger": "^2.3.2",
-		"@supabase/supabase-js": "^1.21.0",
-		"axthe": "^0.4.5",
+		"@supabase/supabase-js": "^1.22.2",
+		"axthe": "^0.6.2",
 		"cors": "^2.8.5",
 		"debug": "^4.3.2",
 		"dotenv": "^10.0.0",

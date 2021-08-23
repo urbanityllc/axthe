@@ -1,3 +1,119 @@
+.header-row{
+    width:100%;
+}
+
+.ha-inner1{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.header-assets-inner{
+    padding-left: 0;
+    padding-right:0;
+}
+
+/* .create-button{
+    position:absolute;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50% 50% 50%;
+    border-style: none;
+    font-size: 30px;
+    color: #000000;
+    padding: 0;
+    left:78%;
+} */
+
+input{
+    outline: none;
+}
+
+input[type=search]{
+    appearance: textfield;
+    box-sizing: content-box;
+    font-family: inherit;
+    font-size: 100%;
+
+    /* search icon */
+    background:#ededed 
+    url(https://static.tumblr.com/ftv85bp/MIXmud4tx/search-icon.png)
+    no-repeat 9px center;
+
+    /* border */
+    border: solid 1px #ccc;
+    padding: 9px 10px 9px 32px;
+    width: 55px;
+
+    /* border radius */
+    border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	
+    -webkit-transition: all .5s;
+	-moz-transition: all .5s;
+	transition: all .5s;
+}
+
+input::-webkit-search-decoration,
+input::-webkit-search-cancel-button{
+    display:none;
+}
+
+/* after it gets clicked */
+input[type=search]:focus{
+    width: 130px;
+    background-color: #fff;
+    border-color:#fff;
+
+    -webkit-box-shadow: 0 0 5px 
+        rgba(109,207,246,.5);
+	-moz-box-shadow: 0 0 5px 
+        rgba(109,207,246,.5);
+	box-shadow: 0 0 5px 
+        rgba(109,207,246,.5);
+}
+
+input:-moz-placeholder {
+	color: #999;
+}
+input::-webkit-input-placeholder {
+	color: #999;
+}
+
+.search-bar input[type=search]{
+    width: 15px;
+    padding-left: 10px;
+    color:transparent;
+    cursor: pointer;
+    height: 20%;
+}
+
+.search-bar input[type=search]:hover{
+    background-color: #fff;
+}
+
+.search-bar input[type=search]:focus{
+    width: 
+    150px;
+    padding-left: 32px;
+    color:#000;
+    background-color: #fff;
+    cursor:auto;
+}
+
+.search-bar input:-moz-placeholder {
+	color: transparent;
+}
+#search-bar input::-webkit-input-placeholder {
+	color: transparent;
+}
+
+/* .create-button strong{
+    position:absolute;
+    top:0;
+    align-self: center;
+} */
+
 .scrolling-headline{
     height: 30px;
     width: 100%;
@@ -10,7 +126,6 @@
 .scrolling-content{
     width:100%;
 }
-
 
 .scrolling-content > p{
     height: 100%;

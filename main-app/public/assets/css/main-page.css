@@ -1,0 +1,304 @@
+/* START OF MAIN PAGE STYLES */
+.main-body{
+    margin-top: 1%;
+}
+
+img{  
+    height: 40px;
+    width: 40px; 
+}
+
+.content-header-inner{
+    display: inline-block;    
+}
+
+.side-bar{
+    position:absolute;
+    left:0;
+}
+
+/* --- END OF MAIN PAGE STYLES */
+
+/* -- START OF SIDE BAR STYLES -- */
+
+#side-card{
+    box-shadow: 0 5px 10px 0 rgb(0 0 0 / 5%);
+    margin-bottom: 10px;
+    height: 100vh;
+    position: fixed;
+}
+
+.circle{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline;
+}
+
+.side-card-profile-pic{
+    border-radius: 50% 50% 50% 50%;
+}
+
+.side-card-profile-text{
+    text-align: center;
+    font-weight: 700;
+    padding:5px;
+}
+
+.side-card-profile-name{
+    font-size: 1rem;
+    color: black;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.side-card-profile-name:hover{
+    color:black;
+}
+
+.side-card-user{
+    margin-bottom: 10px;
+}
+
+.side-card-links{
+    position: relative;
+}
+
+.side-card-links a{
+    font-size: 15px;
+    display: flex;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    border-radius: 10px;
+    height:30px;
+}
+
+.side-card-links a:hover{
+    background-color: #e2e2e2;   
+}
+
+/* -- END OF SIDE BAR STYLES -- */
+
+/* -- START OF CONTENT ENTRY STYLES */
+.card-body input{
+    border-style:solid;
+    border-width: 1px;
+}
+
+.content-input-title{
+    width:100%;
+}
+
+.content-input-links{
+    width: 100%;
+    margin-top:10px;
+}
+
+.content-input-area{
+    width: 100%;
+    margin-top: 10px;
+}
+
+.content-input-submit{
+    border-style: none;
+    border-radius: 5px 5px 5px 5px;
+    font-size: 16px;
+    margin-top: 5px;
+    background-color: #212529;
+    color: white;
+}
+
+/* content-creation-collapsible */
+input[type='checkbox']{
+    display:none;
+}
+
+.content-label-toggle{
+    display:block;
+
+    font-weight:bold;
+    font-family: monospace;
+    font-size: 15px;
+    text-align: left;
+
+    padding: 1rem;
+    
+    color:#212529;
+    background: #ccc;
+
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all 0.25s ease-out;
+}
+
+.content-label-toggle:hover{
+    color: #bababa;
+}
+
+.content-label-toggle::before{
+    content:' ';
+    display: inline-block;
+
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid currentColor;
+    
+    vertical-align: middle;
+    margin-right: .7rem;
+    transform: translateY(-2px);
+
+    transition: transform .2s ease-out;
+}
+
+.content-input-collapsible-content .collapsible-content-inner{
+    padding: .5rem 1rem;
+}
+
+.content-input-collapsible-content{
+    /* hide contents while unchecked */
+    max-height: 0px;
+    overflow: hidden;
+
+    transition: max-height .25s ease-in-out;
+}
+
+.toggle:checked + .content-label-toggle + .content-input-collapsible-content{
+    /* go to max height on click */
+    max-height: 100vh;
+}
+
+.toggle:checked + .content-label-toggle::before{
+    /* rotate triangle */
+    transform: rotate(90deg) translateX(-3px);
+}
+
+.toggle:checked + .content-label-toggle{
+    /* make corner sharp on click */
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* end */
+
+/* -- END OF CONTENT ENTRY STYLES */
+
+/* --- START OF MAIN CONTENT CARD STYLES --- */
+#main-card{
+    margin-top: 10px;
+}
+
+.main-card-title{
+    margin-top: 10px;
+}
+
+.card-title a{
+    color: black;
+    text-decoration: none;
+}
+
+.card-title a:hover{
+    color:black;
+    text-decoration: underline;
+}
+
+.main-card-footer{
+    margin-top: 20px;
+}
+
+.main-card-footer p{
+    display: inline;
+}
+
+.circle{
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: black;
+    display: inline;
+}
+
+.card-user-profile{
+    background: url('default-avatar-icon.jpg');
+    height: 40px;
+    width: 40px;
+}
+
+/* --- END OF MAIN CONTENT CARD STYLES --- */
+
+/* -- START OF USER PROFILE STYLES --*/
+.profile{
+    position: relative;
+    min-width: 100px;
+    width: 100%;
+}
+
+.profile-pic{
+    border-radius: 50% 50% 50% 50%;
+}
+
+.profile-name{
+    margin-left: 5px;
+    position: absolute;
+    top:0px;
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+
+.profile-name:hover{
+    color:black;
+}
+
+.profile-metadata{
+    margin-left: 5px;
+    position: absolute;
+    bottom: 0px;
+    font-size: 14px;
+}
+
+.profile-metadata p{
+    display: inline;
+    color: #a5a7ab;
+}
+
+.profile-metadata .spacer{
+    position: relative;
+    bottom: 5px;
+}
+/* -- END OF USER PROFILE STYLES -- */
+
+/* -- START OF CREDITS AND EULA STYLES */
+
+.cr-eula-main{
+    height: 100vh;
+    display: flex;
+    align-items: end;
+
+}
+
+
+.copyright{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 10px;
+    color: #818488;
+}
+
+.eula-links{
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 10px;
+}
+
+.eula-links a{
+    text-decoration: none;
+    color:#818488;
+}
+
+.eula-links a:hover{
+    text-decoration: underline;
+}
+
+/* -- END OF CREDITS AND EULA STYLES */

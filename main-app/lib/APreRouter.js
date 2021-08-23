@@ -40,26 +40,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			res.send(JSON.stringify(dat)) 
 		})
 
-		this.eapp.get('/api/articles', (req, res) => {
-			const directory = './public/articles'
-			let f = [] 
-			fs.readdir(directory, (err, files) => {
-				files.forEach(file => {
-					if (fs.lstatSync(path.resolve(directory, file)).isDirectory()) {
-						//console.log('Directory: ' + file);
-						f.push(file);
-					} 
-				});
-				if (req.query['articles']){
-					let intersection = f.filter(x => !req.query['articles'].includes(x))
-					//console.log(intersection)
-					if (intersection.length) res.render('articles/' + intersection[0] + '/')
-				}
-				else res.render('articles/' + f[0] + '/')
-			});			
-		})
-
-		this.eapp.get('/api/supaarticles', async (req, res) => {
+		this.eapp.get('/api/articles', async (req, res) => {
 			let { data: articles, error } = await supabase
 				.from('articles')
 				.select('*')
@@ -67,7 +48,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			res.send(JSON.stringify(articles))
 		})
 
-		this.eapp.post('/api/supaarticles', async (req, res) => {
+		this.eapp.post('/api/articles', async (req, res) => {
 			//need to implement auth
 			console.log({
 				title: req.body.title,
@@ -81,7 +62,7 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 				author: req.body.author,
 				content: req.body.content
 				},])
-			res.send(JSON.stringify(data))
+			res.redirect('/')
 		})
 
 
