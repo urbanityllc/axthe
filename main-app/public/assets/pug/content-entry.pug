@@ -1,17 +1,15 @@
-link(href='/assets/css/main-page.css' rel='stylesheet')
-
 .content-entry-wrap  
-        input#collapsible.toggle(type="checkbox")
-        label.content-label-toggle(for="collapsible") Create Content
-        .content-input-collapsible-content 
-            .collapsible-content-inner
-                .row 
-                    .col-md-12
-                        input.content-input-title(type="text" name="user-post-title" placeholder="Enter a title (optional)")
-                        input.content-input-links(type="text" name="user-post-title" placeholder="Paste links (optional)")
-                        textarea.content-input-area(name="user-post-content" placeholder="Start typing")
-                .row 
-                    .col-md-10
-                        //- text
-                    .col-md-2.d-flex.justify-content-end
-                        button.content-input-submit Post
+    input.toggle#content-entry-toggle__input(type="checkbox")
+    label.content-entry-toggle__text(for="content-entry-toggle__input") Create Content
+    .content-entry-collapsible 
+        .content-entry-collapsible-inner
+            .row 
+                .col-md-12.content-entry-fields
+                    input.content-entry-fields--title(type="text" name="user-post-title" placeholder="Enter a title (optional)")
+                    input.content-entry-fields--links(type="text" name="user-post-title" placeholder="Paste links (optional)")
+                    textarea.content-entry-fields__textarea(name="user-post-content" placeholder="Start typing")
+            .row 
+                .col-md-10
+                    //- text
+                .col-md-2.d-flex.justify-content-end
+                    button.content-entry-submit__button Post

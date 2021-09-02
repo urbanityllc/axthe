@@ -1,7 +1,11 @@
-link(href='/assets/css/main-page.css' rel='stylesheet')
-
-span.main-card-footer
+.main-card-footer
     .upvote
-        .circle 
         p Likes
-    p Comments
+        input.toggle#comment-toggle__input(type="checkbox" checked)
+        label.comment-toggle__text(for="commment-toggle__input") Comment
+        .comment-collapsible 
+            .comment-collapsible-inner 
+                .row 
+                    .col.md-12.comment-main 
+                        include /assets/pug/comment-single.pug
+

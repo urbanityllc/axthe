@@ -10,16 +10,23 @@ head
 	title Title
 
 body
-	include /includes/header
-
-	.container
-		.main-body 
-			.row
-				.col-md-2
-					.side-bar 
-						include /assets/pug/side-card/side-card.pug
-				.col-md-2
-					include /assets/pug/content-entry.pug
-				.col-md-8
-					include /assets/pug/main-card/main-card-text.pug
-					include /assets/pug/main-card/main-card-video.pug
+	//- will need to fix this to be more of a structure: 
+	//- 	main page  
+	//- 		sidebar 
+	//- 		main body 
+	//- 			header - expands and shrinks 
+	//- 			content
+	.cursor-listener 
+		.side-bar-container  
+			include /assets/pug/side-bar/side-bar.pug
+		.main-container 
+			include /includes/header
+			.main-body 
+				.row
+					//- .col-md-2
+						//- placeholder
+					//- .col-md-2
+					.col-md-12
+						include /assets/pug/content-entry.pug
+						include /assets/pug/main-card/main-card-text-infinite.pug
+						include /assets/pug/main-card/main-card-video.pug
