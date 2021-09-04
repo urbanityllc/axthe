@@ -10,15 +10,16 @@
 # caddy stop, start, validate
 ## #################################################### 
 
-1.justinpacquing.me {
-	respond "hi"
+# re: matcher http://caddyserver.com/docs/caddyfile-tutorial
+# example matcher of static and dynamic combined
+:9090 {
+	root * ./caddy/dev
+	file_server
+
+	# the magic of matcher is here:
+	reverse_proxy /api/* :8080
+	reverse_proxy /dyn/* :8080
 }
 
-# admin
-a.axthe.net {
-	reverse_proxy localhost:9090
-}
 
-justinpacquing.me, app.urbanitymag.com {
-	reverse_proxy localhost:8080
-}
+

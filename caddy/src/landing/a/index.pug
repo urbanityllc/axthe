@@ -1,0 +1,32 @@
+doctype html
+head
+	meta(charset='UTF-8')
+	meta(name='viewport' content='width=device-width, initial-scale=1.0')
+	meta(http-equiv='X-UA-Compatible' content='ie=edge')
+	link(href='../../assets/css/style.css' rel='stylesheet')
+	link(href='../../assets/css/header.css' rel='stylesheet')
+	link(href='../../assets/css/main-page.css' rel='stylesheet')
+	meta(name='Description' content='Enter your description here')
+	title Title
+
+body
+	//- will need to fix this to be more of a structure: 
+	//- 	main page  
+	//- 		sidebar
+	//- 		main body 
+	//- 			header - expands and shrinks 
+	//- 			content
+	.cursor-listener 
+		.side-bar-container  
+			include ../../assets/pug/side-bar/side-bar.pug
+		.main-container 
+			include ../../includes/header
+			.main-body 
+				.row
+					//- .col-md-2
+						//- placeholder
+					//- .col-md-2
+					.col-md-12
+						include ../../assets/pug/content-entry.pug
+						include ../../assets/pug/main-card/main-card-text-infinite.pug
+						include ../../assets/pug/main-card/main-card-video.pug

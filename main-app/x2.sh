@@ -1,1 +1,0 @@
-echo 'production/backgorund process:'

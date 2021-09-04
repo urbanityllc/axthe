@@ -1,0 +1,17 @@
+.post-card-wrap.card
+    .post-card-wrap-inner.card-body
+        .post-card-header  
+            include ../../../assets/pug/post-header
+        .post-card-title
+            h5.post-card-title__text
+                a(href="https://www.youtube.com/watch?v=4Qn49CBmd9M&t=189s") 
+                    | Suni Lee DELIVERS on the floor to win all-around gold for USA | Tokyo Olympics | NBC Sports
+        .row.post-card-content 
+            iframe.post-card-content__video(width='1060' height='573' 
+                src='https://www.youtube.com/embed/4Qn49CBmd9M' 
+                title='YouTube video player' frameborder='0' 
+                allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture' 
+                allowfullscreen='')
+        .row.post-card-footer
+            include ../../../assets/pug/main-card/main-card-footer.pug
+            

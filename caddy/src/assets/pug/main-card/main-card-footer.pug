@@ -1,0 +1,11 @@
+.main-card-footer
+    .upvote
+        p Likes
+        input.toggle#comment-toggle__input(type="checkbox" checked)
+        label.comment-toggle__text(for="commment-toggle__input") Comment
+        .comment-collapsible 
+            .comment-collapsible-inner 
+                .row 
+                    .col.md-12.comment-main 
+                        include ../../../assets/pug/comment-single.pug
+

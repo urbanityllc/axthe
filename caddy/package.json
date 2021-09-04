@@ -1,0 +1,48 @@
+{
+	"name": "my-jam-stack-app",
+	"version": "0.0.0",
+	"private": true,
+	"scripts": {
+		"test": "npx colortape -- --verbose 'teste/**/*.test.js' ",
+		"clean": "rm -rf ./public",
+		"build": "npx parcel build './src/**/index.pug' --dist-dir public --public-url / --log-level error   --detailed-report --no-source-maps --no-scope-hoist --no-content-hash --no-optimize ",
+		"dev": "npx parcel         './src/**/index.pug' --dist-dir dev    --public-url / --log-level verbose --port 8080 --open --watch-for-stdin"
+	},
+	"browserslist": [
+		"> 5% in US"
+	],
+	"engines": {
+		"node": ">=14.17.1",
+		"npm": ">=7.21.0"
+	},
+	"@parcel/bundler-default": {
+		"minBundles": 0,
+		"minBundleSize": 0,
+		"maxParallelRequests": 3000
+	},
+	"dependencies": {
+		"@ficusjs/core": "^1.1.1",
+		"@ficusjs/renderers": "^3.4.1",
+		"ficusjs": "^3.8.0"
+	},
+	"targets": {
+		"browser": {
+			"outputFormat": "esmodule"
+		}
+	},
+	"staticFiles": {},
+	"devDependencies": {
+		"@parcel/transformer-pug": "^2.0.0-rc.0",
+		"@parcel/transformer-sass": "^2.0.0-rc.0",
+		"autoprefixer": "^10.3.4",
+		"axthe": "^0.8.0",
+		"colortape": "^0.1.2",
+		"cordova-plugin-whitelist": "^1.3.5",
+		"parcel": "^2.0.0-rc.0",
+		"parcel-reporter-static-files-copy": "^1.3.0",
+		"postcss": "^8.3.6",
+		"pug": "^3.0.2",
+		"sass": "^1.39.0"
+	},
+	"//": " eruda, brypt, faker are nice lib. If cordova, then run local via npm "
+}
