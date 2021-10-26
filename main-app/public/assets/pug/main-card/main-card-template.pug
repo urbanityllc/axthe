@@ -2,7 +2,8 @@
     .card-body
         .main-card-title
             h5.card-title=article.title
-        .row.main-card-content 
+        .row.main-card-content
+            img(src=article.image) 
             p.card-text=article.content
         .row.main-card-meta
-            include /assets/pug/main-card/main-card-footer.pug
+            include /assets/pug/main-card/main-card-single-footer.pug

@@ -4,7 +4,12 @@ header.header-container
     .navbar.navbar-dark.bg-dark.shadow-sm
         .container.header-container
             .row.header-row 
-                .col-md-2.header-logo
+                .col-md-1.sidebar-button 
+                    button#siderbarCollapse.btn.btn-info(type="button")
+                        i.fas.fa-align-left 
+                        span test
+
+                .col-md-1.header-logo
                     a.navbar-brand.d-flex.align-items-center(href='/landing/a')
                         strong Urbanity
                 .col-md-8

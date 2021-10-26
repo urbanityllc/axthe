@@ -1,0 +1,15 @@
+.post-card-wrap.card
+    .post-card-wrap-inner.card-body
+        .post-card-header 
+            include /assets/pug/post-header
+        .post-card-clickable
+            .post-card-title
+                //- will need to find a way to pass props/data so we can do the 
+                //- clickable properly
+                h5.post-card-title__text=article.title
+            .row.post-card-content
+                //- same thing here
+                img.post-card-content-img(src=article.image) 
+                p.post-card-content__text=article.content
+        .row.post-card-footer
+            include /assets/pug/main-card/main-card-infinite-footer.pug

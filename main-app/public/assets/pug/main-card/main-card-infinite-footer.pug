@@ -1,0 +1,23 @@
+.main-card-footer
+    .main-card-footer__voting
+        p Likes
+        //- input.toggle#comment-toggle__input(type="checkbox" checked)
+        //- label.comment-toggle__text(for="commment-toggle__input") 
+    .main-card-footer__comment
+        input.toggle#main-card-comment-toggle__input(type="checkbox")
+        label.main-card-comment-toggle__text(for="main-card-comment-toggle__input") Comments 
+        .comment-collapsible 
+            .comment-collapsible-inner 
+                .row 
+                    .comment__input
+                        textarea(placeholder="Test")
+                .row 
+                    .col-md-12.comment-content-outer 
+                        .row.comment-content-inner
+                            p text
+        //- .comment-collapsible 
+        //-     .comment-collapsible-inner 
+                .row 
+                    .col.md-12.comment-main 
+                        include /assets/pug/comment-single.pug
+

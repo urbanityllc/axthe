@@ -5,9 +5,9 @@ head
 
 	link(href='../../assets/css/style.css' rel='stylesheet')
 	script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
-body
+	script(src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js')
 
-		
+body
 		main
 			section.py-5.text-center.container
 				.row.py-lg-5
@@ -23,6 +23,18 @@ body
 					- var articles =  JSON.parse(articles)
 					each article in articles 
 						include /assets/pug/main-card/main-card-template.pug
+					button(id='load-more') Load More
+					script.
+						$(document).ready(function(){
+							$('#load-more').click(function(){
+								$.ajax({
+									url: "/api/articles?start=2", 
+									success: function(result){
+										$('#load-more').replaceWith(result);
+								}});
+							})		
+						});
+					
 
 		footer.text-muted.py-5
 			.container

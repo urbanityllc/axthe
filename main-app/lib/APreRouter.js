@@ -26,8 +26,21 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 
 		this.eapp.get('/', async (req, res) => {
 			let { data: articles, error } = await supabase
-				.from('articles')
+				.from('scraper-articles')
 				.select('*')
+				.range(0,1)
+			let dat = {
+				articles: JSON.stringify(articles)
+			}
+			this.rend(req, res, dat)
+		})
+
+		// passing article data to landing/a
+		this.eapp.get('/landing/a', async (req, res) => {
+			let { data: articles, error } = await supabase
+				.from('scraper-articles')
+				.select('*')
+				.range(0,10)
 			let dat = {
 				articles: JSON.stringify(articles)
 			}
@@ -41,11 +54,25 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 		})
 
 		this.eapp.get('/api/articles', async (req, res) => {
+			let start = req.query.start ? parseInt(req.query.start) : 0
+			let end = req.query.end ? parseInt(req.query.end) : start + 1
 			let { data: articles, error } = await supabase
-				.from('articles')
+				.from('scraper-articles')
 				.select('*')
-			console.log(articles)
-			res.send(JSON.stringify(articles))
+				.range(start, end)
+			res.render('infinite-scroll', { 
+				basedir: './public', 
+				articles: JSON.stringify(articles),
+				start: start,
+				end: end
+			})
+			//send html of articles
+			/*let data = {
+				articles: JSON.stringify(articles),
+				start: start,
+				end: end
+			}
+			res.send(data)*/
 		})
 
 		this.eapp.post('/api/articles', async (req, res) => {

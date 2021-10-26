@@ -1,0 +1,18 @@
+- var articles =  JSON.parse(articles)
+if articles.length
+	each article in articles 
+		include /assets/pug/main-card/main-card-template.pug
+	- var start = end + 1
+		button(id='load-more' + start) Load More
+		script.
+			$(document).ready(function(){
+				$('#load-more'+ #{start}).click(function(){
+					$.ajax({
+						url: "/api/articles?start=" + #{start}, 
+						success: function(result){
+							$('#load-more'+ #{start}).replaceWith(result);
+					}});
+				})		
+			});
+else 
+	#none

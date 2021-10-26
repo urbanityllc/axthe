@@ -2,7 +2,11 @@
 .cursor-listener{
     display: flex;
     flex: 1 1 100%;
+    align-items: stretch;
+    width:100%;
 }
+
+
 
 .main-container{
     display: flex;
@@ -28,6 +32,17 @@ img{
 /* --- END OF MAIN PAGE STYLES */
 
 /* -- START OF SIDE BAR STYLES -- */
+/* test */
+#side-bar{
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+}
+
+#side.active{
+    margin-left: -250px;
+}
+/* ..... */
 .side-bar-container{
     z-index: 99;
     position: relative;
@@ -222,11 +237,6 @@ img{
     margin-top: 10px;
 }
 
-.post-card-crap-inner a{
-    display: block;
-
-}
-
 .post-card-clickable{
     cursor:pointer;
 }
@@ -245,11 +255,25 @@ img{
     text-decoration: underline;
 }
 
-.main-card-footer{
-    margin-top: 20px;
+.post-card-content-clickable{
+    text-decoration: none;
+    color: black;
+}
+
+.post-card-content-clickable:hover{
+    text-decoration: none;
+    color: black;
 }
 
 .main-card-footer p{
+    display: inline;
+}
+
+.main-card-footer__voting{
+    display: inline;
+}
+
+.main-card-footer__comment{
     display: inline;
 }
 
@@ -272,6 +296,85 @@ img{
     display: inline-block;
 }
 
+/* comment collapsible */
+.main-card-footer input[type='checkbox']{
+    display:none;
+}
+
+.main-card-comment-toggle__text{
+    cursor:pointer;
+    transition: all 0.25s ease-out;
+}
+
+.comment-collapsible{
+    max-height: 0px;
+    overflow: hidden;
+
+    transition: max-height .25s ease-in-out;
+}
+
+.comment-collapsible-inner{
+    padding: .5rem 1rem;
+}
+
+.toggle:checked + .main-card-comment-toggle__text + .comment-collapsible{
+    max-height: 100vh;
+}
+
+/* comment collapsible end */
+
+/* start of comment section - single post */
+
+.comment-section-wrap{
+    margin-top: 10px;
+}
+
+.comment-section__input{
+    border: 1px black;
+}
+
+.comment-section__textarea{
+    width: 100%;
+}
+
+.comment-singular__content{
+    position: relative;
+}
+
+.comment-singular__profile-pic{
+    width: fit-content;
+}
+
+.comment-singular__profile-name{
+    position: absolute;
+    top: -5px;
+}
+
+.comment-singular__comment-content{
+    position: absolute;
+    top: 20px;
+}
+
+.comment-singular__comment-divider{
+    border-bottom: solid #E8E9EB 1px;
+    height: 1px;
+    align-content: end;
+    margin-top: 15px;
+}
+
+.comment-singular__comment-divider-wrap p{
+    margin-bottom: 0;
+}
+
+.comment-singular__content P{
+    padding-left: 0;
+}
+
+.comment-singular__content p{
+    margin-bottom: 0;
+}
+
+/* end of comment section - single post */
 
 /* end of main-card footer */
 

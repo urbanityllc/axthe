@@ -8,6 +8,7 @@ head
 	link(href='/assets/css/main-page.css' rel='stylesheet')
 	meta(name='Description' content='Enter your description here')
 	title Title
+	script(src='/assets/js/sidebar.js')
 
 body
 	//- will need to fix this to be more of a structure: 
@@ -17,8 +18,23 @@ body
 	//- 			header - expands and shrinks 
 	//- 			content
 	.cursor-listener 
-		.side-bar-container  
-			include /assets/pug/side-bar/side-bar.pug
+		//- .side-bar-container  
+		//- 	include /assets/pug/side-bar/side-bar.pug
+		//- test code 
+		#side-bar 
+			.sidebar-header 
+				h3 Bootstrap Side bar
+			ul.list-unstyled.components 
+				p Dummy Heading 
+				li.active 
+					a.dropdown-toggle(href="#homeSubmenu" data-toggle="collapse" area-expanded="false") Home 
+					ul#homeSubmenu.collapse.list-unstyled
+						li 
+							a test1
+						li 
+							a test2
+				p Some stuff
+		//- end test code 
 		.main-container 
 			include /includes/header
 			.main-body 
@@ -27,6 +43,10 @@ body
 						//- placeholder
 					//- .col-md-2
 					.col-md-12
-						include /assets/pug/content-entry.pug
+						//- include /assets/pug/content-entry.pug
+						- var articles = JSON.parse(articles)
+						each article in articles
+							include /assets/pug/main-card/main-card-text-infinite-template.pug
+
 						include /assets/pug/main-card/main-card-text-infinite.pug
 						include /assets/pug/main-card/main-card-video.pug
