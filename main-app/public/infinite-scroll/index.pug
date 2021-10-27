@@ -3,16 +3,18 @@ if articles.length
 	each article in articles 
 		include /assets/pug/main-card/main-card-template.pug
 	- var start = end + 1
-		button(id='load-more' + start) Load More
-		script.
-			$(document).ready(function(){
-				$('#load-more'+ #{start}).click(function(){
-					$.ajax({
-						url: "/api/articles?start=" + #{start}, 
-						success: function(result){
-							$('#load-more'+ #{start}).replaceWith(result);
-					}});
-				})		
-			});
+		div(id='load-more'+ start)
+			script.
+				$(document).ready(function(){
+					$(window).scroll(function () {
+							if ($(window).height() + $(window).scrollTop() == $(document).height() && $('#load-more' + #{start}).length) {
+								$.ajax({
+									url: "/api/articles?start=" + #{start}, 
+									success: function(result){
+										$('#load-more' + #{start}).replaceWith(result);
+								}});
+							}
+						}); 	
+					});
 else 
-	#none
+	p No More Articles :)
