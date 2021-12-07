@@ -3,13 +3,15 @@
         .post-card-header 
             include /assets/pug/post-header
         .post-card-clickable
-            .post-card-title
-                //- will need to find a way to pass props/data so we can do the 
-                //- clickable properly
-                h5.post-card-title__text=article.title
             .row.post-card-content
                 //- same thing here
-                img.post-card-content-img(src=article.image) 
-                p.post-card-content__text=article.content
+                .col-md-4.post-card-content-img-wrap
+                    img.post-card-content-img__img(src=article.image) 
+                .col-md-8.post-card-content-text-wrap
+                    .post-card-title
+                        //- will need to find a way to pass props/data so we can do the 
+                        //- clickable properly
+                        h5.post-card-content-text__title=article.title
+                    p.post-card-content-text__summary=article.content
         .row.post-card-footer
             include /assets/pug/main-card/main-card-infinite-footer.pug

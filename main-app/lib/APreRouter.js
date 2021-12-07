@@ -35,6 +35,18 @@ module.exports =  class APreRouter extends BasicPreRouter {// pug pre render. Mo
 			this.rend(req, res, dat)
 		})
 
+		this.eapp.get('/article/', async (req, res) => {
+			let postId = req.query.postId ? parseInt(req.query.postId) : 1
+			let { data: article, error } = await supabase
+				.from('scraper-articles')
+				.select('*')
+				.eq('post_id', postId)
+				.limit(1)
+			//res.send(article[0])
+			this.rend(req, res, article[0])
+		})
+		
+
 		// passing article data to landing/a
 		this.eapp.get('/landing/a', async (req, res) => {
 			let { data: articles, error } = await supabase

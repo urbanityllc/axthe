@@ -5,21 +5,19 @@ header.header-container
         .container.header-container
             .row.header-row 
                 .col-md-1.sidebar-button 
-                    button#siderbarCollapse.btn.btn-info(type="button")
-                        i.fas.fa-align-left 
-                        span test
+                    button.side-bar-openbtn(onclick="openNav()") &#9776;
 
                 .col-md-1.header-logo
                     a.navbar-brand.d-flex.align-items-center(href='/landing/a')
                         strong Urbanity
                 .col-md-8
+                .col-md-2
                     .row.header-assets-outer
                         .col-md-12.d-flex.justify-content-end.header-assets-inner
                             .ha-inner1
                                 form.search-bar
                                     input.search-bar-input(type='search' 
                                         name='search-query' placeholder='')
-                .col-md-2
     .scrolling-headline  
         .scrolling-content  
             p test1 

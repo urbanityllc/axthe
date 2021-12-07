@@ -5,14 +5,12 @@
     align-items: stretch;
     width:100%;
 }
-
-
-
 .main-container{
     display: flex;
     flex-direction: column;
     position: relative;
     z-index: 1;
+    transition: margin-left .5s;
 }
 
 .main-body{
@@ -21,57 +19,62 @@
     margin-right:5%;
 }
 
-img{  
+img{
     height: 40px;
-    width: 40px; 
+    width: 40px;
 }
 
 .content-header-inner{
-    display: inline-block;    
+    display: inline-block;
 }
 /* --- END OF MAIN PAGE STYLES */
 
 /* -- START OF SIDE BAR STYLES -- */
 /* test */
-#side-bar{
-    min-width: 250px;
-    max-width: 250px;
-    min-height: 100vh;
+.side-bar-wrap{
+    width: 0;    /* to be changed with js */
+    height: 100%;
+    position: fixed;    /* stay in place while scrolling  */
+    z-index: 1; /*stays on top */
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;    /* disables horizontal scorlling */
+    padding-top: 60px;    /* push content down from top  */
+    transition: 0.5s;    /* slide effect time */
 }
 
-#side.active{
-    margin-left: -250px;
+.side-bar-openbtn{
+    font-size: 20px;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    padding: 10px 15px;
+    border: none;
 }
+
+.side-bar-closebtn{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+.side-bar-closebtn:hover{
+    color: #818488;
+}
+
+.side-bar-body{
+    height: 100vh;
+}
+
 /* ..... */
 .side-bar-container{
-    z-index: 99;
-    position: relative;
-    display: inline-block;
     box-shadow: 0 5px 10px 0 rgb(0 0 0 / 5%);
-    width: 400px;
-}
-
-.side-bar-wrap input[type='checkbox']{
-    display: none;
-}
-
-.side-bar-toggle__text{
-    position: absolute;
-    left: 0;
-    margin-left:153px;
-    background-color: white;
-    cursor: pointer;
-    width: 50px;
-    text-align: left;
-}
-
-.side-bar-toggle__text:hover{
-    color: #bababa;
-}
-
-.side-bar-toggle__text::before{
-    content:' ';
-    display: inline-block;
 }
 
 .circle{
@@ -129,7 +132,7 @@ img{
 }
 
 .side-bar-links__button a:hover{
-    background-color: #e2e2e2;   
+    background-color: #e2e2e2;
 }
 
 /* -- END OF SIDE BAR STYLES -- */
@@ -172,7 +175,7 @@ img{
     text-align: left;
 
     padding: 1rem;
-    
+
     color:#212529;
     background: #ccc;
 
@@ -192,7 +195,7 @@ img{
     border-top: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-left: 5px solid currentColor;
-    
+
     vertical-align: middle;
     margin-right: .7rem;
     transform: translateY(-2px);
@@ -263,6 +266,32 @@ img{
 .post-card-content-clickable:hover{
     text-decoration: none;
     color: black;
+}
+
+.post-card-content-img-wrap{
+    /* set up for __img */
+    /* position: relative;  */
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.post-card-content-img__img{
+    width: 100%; /* fill parent width */
+    height: 85%;
+    /* center vertically
+    position: absolute;
+    top: 50%;
+    margin-top: -40%; compensate for half the child's height */
+}
+
+.post-card-content-text__summary{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; /* # of lines to show */
+    -webkit-box-orient: vertical;
 }
 
 .main-card-footer p{
@@ -428,7 +457,7 @@ img{
     height: 100%;
     display: flex;
     justify-content: end;
-    
+
 }
 
 
